@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmSettingsLogin : Form
     {
+        private SmdDbManager dbManager;
         public frmSettingsLogin()
         {
             InitializeComponent();
@@ -88,7 +89,7 @@ namespace Health_Street
                 lblOldpassword.ResetText();
                 btnDiable();
             }
-            else if (txtOldPassword.Text == SQLConnectionManager.getValue("SELECT * FROM ACCOUNT",frmLogin.passingRoll,1,4) )
+            else if (txtOldPassword.Text == dbManager.getValue("SELECT * FROM ACCOUNT",frmLogin.passingRoll,1,4) )
             {
                 lblOldpassword.ResetText();
                 txtOldPassword.FocusedBorderColor = Color.FromArgb(33, 96, 104);
@@ -131,7 +132,7 @@ namespace Health_Street
                 btnDiable();
                 txtOldPassword.Focus();
             }
-            else if(txtOldPassword.Text != SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", frmLogin.passingRoll, 1, 4))
+            else if(txtOldPassword.Text != dbManager.getValue("SELECT * FROM 'ACCOUNT'", frmLogin.passingRoll, 1, 4))
             {
                 txtOldPassword.BorderColor = Color.FromArgb(232, 17, 35);
                 lblOldpassword.Text = "*Password is incorrect";
@@ -142,8 +143,8 @@ namespace Health_Street
             {
                 if (!string.IsNullOrEmpty(txtUsername.Text))
                 {
-                    string sqlcmd1 = "UPDATE ACCOUNT SET Login_Username = '" + txtUsername.Text + "' WHERE Roll_Id = '"+ frmLogin.passingRoll + "'";
-                    if (SQLConnectionManager.insrtUpdteDelt(sqlcmd1) == 1)
+                    string sqlcmd1 = "UPDATE 'ACCOUNT' SET Login_Username = '" + txtUsername.Text + "' WHERE Roll_Id = '"+ frmLogin.passingRoll + "'";
+                    if (dbManager.insrtUpdteDelt(sqlcmd1) == 1)
                     {
                         MessageBox.Show("Successfull");
                     }
@@ -151,8 +152,8 @@ namespace Health_Street
                 }
                 if (!string.IsNullOrEmpty(txtCofirmPassword.Text) && !string.IsNullOrEmpty(txtNewPassword.Text))
                 {
-                    string sqlcmd = "UPDATE ACCOUNT SET Login_Password = '" + txtCofirmPassword.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'";
-                    if (SQLConnectionManager.insrtUpdteDelt(sqlcmd) == 1)
+                    string sqlcmd = "UPDATE 'ACCOUNT' SET Login_Password = '" + txtCofirmPassword.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'";
+                    if (dbManager.insrtUpdteDelt(sqlcmd) == 1)
                     {
                         MessageBox.Show("Successfull");
                     }

@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmScanRoom : Form
     {
+
         clsOpnChild chFrmObj = new clsOpnChild();
         public frmScanRoom()
         {
