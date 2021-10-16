@@ -480,6 +480,7 @@
             this.pnlBanner.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.pnlBanner.Size = new System.Drawing.Size(584, 198);
             this.pnlBanner.TabIndex = 13;
+            this.pnlBanner.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBanner_Paint);
             // 
             // gunaLabel2
             // 

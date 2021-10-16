@@ -22,14 +22,17 @@ namespace Health_Street
         {
             InitializeComponent();
             showData();
-            
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+
+
         }
 
 
 
         private void showData()
         {
-            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
                 SqlDataReader reader1 = dbManager.readAndGet("SELECT *FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())

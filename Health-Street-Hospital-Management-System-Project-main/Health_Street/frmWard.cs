@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
+
 
 namespace Health_Street
 {
@@ -18,6 +18,7 @@ namespace Health_Street
         public frmWard()
         {
             InitializeComponent();
+
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
         }
