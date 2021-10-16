@@ -11,11 +11,13 @@ using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
 using System.IO;
+using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmScanAddOut : Form
     {
+        private SmdDbManager dbManager;
         public frmScanAddOut(/*Form frm*/)
         {
             InitializeComponent();
@@ -64,7 +66,7 @@ namespace Health_Street
                 IdNumber();
                 txtPatientId.Focus();
             }
-            else if (!(txtPatientId.Text == SQLConnectionManager.getValue("SELECT * FROM OUT_PATIENT", txtPatientId.Text, 0, 0)))
+            else if (!(txtPatientId.Text == dbManager.getValue("SELECT * FROM 'OUT_PATIENT'", txtPatientId.Text, 0, 0)))
             {
                 IdNumber();
                 lblApNumber.Text = "*Can't Find";
@@ -89,7 +91,7 @@ namespace Health_Street
                     image = null;
                 }
 
-                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO OUT_PATIENT_SCAN VALUES('" + Convert.ToInt32(txtPatientId.Text) + "','@image',SYSDATETIME(),SYSDATETIME(),'"+txtDctName.Text+"')", "@image", image);
+                int i =dbManager.insrtUpdteDelt("INSERT INTO 'OUT_PATIENT_SCAN' VALUES('" + Convert.ToInt32(txtPatientId.Text) + "','@image',SYSDATETIME(),SYSDATETIME(),'"+txtDctName.Text+"')", "@image", image);
 
                 if (i == 1)
                 {
@@ -113,13 +115,13 @@ namespace Health_Street
                 txtPatientId.BorderColor = Color.Silver;
                 txtPatientId.FocusedBorderColor = Color.FromArgb(33, 96, 104);
                 lblApNumber.ResetText();
-                if (txtPatientId.Text == SQLConnectionManager.getValue("SELECT * FROM OUT_PATIENT", txtPatientId.Text, 0, 0))
+                if (txtPatientId.Text == dbManager.getValue("SELECT * FROM 'OUT_PATIENT'", txtPatientId.Text, 0, 0))
                 {
                     txtPatientId.BorderColor = Color.Silver;
                     txtPatientId.FocusedBorderColor = Color.FromArgb(33, 96, 104);
                     lblApNumber.ResetText();
-                    dct  = SQLConnectionManager.getValue("SELECT * FROM OUT_PATIENT", txtPatientId.Text, 0, 8);
-                    txtDctName.Text = SQLConnectionManager.getValue("SELECT * FROM SPECIALIST_DOCTOR", dct, 1, 4);
+                    dct  =dbManager.getValue("SELECT * FROM 'OUT_PATIENT'", txtPatientId.Text, 0, 8);
+                    txtDctName.Text = dbManager.getValue("SELECT * FROM 'SPECIALIST_DOCTOR'", dct, 1, 4);
                 }
                 else
                 {

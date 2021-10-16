@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmScanInpatient : Form
     {
+        private SmdDbManager dbManager;
         public frmScanInpatient()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT_SCAN");
+            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT_SCAN'");
             dgvInScan.AutoGenerateColumns = false;
             dgvInScan.DataSource = dt;
         }
@@ -44,7 +45,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT_SCAN WHERE In_Patient_Scan_No LIKE '" + txtSearch.text + "%' OR Admission_Number LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' ");
+            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT_SCAN' WHERE In_Patient_Scan_No LIKE '" + txtSearch.text + "%' OR Admission_Number LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' ");
             dgvInScan.DataSource = dt;
         }
 
