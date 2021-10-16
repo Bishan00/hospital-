@@ -15,6 +15,8 @@ namespace Health_Street
 {
     public partial class frmSettingsAccount : Form
     {
+
+        private SmdDbManager dbManager;
         public static Image ProfilePic;
         public frmSettingsAccount()
         {
@@ -27,9 +29,9 @@ namespace Health_Street
 
         private void showData()
         {
-            if (SQLConnectionManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = SQLConnectionManager.readAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                SqlDataReader reader1 = dbManager.readAndGet("SELECT *FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblFname.Text = reader1["First_Name"].ToString();
@@ -64,9 +66,9 @@ namespace Health_Street
                 }
             }
 
-            if (SQLConnectionManager.chek("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader2 = SQLConnectionManager.readAndGet("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                SqlDataReader reader2 = dbManager.readAndGet("SELECT * FROM 'ACCOUNT' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader2.Read())
                 {
                     lblGmail.Text = reader2["E_mail"].ToString();

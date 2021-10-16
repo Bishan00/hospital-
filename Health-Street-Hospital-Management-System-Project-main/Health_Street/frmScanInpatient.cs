@@ -71,7 +71,7 @@ namespace Health_Street
                 {
                     string sId = dgr.Cells[1].Value.ToString();
 
-                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM IN_PATIENT_SCAN WHERE In_Patient_Scan_No = '" + sId + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM IN_PATIENT_SCAN WHERE In_Patient_Scan_No = '" + sId + "'");
                     c += 1;
                 }
             }

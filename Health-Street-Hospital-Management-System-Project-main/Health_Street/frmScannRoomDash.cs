@@ -14,6 +14,7 @@ namespace Health_Street
 {
     public partial class frmScannRoomDash : Form
     {
+        private SmdDbManager dbManager;
         public frmScannRoomDash()
         {
             InitializeComponent();
@@ -26,13 +27,13 @@ namespace Health_Street
         private void rowCountInpatients()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT_SCAN");
+            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT_SCAN'");
             lblInpatients.Text = "+" + dt.Rows.Count.ToString();
         }
         private void rowCountOutpatients()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_PATIENT_SCAN");
+            dt =dbManager.getdata("SELECT * FROM 'OUT_PATIENT_SCAN'");
             lblOutpatients.Text = "+" + dt.Rows.Count.ToString();
         }
 
@@ -44,9 +45,9 @@ namespace Health_Street
 
         private void DashName()
         {
-            if (SQLConnectionManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = SQLConnectionManager.readAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                SqlDataReader reader1 =dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblScanOfficer.Text = "Hi, " + reader1[2].ToString();
@@ -58,12 +59,12 @@ namespace Health_Street
         private void dataShow()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM SCAN_ROOM");
+            dt = dbManager.getdata("SELECT * FROM 'SCAN_ROOM'");
             dgvStaff.AutoGenerateColumns = false;
             dgvStaff.DataSource = dt;
 
             DataTable dt2 = new DataTable();
-            dt2 = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT_SCAN,OUT_PATIENT_SCAN");
+            dt2 = dbManager.getdata("SELECT * FROM 'IN_PATIENT_SCAN,OUT_PATIENT_SCAN'");
             dgvScann.AutoGenerateColumns = false;
             dgvScann.DataSource = dt2;
         }
