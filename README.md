@@ -12,3 +12,4 @@ error form
 7.frmBillDash
 8.frmAddDash
 9.frmWdDash
+10.frmXrayDash

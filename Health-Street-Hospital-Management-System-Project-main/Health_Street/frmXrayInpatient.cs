@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmXrayInpatient : Form
     {
+
+        private SmdDbManager dbManager;
         public frmXrayInpatient()
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace Health_Street
         private void show()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT_XRAY");
+            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT_XRAY'");
             dgvRooms.AutoGenerateColumns = false;
             dgvRooms.DataSource = dt;
         }
@@ -44,7 +47,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT_XRAY WHERE In_Patient_X_Ray_No LIKE '" + txtSearch.text + "%' OR Admission_Number LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%'");
+            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT_XRAY' WHERE In_Patient_X_Ray_No LIKE '" + txtSearch.text + "%' OR Admission_Number LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%'");
             dgvRooms.DataSource = dt;
         }
 
@@ -72,7 +75,7 @@ namespace Health_Street
                 {
                     string sId = dgr.Cells[1].Value.ToString();
 
-                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM IN_PATIENT_XRAY WHERE In_Patient_X_Ray_No = '" + sId + "'");
+                    n =dbManager.insrtUpdteDelt("DELETE FROM 'IN_PATIENT_XRAY' WHERE In_Patient_X_Ray_No = '" + sId + "'");
                     c += 1;
                 }
             }
@@ -81,6 +84,11 @@ namespace Health_Street
             {
                 HSMessageBox.Show(c + " DATA DELETED SUCCESSFULLY ", "DELETE DATA", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
+        }
+
+        private void gunaPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

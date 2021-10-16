@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmXrayOutpatient : Form
     {
+        private SmdDbManager dbManager;
+
         public frmXrayOutpatient()
         {
             InitializeComponent();
@@ -30,7 +33,7 @@ namespace Health_Street
         private void show()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_PATIENT_XRAY");
+            dt =dbManager.getdata("SELECT * FROM 'OUT_PATIENT_XRAY'");
             dgvXrayOutPatient.AutoGenerateColumns = false;
             dgvXrayOutPatient.DataSource = dt;
         }
@@ -43,7 +46,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_PATIENT_XRAY WHERE Out_Patient_Xray_No LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%'");
+            dt =dbManager.getdata("SELECT * FROM 'OUT_PATIENT_XRAY' WHERE Out_Patient_Xray_No LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%'");
             dgvXrayOutPatient.DataSource = dt;
         }
 
@@ -68,7 +71,7 @@ namespace Health_Street
                 {
                     string sId = dgr.Cells[1].Value.ToString();
 
-                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM OUT_PATIENT_XRAY WHERE Out_Patient_Xray_No = '" + sId + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM 'OUT_PATIENT_XRAY' WHERE Out_Patient_Xray_No = '" + sId + "'");
                     c += 1;
                 }
             }

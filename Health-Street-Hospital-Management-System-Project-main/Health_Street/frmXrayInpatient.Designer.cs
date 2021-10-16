@@ -79,6 +79,7 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1112, 763);
             this.gunaPanel1.TabIndex = 10;
+            this.gunaPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaPanel1_Paint);
             // 
             // btnDelete
             // 
@@ -120,7 +121,7 @@
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
             this.txtSearch.Location = new System.Drawing.Point(38, 136);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 36);
             this.txtSearch.TabIndex = 8;
@@ -146,7 +147,7 @@
             this.lblGuardians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblGuardians.Location = new System.Drawing.Point(150, 6);
             this.lblGuardians.Name = "lblGuardians";
-            this.lblGuardians.Size = new System.Drawing.Size(470, 78);
+            this.lblGuardians.Size = new System.Drawing.Size(372, 62);
             this.lblGuardians.TabIndex = 6;
             this.lblGuardians.Text = "In Patients Xray";
             // 
