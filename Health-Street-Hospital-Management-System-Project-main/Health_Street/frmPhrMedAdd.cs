@@ -11,11 +11,14 @@ using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
 using System.IO;
+using SMDMySQLDBManager;
+
 
 namespace Health_Street
 {
     public partial class frmPhrMedAdd : Form
     {
+        private SmdDbManager dbManager;
         public frmPhrMedAdd(/*Form frm*/)
         {
             InitializeComponent();
@@ -110,7 +113,7 @@ namespace Health_Street
             else
             {
 
-                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO DRUG VALUES('" + txtDrugName.Text + "','" + txtTradeNumber.Text + "','" + txtStorePlace.Text + "','" + txtDrugPrice.Text + "')");
+                int i =dbManager.insrtUpdteDelt("INSERT INTO 'DRUG' VALUES('" + txtDrugName.Text + "','" + txtTradeNumber.Text + "','" + txtStorePlace.Text + "','" + txtDrugPrice.Text + "')");
 
                 if (i == 1)
                 {
