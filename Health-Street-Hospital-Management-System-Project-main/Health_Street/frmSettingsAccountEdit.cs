@@ -59,7 +59,7 @@ namespace Health_Street
 
             if (dbManager.chek("SELECT * FROM 'ACCOUNT' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader2 = dbManager.readAndGet("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                SqlDataReader reader2 = dbManager.readAndGet("SELECT * FROM 'ACCOUNT' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader2.Read())
                 {
                     txtGmail.Text = reader2["E_mail"].ToString();
@@ -240,8 +240,8 @@ namespace Health_Street
                 }
                 else
                 {
-                    int j =dbManager.insrtUpdteDelt("UPDATE LOG_IN_USER SET First_Name='"+ txtFirstName.Text + "',Middle_Name='"+ txtMiddleName.Text + "',Surname='"+ txtSurname.Text + "',User_Address='"+ txtAddress.Text + "',Img=@image, Gender='" + gender + "', User_Tele_No='"+ txtTpNumber.Text + "', Date_Of_Birth='"+ dof + "', Designation='"+ txtDesignation.Text + "', Salary='"+ txtSalary.Text + "' WHERE Roll_Id='"+frmLogin.passingRoll+"'", "@image", image);
-                    int i = dbManager.insrtUpdteDelt("UPDATE ACCOUNT SET E_mail = '" + txtGmail.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                    int j =dbManager.insrtUpdteDelt("UPDATE 'LOG_IN_USER' SET First_Name='"+ txtFirstName.Text + "',Middle_Name='"+ txtMiddleName.Text + "',Surname='"+ txtSurname.Text + "',User_Address='"+ txtAddress.Text + "',Img=@image, Gender='" + gender + "', User_Tele_No='"+ txtTpNumber.Text + "', Date_Of_Birth='"+ dof + "', Designation='"+ txtDesignation.Text + "', Salary='"+ txtSalary.Text + "' WHERE Roll_Id='"+frmLogin.passingRoll+"'", "@image", image);
+                    int i = dbManager.insrtUpdteDelt("UPDATE 'ACCOUNT' SET E_mail = '" + txtGmail.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
 
                     if (i == 1 && j == 1)
                     {

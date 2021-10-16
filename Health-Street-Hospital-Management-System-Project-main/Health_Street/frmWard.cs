@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmWard : Form
     {
+
         clsOpnChild chFrmObj = new clsOpnChild();
         public frmWard()
         {

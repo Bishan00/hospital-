@@ -19,13 +19,14 @@ namespace Health_Street
         public frmGuardian()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
 
-            
             for (int i = 1; i <= 8; i++)
             {
                 dgvPatient.Columns[i].ReadOnly = true;
             }
             showData();
+
         }
 
         private void frm_UpdateEventHandler(object sender, frmBilAdd.UpdateEvenetArgs args)

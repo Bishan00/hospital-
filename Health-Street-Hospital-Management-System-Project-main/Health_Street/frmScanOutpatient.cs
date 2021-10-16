@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmScanOutpatient : Form
     {
+        private SmdDbManager dbManager;
         public frmScanOutpatient()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_PATIENT_SCAN");
+            dt = dbManager.getdata("SELECT * FROM 'OUT_PATIENT_SCAN'");
             dgvOutScan.AutoGenerateColumns = false;
             dgvOutScan.DataSource = dt;
         }
@@ -44,7 +45,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_PATIENT_SCAN WHERE Out_Patient_Scan_No LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%' OR Issue_Date LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%'");
+            dt = dbManager.getdata("SELECT * FROM 'OUT_PATIENT_SCAN' WHERE Out_Patient_Scan_No LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%' OR Issue_Date LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%'");
             dgvOutScan.DataSource = dt;
         }
 
@@ -69,7 +70,7 @@ namespace Health_Street
                 {
                     string sId = dgr.Cells[1].Value.ToString();
 
-                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM OUT_PATIENT_SCAN WHERE Out_Patient_Scan_No = '" + sId + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM 'OUT_PATIENT_SCAN' WHERE Out_Patient_Scan_No = '" + sId + "'");
                     c += 1;
                 }
             }

@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmNewPassword : Form
     {
+        private SmdDbManager dbManager;
         string gmail = frmForgetPassword.mail;
         public frmNewPassword()
         {
@@ -55,8 +56,8 @@ namespace Health_Street
             }
             else
             {
-                string sqlcmd = "UPDATE ACCOUNT SET Login_Password = '" + txtComfrmPassword.Text + "' WHERE E_mail = '"+gmail+"'";
-                if (SQLConnectionManager.insrtUpdteDelt(sqlcmd) == 1)
+                string mysqlcmd = "UPDATE 'ACCOUNT' SET Login_Password = '" + txtComfrmPassword.Text + "' WHERE E_mail = '"+gmail+"'";
+                if (dbManager.insrtUpdteDelt(mysqlcmd) == 1)
                 {
                     MessageBox.Show("SUCCESSFULL");
                     new frmLogin().Show();

@@ -154,7 +154,7 @@ namespace Health_Street
                 case "PHARMACY_STAFF":
                     rememberMe();
                     this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 1);
+                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
                     passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
                     new frmPharmacy().Show();
                     if (txtPassword.Text == "87421LKJLH" || txtPassword.Text == "SAAYOM12B3" || txtPassword.Text == "KALUN2312D")
@@ -165,7 +165,7 @@ namespace Health_Street
                 case "WARD_STAFF":
                     rememberMe();
                     this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 1);
+                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
                     passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
                     new frmWard().Show();
                     if (txtPassword.Text == "ACHINSUDHARK" || txtPassword.Text == "SACHINI12D34")
@@ -176,8 +176,8 @@ namespace Health_Street
                 case "LABORATORY_STAFF":
                     rememberMe();
                     this.Hide();
-                    passingRoll = SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 1);
-                    passingRollName = SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
+                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
+                    passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
                     new frmLaboratory().Show();
                     if (txtPassword.Text == "12FGR453ASDD" || txtPassword.Text == "HOSTR4E3W21W" || txtPassword.Text == "SASHOSLAB190")
                     {
@@ -187,8 +187,8 @@ namespace Health_Street
                 case "SCAN_ROOM":
                     rememberMe();
                     this.Hide();
-                    passingRoll = SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 1);
-                    passingRollName = SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
+                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
+                    passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
                     new frmScanRoom().Show();
                     if (txtPassword.Text == "WAYOMI2346" || txtPassword.Text == "MADAWA1009" || txtPassword.Text == "NALIN65430" || txtPassword.Text == "NISHADI980" || txtPassword.Text == "CHATHURA00")
                     {
@@ -198,8 +198,8 @@ namespace Health_Street
                 case "XRAY_ROOM":
                     rememberMe();
                     this.Hide();
-                    passingRoll = SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 1);
-                    passingRollName = SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
+                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
+                    passingRollName = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 2);
                     new frmXray().Show();
                     if (txtPassword.Text == "LKLKHYT632" || txtPassword.Text == "LKHFUY763H" || txtPassword.Text == "09KJG54GSG" || txtPassword.Text == "NIHGY65412" || txtPassword.Text == "HU653VSJ6V")
                     {

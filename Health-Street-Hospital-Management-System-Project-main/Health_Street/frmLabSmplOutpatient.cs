@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmLabSmplOutpatient : Form
     {
+        private SmdDbManager dbManager;
         public frmLabSmplOutpatient()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_SAMPLE");
+            dt = dbManager.getdata("SELECT * FROM 'OUT_SAMPLE'");
             dgvOutSample.AutoGenerateColumns = false;
             dgvOutSample.DataSource = dt;
         }
@@ -35,7 +37,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_SAMPLE WHERE Sample_Out_Number LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%' OR Sample_Type LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' OR Laboratory_Staff_Id LIKE '" + txtSearch.text + "%' ");
+            dt = dbManager.getdata("SELECT * FROM 'OUT_SAMPLE' WHERE Sample_Out_Number LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%' OR Sample_Type LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' OR Laboratory_Staff_Id LIKE '" + txtSearch.text + "%' ");
             dgvOutSample.DataSource = dt;
         }
 
@@ -65,7 +67,7 @@ namespace Health_Street
                 {
                     string sId = dgr.Cells[1].Value.ToString();
 
-                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM OUT_SAMPLE WHERE Sample_Out_Number = '" + sId + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM 'OUT_SAMPLE' WHERE Sample_Out_Number = '" + sId + "'");
                     c += 1;
                 }
             }
