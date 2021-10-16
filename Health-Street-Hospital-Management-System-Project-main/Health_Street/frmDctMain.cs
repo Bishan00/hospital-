@@ -20,6 +20,9 @@ namespace Health_Street
         public frmDctMain()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+
 
             if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
