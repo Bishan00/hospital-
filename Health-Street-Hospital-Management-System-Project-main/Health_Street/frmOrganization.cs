@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmOrganization : Form
     {
+        private SmdDbManager dbManager;
         public frmOrganization()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM ORGANIZATION");
+            dt = dbManager.getdata("SELECT * FROM 'ORGANIZATION'");
             dgvPatient.AutoGenerateColumns = false;
             dgvPatient.DataSource = dt;
         }
@@ -53,7 +54,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM ORGANIZATION WHERE Goverment_Reg_Number LIKE '" + txtSearch.text + "%' OR Organization_Name LIKE '" + txtSearch.text + "%' OR Bill_Number LIKE '" + txtSearch.text + "%'");
+            dt = dbManager.getdata("SELECT * FROM 'ORGANIZATION' WHERE Goverment_Reg_Number LIKE '" + txtSearch.text + "%' OR Organization_Name LIKE '" + txtSearch.text + "%' OR Bill_Number LIKE '" + txtSearch.text + "%'");
             dgvPatient.DataSource = dt;
         }
 
@@ -83,7 +84,7 @@ namespace Health_Street
             {
                 if (Convert.ToBoolean(dgr.Cells[0].Value) == true)
                 {
-                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM ORGANIZATION WHERE Goverment_Reg_Number = '" + dgr.Cells[1].Value.ToString() + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM 'ORGANIZATION' WHERE Goverment_Reg_Number = '" + dgr.Cells[1].Value.ToString() + "'");
                     c += 1;
                 }
             }

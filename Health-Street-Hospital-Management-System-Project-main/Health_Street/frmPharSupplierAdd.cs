@@ -17,6 +17,7 @@ namespace Health_Street
 {
     public partial class frmPharSupplierAdd : Form
     {
+        private SmdDbManager dbManager;
         public frmPharSupplierAdd(/*Form frm*/)
         {
             InitializeComponent();
@@ -110,7 +111,7 @@ namespace Health_Street
             else
             {
 
-                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO DRUG_SUPPLIER VALUES('" + txtSuppName.Text + "','" + txtManufaCompany.Text + "','" + txtManufaCountry.Text + "','" + txtManufaRegNumber.Text + "')");
+                int i = dbManager.insrtUpdteDelt("INSERT INTO 'DRUG_SUPPLIER' VALUES('" + txtSuppName.Text + "','" + txtManufaCompany.Text + "','" + txtManufaCountry.Text + "','" + txtManufaRegNumber.Text + "')");
 
                 if (i == 1)
                 {

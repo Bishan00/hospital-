@@ -13,6 +13,7 @@ namespace Health_Street
 {
     public partial class frmPhrCstmr : Form
     {
+        private SmdDbManager dbManager;
         public frmPhrCstmr()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM HOSPITAL_CUSTOMER");
+            dt = dbManager.getdata("SELECT * FROM 'HOSPITAL_CUSTOMER'");
             dgvCustomer.AutoGenerateColumns = false;
             dgvCustomer.DataSource = dt;
         }
@@ -35,10 +36,9 @@ namespace Health_Street
 
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");.getdata("SELECT * FROM CUSTOMER WHERE Invoice_Number LIKE '" + txtSearch.text + "%' OR Pharmacy_Invoice_Number LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' OR Pharmacy_Staff_Id LIKE '" + txtSearch.text + "%' ");
-            dgvCustomer.DataSource = dt;
+
         }
+       
 
         private void dgvCustomer_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
