@@ -24,6 +24,9 @@ namespace Health_Street
             InitializeComponent();
             tmrDateTime.Start();
             txtDrugName.Focus();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+
         }
 
         public delegate void UpdateDelegate(Object sender, UpdateEvenetArgs args);

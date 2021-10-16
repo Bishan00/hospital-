@@ -17,6 +17,9 @@ namespace Health_Street
         public frmPhrMdcn()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+
             for (int i = 1; i <= 9; i++)
             {
                 dgvMedicine.Columns[i].ReadOnly = true;

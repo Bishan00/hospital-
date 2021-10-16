@@ -22,6 +22,9 @@ namespace Health_Street
                 dgvSupplier.Columns[i].ReadOnly = true;
             }
             showData();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+
         }
 
         private void showData()

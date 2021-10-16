@@ -17,6 +17,8 @@ namespace Health_Street
         public frmScanInpatient()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
             for (int i = 1; i <= 8; i++)
             {
                 dgvInScan.Columns[i].ReadOnly = true;

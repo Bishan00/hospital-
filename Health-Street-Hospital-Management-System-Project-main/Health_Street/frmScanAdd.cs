@@ -21,6 +21,7 @@ namespace Health_Street
         public frmScanAdd(/*Form frm*/)
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
             tmrDateTime.Start();
             txtAdNumber.Focus();
         }
