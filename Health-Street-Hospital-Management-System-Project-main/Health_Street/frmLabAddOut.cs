@@ -21,6 +21,8 @@ namespace Health_Street
         public frmLabAddOut(/*Form frm*/)
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
             tmrDateTime.Start();
             txtPatientId.Focus();
             cmbSample.SelectedItem = null;

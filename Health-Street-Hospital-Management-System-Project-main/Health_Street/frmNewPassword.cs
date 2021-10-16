@@ -19,6 +19,9 @@ namespace Health_Street
         {
             InitializeComponent();
             txtnewPassword.Focus();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+
         }
 
         private void frmNewPassword_Load(object sender, EventArgs e)

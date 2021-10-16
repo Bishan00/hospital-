@@ -17,6 +17,9 @@ namespace Health_Street
         public frmPatientDetails()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+
             MessageBox.Show(frmDctInpatient.admitionNumber);
             show();
         }
