@@ -101,7 +101,7 @@ namespace Health_Street
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string a = dbManager.ReadValue("SELECT * FROM 'ACCOUNT' WHERE Login_Username = '" + txtUsername.Text + "' AND Login_Password = '" + txtPassword.Text + "' ");
+            string a = dbManager.ReadValue("SELECT * FROM 'ACCOUNT' WHERE Login_Username = '" + txtUsername.Text + "' AND Login_Password = '" + txtPassword.Text + "' ",2);
 
             switch (a)
             {
