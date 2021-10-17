@@ -225,6 +225,11 @@ namespace Health_Street
 
         }
 
+        private void gunaPictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void lnkLblForgotPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();

@@ -49,10 +49,10 @@ namespace Health_Street
         {
             if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
-                if (reader1.Read())
+               // SqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                //if (reader1.Read())
                 {
-                    lblXrayOfficer.Text = "HI, " + reader1[2].ToString();
+                    //lblXrayOfficer.Text = "HI, " + reader1[2].ToString();
 
                 }
             }
