@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 
 
@@ -25,7 +26,7 @@ namespace Health_Street
 
             if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                 SqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblBillOfficer.Text = "Hi, " + reader1[2].ToString();
