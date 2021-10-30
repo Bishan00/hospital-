@@ -7,20 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmLogin : Form
     {
-
-        public static string passingRoll,passingRollName;
+        public static string passingRoll, passingRollName;
         private SmdDbManager dbManager;
         public frmLogin()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
             LoadCredentials();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
         }
 
         private const int CS_Dropshadow = 0x00020000;
@@ -76,7 +77,7 @@ namespace Health_Street
 
         private void rememberMe()
         {
-            if(chkbxRememberMe.Checked == false)
+            if (chkbxRememberMe.Checked == false)
             {
                 Properties.Settings.Default.Username = "";
                 Properties.Settings.Default.Password = "";
@@ -92,122 +93,106 @@ namespace Health_Street
 
         void LoadCredentials()
         {
-            if(Properties.Settings.Default.Username != string.Empty)
+            if (Properties.Settings.Default.Username != string.Empty)
             {
                 txtUsername.Text = Properties.Settings.Default.Username;
                 txtPassword.Text = Properties.Settings.Default.Password;
                 chkbxRememberMe.Checked = true;
             }
         }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string a = dbManager.ReadValue("SELECT * FROM 'account' WHERE Login_Username = '" + txtUsername.Text + "' AND Login_Password = '" + txtPassword.Text + "' ",1);
+            //MessageBox.Show("");
+            string a = dbManager.ReadValue("SELECT * FROM account WHERE Login_Username = '" + txtUsername.Text + "' AND Login_Password = '" + txtPassword.Text + "' ", 1);
 
             switch (a)
             {
                 case "DOCTOR":
                     rememberMe();
                     this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text,3,1);
-                    passingRollName = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 2);
-                    new frmDctMain().Show();
-                    if (txtPassword.Text == "RUBERU1212" || txtPassword.Text == "LOSALA45DO" || txtPassword.Text == "HARENDRAQ1" || txtPassword.Text == "SANJAYA123" || txtPassword.Text == "WARUNA2312")
-                    {
-                        new Health_Street.frmTranceparentBG(new frmChangePassword());
-                    }
-
-
-                    break;
-                case "CHANNELING_OFFICER":
-                    rememberMe();
-                    this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 2);
-                    new frmChanlingOfficer().Show();
-                    if (txtPassword.Text == "SARANGA123" || txtPassword.Text == "THUSHDASA1" || txtPassword.Text == "RANGIPRIYA" || txtPassword.Text == "SANJU12341" || txtPassword.Text == "123NILANTH")
-                    {
-                        new Health_Street.frmTranceparentBG(new frmChangePassword());
-                    }
-                    break;
-                case "ADMISSION_OFFICER":
-                    rememberMe();
-                    this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 2);
+                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 2, 0);
+                    passingRollName = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 2, 1);
                     new frmAddmitionOfficer().Show();
-                    if (txtPassword.Text == "123@HF8646" || txtPassword.Text == "9H5D431SAD" || txtPassword.Text == "8907GFDARH" || txtPassword.Text == "S90MGCDYNU" || txtPassword.Text == "LIKU76543D")
+                    if (txtPassword.Text == "hospharm0019")
                     {
                         new Health_Street.frmTranceparentBG(new frmChangePassword());
                     }
                     break;
-                case "BILLING_OFFICER":
+                case "Laboratorian":
                     rememberMe();
                     this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 2);
-                    new frmBillingOfficer().Show();
-                    if (txtPassword.Text == "KI7431DHDF" || txtPassword.Text == "F54FJYRCBJ" || txtPassword.Text == "0909NJG65B" || txtPassword.Text == "S86BC642CY" || txtPassword.Text == "097VFDEWH6")
-                    {
-                        new Health_Street.frmTranceparentBG(new frmChangePassword());
-                    }
-                    break;
-                case "PHARMACY_STAFF":
-                    rememberMe();
-                    this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
-                    new frmPharmacy().Show();
-                    if (txtPassword.Text == "87421LKJLH" || txtPassword.Text == "SAAYOM12B3" || txtPassword.Text == "KALUN2312D")
-                    {
-                        new Health_Street.frmTranceparentBG(new frmChangePassword());
-                    }
-                    break;
-                case "WARD_STAFF":
-                    rememberMe();
-                    this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
-                    new frmWard().Show();
-                    if (txtPassword.Text == "ACHINSUDHARK" || txtPassword.Text == "SACHINI12D34")
-                    {
-                        new Health_Street.frmTranceparentBG(new frmChangePassword());
-                    }
-                    break;
-                case "LABORATORY_STAFF":
-                    rememberMe();
-                    this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
                     new frmLaboratory().Show();
-                    if (txtPassword.Text == "12FGR453ASDD" || txtPassword.Text == "HOSTR4E3W21W" || txtPassword.Text == "SASHOSLAB190")
+                    if (txtPassword.Text == "hoslabo00212")
                     {
                         new Health_Street.frmTranceparentBG(new frmChangePassword());
                     }
                     break;
-                case "SCAN_ROOM":
+                case "Channeling Officer":
                     rememberMe();
                     this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
-                    new frmScanRoom().Show();
-                    if (txtPassword.Text == "WAYOMI2346" || txtPassword.Text == "MADAWA1009" || txtPassword.Text == "NALIN65430" || txtPassword.Text == "NISHADI980" || txtPassword.Text == "CHATHURA00")
+                    new frmChanlingOfficer().Show();
+                    if (txtPassword.Text == "hoschan00346")
                     {
                         new Health_Street.frmTranceparentBG(new frmChangePassword());
                     }
                     break;
-                case "XRAY_ROOM":
+                case "Admission Officer":
                     rememberMe();
                     this.Hide();
-                    passingRoll = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 1);
-                    passingRollName = dbManager.getValue("SELECT * FROM 'ACCOUNT'", txtUsername.Text, 3, 2);
-                    new frmXray().Show();
-                    if (txtPassword.Text == "LKLKHYT632" || txtPassword.Text == "LKHFUY763H" || txtPassword.Text == "09KJG54GSG" || txtPassword.Text == "NIHGY65412" || txtPassword.Text == "HU653VSJ6V")
+                    new frmAddmitionOfficer().Show();
+                    if (txtPassword.Text == "hosadmit0019")
+                    {
+                        new Health_Street.frmTranceparentBG(new frmChangePassword());
+                    }
+                    break;
+                case "Billing Officer":
+                    rememberMe();
+                    this.Hide();
+                    new frmBillingOfficer().Show();
+                    if (txtPassword.Text == "hosbill00878")
+                    {
+                        new Health_Street.frmTranceparentBG(new frmChangePassword());
+                    }
+                    break;
+                case "Paediatrician":
+                    rememberMe();
+                    this.Hide();
+                    new frmDctMain().Show();
+                    if (txtPassword.Text == "hosdoc123406")
+                    {
+                        new Health_Street.frmTranceparentBG(new frmChangePassword());
+                    }
+                    break;
+                case "Paediatric Surgeon":
+                    rememberMe();
+                    this.Hide();
+                    new frmLaboratory().Show();
+                    if (txtPassword.Text == "hossurg87655")
+                    {
+                        new Health_Street.frmTranceparentBG(new frmChangePassword());
+                    }
+                    break;
+                case "Paediatric Oncologist":
+                    rememberMe();
+                    this.Hide();
+                    new frmLaboratory().Show();
+                    if (txtPassword.Text == "hosonco34236")
+                    {
+                        new Health_Street.frmTranceparentBG(new frmChangePassword());
+                    }
+                    break;
+                case "Paediatric Neurologist":
+                    rememberMe();
+                    this.Hide();
+                    new frmLaboratory().Show();
+                    if (txtPassword.Text == "hosneuro0087")
                     {
                         new Health_Street.frmTranceparentBG(new frmChangePassword());
                     }
                     break;
                 case "Error":
-                    HSMessageBox.Show("THE USERNAME OR PASSWORD \nTHAT YOU HAVE \nENTERED DOESN'T MATCH", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HSMessageBox.Show("The username or password \n that you've entered doesn't match ", "Loggin Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsername.Clear();
                     txtPassword.Clear();
                     txtUsername.Focus();
@@ -225,11 +210,6 @@ namespace Health_Street
 
         }
 
-        private void gunaPictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lnkLblForgotPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -237,3 +217,4 @@ namespace Health_Street
         }
     }
 }
+
