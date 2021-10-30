@@ -26,12 +26,12 @@ namespace Health_Street
 
             if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-               MySqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
-                if (reader1.Read())
-                {
-                    lblBillOfficer.Text = "Hi, " + reader1[2].ToString();
+               string firstName = dbManager.ReadValue("SELECT * FROM 'log_in_user'",2);
+                //if (reader1.Read())
+                //{
+                lblBillOfficer.Text = "Hi, " + firstName;
 
-                }
+                //}
             }
 
             rowCountGuardian();
