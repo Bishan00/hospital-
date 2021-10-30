@@ -29,7 +29,7 @@ namespace Health_Street
                MySqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
-                    lblBillOfficer.Text = "Hi, " + reader[2].ToString();
+                    lblBillOfficer.Text = "Hi, " + reader1[2].ToString();
 
                 }
             }
@@ -48,7 +48,7 @@ namespace Health_Street
         {
             DataTable dt = new DataTable();
             dt = dbManager.getdata("SELECT * FROM 'ORGANIZATION'");
-            lblOrganization.Text = "+" + dt.Rows.Count.ToString();
+            lblOrganization.Text = "-" + dt.Rows.Count.ToString();
         }
 
         private void ShowData()
