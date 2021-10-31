@@ -8,14 +8,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmADaddPatient : Form
     {
+        private SmdDbManager dbManager;
         public frmADaddPatient(/*Form frm*/)
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             tmrDateTime.Start();
             comboBlood();
             comboDoctor();
@@ -67,7 +71,7 @@ namespace Health_Street
         private void comboDoctor()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT S_Doctor_Name FROM SPECIALIST_DOCTOR");
+            dt = dbManager.getdata("SELECT S_Doctor_Name FROM SPECIALIST_DOCTOR");
 
             foreach(DataRow dr in dt.Rows)
             {
@@ -78,7 +82,7 @@ namespace Health_Street
         private void comboWard()
         {
             DataTable dt2 = new DataTable();
-            dt2 = SQLConnectionManager.getdata("SELECT Ward_Name FROM WARD");
+            dt2 = dbManager.getdata("SELECT Ward_Name FROM WARD");
 
             foreach (DataRow dr in dt2.Rows)
             {
@@ -89,7 +93,7 @@ namespace Health_Street
         private void comboRoom()
         {
             DataTable dt3 = new DataTable();
-            dt3 = SQLConnectionManager.getdata("SELECT Room_Name FROM ROOM");
+            dt3 = dbManager.getdata("SELECT Room_Name FROM ROOM");
 
             foreach (DataRow dr in dt3.Rows)
             {
@@ -344,12 +348,12 @@ namespace Health_Street
             }
             else
             {
-                string addmitionOffId = SQLConnectionManager.getValue("SELECT * FROM ADMISSION_OFFICER", frmLogin.passingRoll,10,1);
+                string addmitionOffId = dbManager.getValue("SELECT * FROM ADMISSION_OFFICER", frmLogin.passingRoll,10,1);
 
 
-                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "','B0002')");
-                string guardianId = SQLConnectionManager.getValue("SELECT * FROM GUARDIAN", txtNic.Text, 2, 1);
-                int j = SQLConnectionManager.insrtUpdteDelt("INSERT INTO PATIENT_PRIVATE_DETAIL VALUES ('" + txtFirstname.Text + "','" + txtMiddleName.Text + "','" + txtSurname.Text + "','" + gender + "','" + dtpDOF.Value.ToString("MM-dd-yyy") + "','" + age + "','" + cmbBlood.Text.ToString() + "','" + guardianId + "','" + specialD + "')");
+                int i = dbManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "','B0002')");
+                string guardianId = dbManager.getValue("SELECT * FROM GUARDIAN", txtNic.Text, 2, 1);
+                int j = dbManager.insrtUpdteDelt("INSERT INTO PATIENT_PRIVATE_DETAIL VALUES ('" + txtFirstname.Text + "','" + txtMiddleName.Text + "','" + txtSurname.Text + "','" + gender + "','" + dtpDOF.Value.ToString("MM-dd-yyy") + "','" + age + "','" + cmbBlood.Text.ToString() + "','" + guardianId + "','" + specialD + "')");
 
                 if (i == 1 && j == 1)
                 {
@@ -490,7 +494,7 @@ namespace Health_Street
         private void cmbSpecialist_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM SPECIALIST_DOCTOR");
+            dt = dbManager.getdata("SELECT * FROM SPECIALIST_DOCTOR");
 
             if (!(cmbSpecialist.SelectedIndex == -1))
             {

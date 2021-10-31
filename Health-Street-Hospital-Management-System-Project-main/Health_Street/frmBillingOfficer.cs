@@ -16,7 +16,6 @@ namespace Health_Street
         public frmBillingOfficer()
         {
             InitializeComponent();
-
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
         }

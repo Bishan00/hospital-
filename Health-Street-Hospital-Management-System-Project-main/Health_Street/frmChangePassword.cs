@@ -2,14 +2,18 @@
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmChangePassword : Form
     {
+        private SmdDbManager dbManager;
         public frmChangePassword()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
         }
 
         private void frmChangePassword_Load(object sender, EventArgs e)
@@ -269,8 +273,8 @@ namespace Health_Street
             else
             {
 
-                int i = SQLConnectionManager.insrtUpdteDelt("UPDATE LOG_IN_USER SET First_Name = '" + txtFirstName.Text + "',Surname = '" + txtLastName.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
-                int j = SQLConnectionManager.insrtUpdteDelt("UPDATE ACCOUNT SET Login_Password = '"+txtComfirmPassword.Text+"',E_mail='"+txtGmail.Text+ "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                int i = dbManager.insrtUpdteDelt("UPDATE LOG_IN_USER SET First_Name = '" + txtFirstName.Text + "',Surname = '" + txtLastName.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                int j = dbManager.insrtUpdteDelt("UPDATE ACCOUNT SET Login_Password = '"+txtComfirmPassword.Text+"',E_mail='"+txtGmail.Text+ "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (i == 1 && j==1)
                 {
                     MessageBox.Show("SUCESSFULL");
