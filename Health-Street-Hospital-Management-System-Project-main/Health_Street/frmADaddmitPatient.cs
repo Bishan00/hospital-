@@ -7,19 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmADaddmitPatient : Form
     {
-        private SmdDbManager dbManager;
         public frmADaddmitPatient()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
 
-
+            
             for (int i = 1; i <= 13; i++)
             {
                 dgvPatient.Columns[i].ReadOnly = true;
@@ -30,7 +27,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'PATIENT_PRIVATE_DETAIL,GUARDIAN WHERE PATIENT_PRIVATE_DETAIL.Guardian_Id_Number' = GUARDIAN.Guardian_Id_Number");
+            dt = SQLConnectionManager.getdata("SELECT * FROM PATIENT_PRIVATE_DETAIL,GUARDIAN WHERE PATIENT_PRIVATE_DETAIL.Guardian_Id_Number = GUARDIAN.Guardian_Id_Number");
             dgvPatient.AutoGenerateColumns = false;
             dgvPatient.DataSource = dt;
         }
@@ -55,7 +52,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'PATIENT_PRIVATE_DETAIL,GUARDIAN' WHERE Admission_Number LIKE '" + txtSearch.text + "%' OR First_Name LIKE '" + txtSearch.text + "%' OR Middle_Name LIKE '" + txtSearch.text + "%'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM PATIENT_PRIVATE_DETAIL,GUARDIAN WHERE Admission_Number LIKE '" + txtSearch.text + "%' OR First_Name LIKE '" + txtSearch.text + "%' OR Middle_Name LIKE '" + txtSearch.text + "%'");
             dgvPatient.DataSource = dt;
         }
 
@@ -85,9 +82,9 @@ namespace Health_Street
             {
                 if (Convert.ToBoolean(dgr.Cells[0].Value) == true)
                 {
-                    string GId = dbManager.getValue("SELECT * FROM 'GUARDIAN'", dgr.Cells[9].Value.ToString(),2,1);
+                    string GId = SQLConnectionManager.getValue("SELECT * FROM GUARDIAN", dgr.Cells[9].Value.ToString(),2,1);
                     
-                    n = dbManager.insrtUpdteDelt("DELETE FROM GUARDIAN WHERE 'Guardian_Id_Number' = '"+GId+"'");
+                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM GUARDIAN WHERE Guardian_Id_Number = '"+GId+"'");
                     c += 1;
                 }
             }

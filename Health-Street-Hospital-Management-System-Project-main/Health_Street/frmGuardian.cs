@@ -8,25 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmGuardian : Form
     {
-        private SmdDbManager dbManager;
+
         public static string guardianId;
         public frmGuardian()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
 
+            
             for (int i = 1; i <= 8; i++)
             {
                 dgvPatient.Columns[i].ReadOnly = true;
             }
             showData();
-
         }
 
         private void frm_UpdateEventHandler(object sender, frmBilAdd.UpdateEvenetArgs args)
@@ -36,7 +34,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'GUARDIAN'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM GUARDIAN");
             dgvPatient.AutoGenerateColumns = false;
             dgvPatient.DataSource = dt;
         }
@@ -58,7 +56,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'GUARDIAN' WHERE Guardian_Id_Number LIKE '" + txtSearch.text + "%' OR Guardian_Name LIKE '" + txtSearch.text + "%' OR Guardian_Address LIKE '" + txtSearch.text + "%' OR Guardian_NIC LIKE '" + txtSearch.text + "%'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM GUARDIAN WHERE Guardian_Id_Number LIKE '" + txtSearch.text + "%' OR Guardian_Name LIKE '" + txtSearch.text + "%' OR Guardian_Address LIKE '" + txtSearch.text + "%' OR Guardian_NIC LIKE '" + txtSearch.text + "%'");
             dgvPatient.DataSource = dt;
         }
 
@@ -100,7 +98,7 @@ namespace Health_Street
             {
                 if (Convert.ToBoolean(dgr.Cells[0].Value) == true)
                 {
-                    n = dbManager.insrtUpdteDelt("DELETE FROM 'IN_PATIENT' WHERE Admission_Number = '" + dgr.Cells[1].Value.ToString() + "'");
+                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM IN_PATIENT WHERE Admission_Number = '" + dgr.Cells[1].Value.ToString() + "'");
                     c += 1;
                 }
             }

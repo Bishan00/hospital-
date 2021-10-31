@@ -93,7 +93,7 @@
             this.gunaLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaLabel9.Location = new System.Drawing.Point(32, 114);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(157, 32);
+            this.gunaLabel9.Size = new System.Drawing.Size(194, 41);
             this.gunaLabel9.TabIndex = 1;
             this.gunaLabel9.Text = "Out-Patients";
             // 
@@ -104,7 +104,7 @@
             this.lblOutpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblOutpatient.Location = new System.Drawing.Point(28, 33);
             this.lblOutpatient.Name = "lblOutpatient";
-            this.lblOutpatient.Size = new System.Drawing.Size(114, 65);
+            this.lblOutpatient.Size = new System.Drawing.Size(142, 81);
             this.lblOutpatient.TabIndex = 0;
             this.lblOutpatient.Text = "+78";
             // 
@@ -131,7 +131,7 @@
             this.gunaLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
             this.gunaLabel8.Location = new System.Drawing.Point(28, 114);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(139, 32);
+            this.gunaLabel8.Size = new System.Drawing.Size(171, 41);
             this.gunaLabel8.TabIndex = 1;
             this.gunaLabel8.Text = "In-Patients";
             // 
@@ -142,7 +142,7 @@
             this.lblInpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
             this.lblInpatient.Location = new System.Drawing.Point(30, 33);
             this.lblInpatient.Name = "lblInpatient";
-            this.lblInpatient.Size = new System.Drawing.Size(93, 65);
+            this.lblInpatient.Size = new System.Drawing.Size(114, 81);
             this.lblInpatient.TabIndex = 0;
             this.lblInpatient.Text = "+11";
             // 
@@ -168,7 +168,7 @@
             this.gunaLabel6.ForeColor = System.Drawing.Color.White;
             this.gunaLabel6.Location = new System.Drawing.Point(120, 31);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(114, 18);
+            this.gunaLabel6.Size = new System.Drawing.Size(151, 23);
             this.gunaLabel6.TabIndex = 0;
             this.gunaLabel6.Text = "Appoinments";
             // 
@@ -187,7 +187,6 @@
             this.pnlBanner.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.pnlBanner.Size = new System.Drawing.Size(584, 198);
             this.pnlBanner.TabIndex = 13;
-            this.pnlBanner.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBanner_Paint);
             // 
             // gunaLabel2
             // 
@@ -196,7 +195,7 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.gunaLabel2.Location = new System.Drawing.Point(35, 92);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(295, 38);
+            this.gunaLabel2.Size = new System.Drawing.Size(365, 46);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
@@ -207,7 +206,7 @@
             this.lblDCTname.ForeColor = System.Drawing.Color.White;
             this.lblDCTname.Location = new System.Drawing.Point(34, 42);
             this.lblDCTname.Name = "lblDCTname";
-            this.lblDCTname.Size = new System.Drawing.Size(115, 23);
+            this.lblDCTname.Size = new System.Drawing.Size(139, 28);
             this.lblDCTname.TabIndex = 0;
             this.lblDCTname.Text = "Hi, Doctor";
             // 

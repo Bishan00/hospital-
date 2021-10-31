@@ -7,18 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmBillingOfficer : Form
     {
-        private SmdDbManager dbManager;
         clsOpnChild chld = new clsOpnChild();
         public frmBillingOfficer()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;

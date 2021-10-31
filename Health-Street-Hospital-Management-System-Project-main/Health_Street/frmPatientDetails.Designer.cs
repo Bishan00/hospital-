@@ -65,10 +65,6 @@
             this.lblPname = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.dgvReports = new Guna.UI.WinForms.GunaDataGridView();
-            this.In_Patient_Report_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Report = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Issue_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Issue_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaGroupBox2 = new Guna.UI.WinForms.GunaGroupBox();
             this.dgvMedicine = new Guna.UI.WinForms.GunaDataGridView();
             this.Drug_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +72,10 @@
             this.Given_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Given_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.In_Patient_Report_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Report = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Issue_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Issue_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDrag.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
             this.gunaElipsePanel2.SuspendLayout();
@@ -98,9 +98,8 @@
             this.pnlDrag.Controls.Add(this.btnClose);
             this.pnlDrag.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDrag.Location = new System.Drawing.Point(0, 0);
-            this.pnlDrag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlDrag.Name = "pnlDrag";
-            this.pnlDrag.Size = new System.Drawing.Size(1040, 51);
+            this.pnlDrag.Size = new System.Drawing.Size(1392, 63);
             this.pnlDrag.TabIndex = 1;
             // 
             // btnClose
@@ -110,13 +109,12 @@
             this.btnClose.AnimationSpeed = 0.03F;
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconSize = 15F;
-            this.btnClose.Location = new System.Drawing.Point(981, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(1313, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnClose.OnHoverIconColor = System.Drawing.Color.White;
             this.btnClose.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(112)))), ((int)(((byte)(122)))));
-            this.btnClose.Size = new System.Drawing.Size(59, 35);
+            this.btnClose.Size = new System.Drawing.Size(79, 43);
             this.btnClose.TabIndex = 2;
             // 
             // drag
@@ -130,10 +128,9 @@
             this.gunaElipsePanel1.Controls.Add(this.gunaElipsePanel2);
             this.gunaElipsePanel1.Controls.Add(this.gunaGroupBox4);
             this.gunaElipsePanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 51);
-            this.gunaElipsePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 63);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(346, 562);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(461, 691);
             this.gunaElipsePanel1.TabIndex = 2;
             // 
             // gunaElipsePanel2
@@ -149,10 +146,9 @@
             this.gunaElipsePanel2.Controls.Add(this.lblReason);
             this.gunaElipsePanel2.Controls.Add(this.gunaLabel11);
             this.gunaElipsePanel2.Controls.Add(this.gunaLabel7);
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(22, 206);
-            this.gunaElipsePanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(30, 254);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
-            this.gunaElipsePanel2.Size = new System.Drawing.Size(311, 329);
+            this.gunaElipsePanel2.Size = new System.Drawing.Size(415, 405);
             this.gunaElipsePanel2.TabIndex = 4;
             // 
             // gunaPanel3
@@ -162,9 +158,8 @@
             this.gunaPanel3.Controls.Add(this.gunaLinePanel1);
             this.gunaPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel3.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaPanel3.Name = "gunaPanel3";
-            this.gunaPanel3.Size = new System.Drawing.Size(311, 53);
+            this.gunaPanel3.Size = new System.Drawing.Size(415, 65);
             this.gunaPanel3.TabIndex = 6;
             // 
             // gunaLabel6
@@ -172,10 +167,9 @@
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.gunaLabel6.Location = new System.Drawing.Point(3, 12);
-            this.gunaLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel6.Location = new System.Drawing.Point(4, 15);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(142, 28);
+            this.gunaLabel6.Size = new System.Drawing.Size(176, 35);
             this.gunaLabel6.TabIndex = 5;
             this.gunaLabel6.Text = "Guardian Info";
             // 
@@ -185,27 +179,24 @@
             this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel1.Location = new System.Drawing.Point(0, -1);
-            this.gunaLinePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(313, 8);
+            this.gunaLinePanel1.Size = new System.Drawing.Size(417, 10);
             this.gunaLinePanel1.TabIndex = 4;
             // 
             // gunaPanel2
             // 
             this.gunaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.gunaPanel2.Location = new System.Drawing.Point(0, 222);
-            this.gunaPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPanel2.Location = new System.Drawing.Point(0, 273);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(313, 4);
+            this.gunaPanel2.Size = new System.Drawing.Size(417, 5);
             this.gunaPanel2.TabIndex = 5;
             // 
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 125);
-            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 154);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(313, 4);
+            this.gunaPanel1.Size = new System.Drawing.Size(417, 5);
             this.gunaPanel1.TabIndex = 5;
             // 
             // gunaLabel8
@@ -213,10 +204,9 @@
             this.gunaLabel8.AutoSize = true;
             this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.gunaLabel8.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel8.Location = new System.Drawing.Point(20, 248);
-            this.gunaLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel8.Location = new System.Drawing.Point(26, 305);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(82, 21);
+            this.gunaLabel8.Size = new System.Drawing.Size(101, 28);
             this.gunaLabel8.TabIndex = 3;
             this.gunaLabel8.Text = "Room No";
             // 
@@ -225,10 +215,9 @@
             this.lblWard.AutoSize = true;
             this.lblWard.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblWard.ForeColor = System.Drawing.Color.Black;
-            this.lblWard.Location = new System.Drawing.Point(19, 177);
-            this.lblWard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWard.Location = new System.Drawing.Point(25, 218);
             this.lblWard.Name = "lblWard";
-            this.lblWard.Size = new System.Drawing.Size(0, 19);
+            this.lblWard.Size = new System.Drawing.Size(0, 23);
             this.lblWard.TabIndex = 3;
             // 
             // lblRoom
@@ -236,10 +225,9 @@
             this.lblRoom.AutoSize = true;
             this.lblRoom.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblRoom.ForeColor = System.Drawing.Color.Black;
-            this.lblRoom.Location = new System.Drawing.Point(20, 280);
-            this.lblRoom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRoom.Location = new System.Drawing.Point(27, 344);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(0, 19);
+            this.lblRoom.Size = new System.Drawing.Size(0, 23);
             this.lblRoom.TabIndex = 3;
             // 
             // lblReason
@@ -247,10 +235,9 @@
             this.lblReason.AutoSize = true;
             this.lblReason.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblReason.ForeColor = System.Drawing.Color.Black;
-            this.lblReason.Location = new System.Drawing.Point(20, 93);
-            this.lblReason.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReason.Location = new System.Drawing.Point(27, 114);
             this.lblReason.Name = "lblReason";
-            this.lblReason.Size = new System.Drawing.Size(0, 19);
+            this.lblReason.Size = new System.Drawing.Size(0, 23);
             this.lblReason.TabIndex = 3;
             // 
             // gunaLabel11
@@ -258,10 +245,9 @@
             this.gunaLabel11.AutoSize = true;
             this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel11.Location = new System.Drawing.Point(20, 154);
-            this.gunaLabel11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel11.Location = new System.Drawing.Point(26, 190);
             this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(77, 21);
+            this.gunaLabel11.Size = new System.Drawing.Size(96, 28);
             this.gunaLabel11.TabIndex = 3;
             this.gunaLabel11.Text = "Ward No";
             // 
@@ -270,10 +256,9 @@
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.gunaLabel7.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel7.Location = new System.Drawing.Point(20, 70);
-            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel7.Location = new System.Drawing.Point(26, 86);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(65, 21);
+            this.gunaLabel7.Size = new System.Drawing.Size(80, 28);
             this.gunaLabel7.TabIndex = 3;
             this.gunaLabel7.Text = "Reason";
             // 
@@ -295,10 +280,9 @@
             this.gunaGroupBox4.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaGroupBox4.LineTop = 35;
-            this.gunaGroupBox4.Location = new System.Drawing.Point(22, 5);
-            this.gunaGroupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox4.Location = new System.Drawing.Point(30, 6);
             this.gunaGroupBox4.Name = "gunaGroupBox4";
-            this.gunaGroupBox4.Size = new System.Drawing.Size(311, 184);
+            this.gunaGroupBox4.Size = new System.Drawing.Size(415, 227);
             this.gunaGroupBox4.TabIndex = 0;
             this.gunaGroupBox4.Text = "Patient Details";
             this.gunaGroupBox4.TextLocation = new System.Drawing.Point(10, 8);
@@ -308,10 +292,9 @@
             this.dof.AutoSize = true;
             this.dof.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.dof.ForeColor = System.Drawing.Color.Black;
-            this.dof.Location = new System.Drawing.Point(10, 145);
-            this.dof.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dof.Location = new System.Drawing.Point(14, 178);
             this.dof.Name = "dof";
-            this.dof.Size = new System.Drawing.Size(81, 21);
+            this.dof.Size = new System.Drawing.Size(103, 28);
             this.dof.TabIndex = 3;
             this.dof.Text = "Birth Day";
             // 
@@ -320,10 +303,9 @@
             this.bloodGroup.AutoSize = true;
             this.bloodGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.bloodGroup.ForeColor = System.Drawing.Color.Black;
-            this.bloodGroup.Location = new System.Drawing.Point(10, 111);
-            this.bloodGroup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bloodGroup.Location = new System.Drawing.Point(14, 137);
             this.bloodGroup.Name = "bloodGroup";
-            this.bloodGroup.Size = new System.Drawing.Size(106, 21);
+            this.bloodGroup.Size = new System.Drawing.Size(131, 28);
             this.bloodGroup.TabIndex = 3;
             this.bloodGroup.Text = "Blood Group";
             // 
@@ -332,10 +314,9 @@
             this.lblDof.AutoSize = true;
             this.lblDof.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblDof.ForeColor = System.Drawing.Color.Black;
-            this.lblDof.Location = new System.Drawing.Point(122, 145);
-            this.lblDof.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDof.Location = new System.Drawing.Point(162, 178);
             this.lblDof.Name = "lblDof";
-            this.lblDof.Size = new System.Drawing.Size(0, 21);
+            this.lblDof.Size = new System.Drawing.Size(0, 28);
             this.lblDof.TabIndex = 3;
             // 
             // lblBloodGroup
@@ -343,10 +324,9 @@
             this.lblBloodGroup.AutoSize = true;
             this.lblBloodGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblBloodGroup.ForeColor = System.Drawing.Color.Black;
-            this.lblBloodGroup.Location = new System.Drawing.Point(122, 111);
-            this.lblBloodGroup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBloodGroup.Location = new System.Drawing.Point(162, 137);
             this.lblBloodGroup.Name = "lblBloodGroup";
-            this.lblBloodGroup.Size = new System.Drawing.Size(0, 21);
+            this.lblBloodGroup.Size = new System.Drawing.Size(0, 28);
             this.lblBloodGroup.TabIndex = 3;
             // 
             // lblGender
@@ -354,10 +334,9 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblGender.ForeColor = System.Drawing.Color.Black;
-            this.lblGender.Location = new System.Drawing.Point(122, 78);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGender.Location = new System.Drawing.Point(162, 96);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(0, 21);
+            this.lblGender.Size = new System.Drawing.Size(0, 28);
             this.lblGender.TabIndex = 3;
             // 
             // gunaLabel1
@@ -365,10 +344,9 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(10, 44);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(14, 54);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(56, 21);
+            this.gunaLabel1.Size = new System.Drawing.Size(68, 28);
             this.gunaLabel1.TabIndex = 3;
             this.gunaLabel1.Text = "Name";
             // 
@@ -377,10 +355,9 @@
             this.gender.AutoSize = true;
             this.gender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.gender.ForeColor = System.Drawing.Color.Black;
-            this.gender.Location = new System.Drawing.Point(10, 78);
-            this.gender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gender.Location = new System.Drawing.Point(14, 96);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(65, 21);
+            this.gender.Size = new System.Drawing.Size(80, 28);
             this.gender.TabIndex = 3;
             this.gender.Text = "Gender";
             // 
@@ -389,10 +366,9 @@
             this.lblPname.AutoSize = true;
             this.lblPname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblPname.ForeColor = System.Drawing.Color.Black;
-            this.lblPname.Location = new System.Drawing.Point(122, 44);
-            this.lblPname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPname.Location = new System.Drawing.Point(162, 54);
             this.lblPname.Name = "lblPname";
-            this.lblPname.Size = new System.Drawing.Size(0, 21);
+            this.lblPname.Size = new System.Drawing.Size(0, 28);
             this.lblPname.TabIndex = 3;
             // 
             // gunaGroupBox1
@@ -405,10 +381,9 @@
             this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaGroupBox1.Location = new System.Drawing.Point(350, 50);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(467, 62);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(665, 242);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(887, 298);
             this.gunaGroupBox1.TabIndex = 3;
             this.gunaGroupBox1.Text = "Patient Reports";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -451,8 +426,7 @@
             this.dgvReports.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvReports.EnableHeadersVisualStyles = false;
             this.dgvReports.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvReports.Location = new System.Drawing.Point(0, 24);
-            this.dgvReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvReports.Location = new System.Drawing.Point(0, 30);
             this.dgvReports.Name = "dgvReports";
             this.dgvReports.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -467,7 +441,7 @@
             this.dgvReports.RowHeadersWidth = 51;
             this.dgvReports.RowTemplate.Height = 24;
             this.dgvReports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReports.Size = new System.Drawing.Size(665, 218);
+            this.dgvReports.Size = new System.Drawing.Size(887, 268);
             this.dgvReports.TabIndex = 3;
             this.dgvReports.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvReports.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -491,46 +465,7 @@
             this.dgvReports.ThemeStyle.RowsStyle.Height = 24;
             this.dgvReports.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(181)))), ((int)(((byte)(189)))));
             this.dgvReports.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvReports.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReports_CellContentClick);
             this.dgvReports.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvInpatient_DataError);
-            // 
-            // In_Patient_Report_No
-            // 
-            this.In_Patient_Report_No.DataPropertyName = "In_Patient_Report_No";
-            this.In_Patient_Report_No.FillWeight = 94.31937F;
-            this.In_Patient_Report_No.HeaderText = "In Patient Report No";
-            this.In_Patient_Report_No.MinimumWidth = 6;
-            this.In_Patient_Report_No.Name = "In_Patient_Report_No";
-            this.In_Patient_Report_No.ReadOnly = true;
-            // 
-            // Report
-            // 
-            this.Report.DataPropertyName = "Report";
-            this.Report.FillWeight = 94.31937F;
-            this.Report.HeaderText = "Report";
-            this.Report.MinimumWidth = 6;
-            this.Report.Name = "Report";
-            this.Report.ReadOnly = true;
-            this.Report.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Report.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Issue_Date
-            // 
-            this.Issue_Date.DataPropertyName = "Issue_Date";
-            this.Issue_Date.FillWeight = 94.31937F;
-            this.Issue_Date.HeaderText = "Issue Date";
-            this.Issue_Date.MinimumWidth = 6;
-            this.Issue_Date.Name = "Issue_Date";
-            this.Issue_Date.ReadOnly = true;
-            // 
-            // Issue_Time
-            // 
-            this.Issue_Time.DataPropertyName = "Issue_Time";
-            this.Issue_Time.FillWeight = 94.31937F;
-            this.Issue_Time.HeaderText = "Issue Time";
-            this.Issue_Time.MinimumWidth = 6;
-            this.Issue_Time.Name = "Issue_Time";
-            this.Issue_Time.ReadOnly = true;
             // 
             // gunaGroupBox2
             // 
@@ -542,10 +477,9 @@
             this.gunaGroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox2.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaGroupBox2.Location = new System.Drawing.Point(350, 313);
-            this.gunaGroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox2.Location = new System.Drawing.Point(467, 385);
             this.gunaGroupBox2.Name = "gunaGroupBox2";
-            this.gunaGroupBox2.Size = new System.Drawing.Size(665, 274);
+            this.gunaGroupBox2.Size = new System.Drawing.Size(887, 337);
             this.gunaGroupBox2.TabIndex = 3;
             this.gunaGroupBox2.Text = "Patient Medicine";
             this.gunaGroupBox2.TextLocation = new System.Drawing.Point(10, 8);
@@ -588,8 +522,7 @@
             this.dgvMedicine.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMedicine.EnableHeadersVisualStyles = false;
             this.dgvMedicine.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvMedicine.Location = new System.Drawing.Point(0, 24);
-            this.dgvMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMedicine.Location = new System.Drawing.Point(0, 30);
             this.dgvMedicine.Name = "dgvMedicine";
             this.dgvMedicine.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -604,7 +537,7 @@
             this.dgvMedicine.RowHeadersWidth = 51;
             this.dgvMedicine.RowTemplate.Height = 24;
             this.dgvMedicine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMedicine.Size = new System.Drawing.Size(665, 247);
+            this.dgvMedicine.Size = new System.Drawing.Size(887, 304);
             this.dgvMedicine.TabIndex = 3;
             this.dgvMedicine.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvMedicine.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -668,28 +601,64 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(830, 684);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(1107, 842);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 53);
+            this.button1.Size = new System.Drawing.Size(184, 65);
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // In_Patient_Report_No
+            // 
+            this.In_Patient_Report_No.DataPropertyName = "In_Patient_Report_No";
+            this.In_Patient_Report_No.FillWeight = 94.31937F;
+            this.In_Patient_Report_No.HeaderText = "In Patient Report No";
+            this.In_Patient_Report_No.MinimumWidth = 6;
+            this.In_Patient_Report_No.Name = "In_Patient_Report_No";
+            this.In_Patient_Report_No.ReadOnly = true;
+            // 
+            // Report
+            // 
+            this.Report.DataPropertyName = "Report";
+            this.Report.FillWeight = 94.31937F;
+            this.Report.HeaderText = "Report";
+            this.Report.MinimumWidth = 6;
+            this.Report.Name = "Report";
+            this.Report.ReadOnly = true;
+            this.Report.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Report.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Issue_Date
+            // 
+            this.Issue_Date.DataPropertyName = "Issue_Date";
+            this.Issue_Date.FillWeight = 94.31937F;
+            this.Issue_Date.HeaderText = "Issue Date";
+            this.Issue_Date.MinimumWidth = 6;
+            this.Issue_Date.Name = "Issue_Date";
+            this.Issue_Date.ReadOnly = true;
+            // 
+            // Issue_Time
+            // 
+            this.Issue_Time.DataPropertyName = "Issue_Time";
+            this.Issue_Time.FillWeight = 94.31937F;
+            this.Issue_Time.HeaderText = "Issue Time";
+            this.Issue_Time.MinimumWidth = 6;
+            this.Issue_Time.Name = "Issue_Time";
+            this.Issue_Time.ReadOnly = true;
+            // 
             // frmPatientDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1040, 613);
+            this.ClientSize = new System.Drawing.Size(1392, 754);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gunaGroupBox2);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaElipsePanel1);
             this.Controls.Add(this.pnlDrag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmPatientDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPatientDetails";

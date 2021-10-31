@@ -82,8 +82,14 @@
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
@@ -98,17 +104,8 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data">
-      <HintPath>..\DLLS\MySql.Data.DLL</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Renci.SshNet">
-      <HintPath>..\DLLS\Renci.SshNet.dll</HintPath>
-    </Reference>
-    <Reference Include="SMDMySQLDBManager">
-      <HintPath>..\DLLS\SMDMySQLDBManager.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -491,6 +488,16 @@
     <Compile Include="frmPhrSplr.Designer.cs">
       <DependentUpon>frmPhrSplr.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_Hospital_Management_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GUI_Hospital_Management_SystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Hospital_Management_SystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GUI_Hospital_Management_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HSMessageBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -505,6 +512,7 @@
     <Compile Include="Reports\frmPrintBillPatient.Designer.cs">
       <DependentUpon>frmPrintBillPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLConnectionManager.cs" />
     <EmbeddedResource Include="frmLabAddOut.resx">
       <DependentUpon>frmLabAddOut.cs</DependentUpon>
     </EmbeddedResource>
@@ -694,6 +702,29 @@
       <DependentUpon>frmPrintBillPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <None Include="GUI_Hospital_Management_SystemDataSet.xsc">
+      <DependentUpon>GUI_Hospital_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI_Hospital_Management_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GUI_Hospital_Management_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GUI_Hospital_Management_SystemDataSet.xss">
+      <DependentUpon>GUI_Hospital_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI_Hospital_Management_SystemDataSet1.xsc">
+      <DependentUpon>GUI_Hospital_Management_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GUI_Hospital_Management_SystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GUI_Hospital_Management_SystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GUI_Hospital_Management_SystemDataSet1.xss">
+      <DependentUpon>GUI_Hospital_Management_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Health_Street_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

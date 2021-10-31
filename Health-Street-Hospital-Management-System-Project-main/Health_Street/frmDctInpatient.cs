@@ -7,20 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
-
 
 namespace Health_Street
 {
     public partial class frmDctInpatient : Form
     {
-        private SmdDbManager dbManager;
 
         public static string admitionNumber;
         public frmDctInpatient()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
 
             for (int i = 1; i <= 14; i++)
             {
@@ -37,7 +33,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'PATIENT_PRIVATE_DETAIL,GUARDIAN,IN_PATIENT' WHERE PATIENT_PRIVATE_DETAIL.Guardian_Id_Number = GUARDIAN.Guardian_Id_Number AND PATIENT_PRIVATE_DETAIL.Patient_Id_Number=IN_PATIENT.Patient_Id_Number");
+            dt = SQLConnectionManager.getdata("SELECT * FROM PATIENT_PRIVATE_DETAIL,GUARDIAN,IN_PATIENT WHERE PATIENT_PRIVATE_DETAIL.Guardian_Id_Number = GUARDIAN.Guardian_Id_Number AND PATIENT_PRIVATE_DETAIL.Patient_Id_Number=IN_PATIENT.Patient_Id_Number");
             dgvInpatient.AutoGenerateColumns = false;
             dgvInpatient.DataSource = dt;
         }
@@ -71,7 +67,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT,PATIENT_PRIVATE_DETAIL,GUARDIAN' WHERE (IN_PATIENT.Admission_Number LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Patient_First_Name LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Patient_Middle_Name LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Patient_Last_Name LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Blood_Group LIKE '" + txtSearch.text + "%' OR IN_PATIENT.Ward_Number LIKE '" + txtSearch.text + "%' OR IN_PATIENT.Room_Number LIKE '" + txtSearch.text + "%' OR IN_PATIENT.Reason LIKE '" + txtSearch.text + "%') AND (PATIENT_PRIVATE_DETAIL.Guardian_Id_Number = GUARDIAN.Guardian_Id_Number AND PATIENT_PRIVATE_DETAIL.Patient_Id_Number=IN_PATIENT.Patient_Id_Number)");
+            dt = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT,PATIENT_PRIVATE_DETAIL,GUARDIAN WHERE (IN_PATIENT.Admission_Number LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Patient_First_Name LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Patient_Middle_Name LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Patient_Last_Name LIKE '" + txtSearch.text + "%' OR PATIENT_PRIVATE_DETAIL.Blood_Group LIKE '" + txtSearch.text + "%' OR IN_PATIENT.Ward_Number LIKE '" + txtSearch.text + "%' OR IN_PATIENT.Room_Number LIKE '" + txtSearch.text + "%' OR IN_PATIENT.Reason LIKE '" + txtSearch.text + "%') AND (PATIENT_PRIVATE_DETAIL.Guardian_Id_Number = GUARDIAN.Guardian_Id_Number AND PATIENT_PRIVATE_DETAIL.Patient_Id_Number=IN_PATIENT.Patient_Id_Number)");
             dgvInpatient.DataSource = dt;
         }
 
@@ -97,7 +93,7 @@ namespace Health_Street
             {
                 if (Convert.ToBoolean(dgr.Cells[0].Value) == true)
                 {
-                    n =dbManager.insrtUpdteDelt("DELETE FROM 'IN_PATIENT' WHERE Admission_Number = '" + dgr.Cells[1].Value.ToString() + "'");
+                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM IN_PATIENT WHERE Admission_Number = '" + dgr.Cells[1].Value.ToString() + "'");
                     c += 1;
                 }
             }

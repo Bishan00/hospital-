@@ -11,19 +11,14 @@ using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
 using System.IO;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmLabAdd : Form
     {
-        private SmdDbManager dbManager;
         public frmLabAdd(/*Form frm*/)
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
             tmrDateTime.Start();
             txtPatientId.Focus();
             cmbSample.SelectedItem = null;
@@ -82,7 +77,7 @@ namespace Health_Street
             else
             {
 
-                int i = dbManager.insrtUpdteDelt("INSERT INTO IN_SAMPLE VALUES('" + txtPatientId.Text+ "','"+cmbSample.Text+"','" + txtWardNo.Text+"','"+txtRoomNo.Text+"','"+dct+"','"+frmLogin.passingRoll+ "',SYSDATETIME(),SYSDATETIME())");
+                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO IN_SAMPLE VALUES('" + txtPatientId.Text+ "','"+cmbSample.Text+"','" + txtWardNo.Text+"','"+txtRoomNo.Text+"','"+dct+"','"+frmLogin.passingRoll+ "',SYSDATETIME(),SYSDATETIME())");
 
                 if (i == 1)
                 {
@@ -106,15 +101,15 @@ namespace Health_Street
                 txtPatientId.BorderColor = Color.Silver;
                 txtPatientId.FocusedBorderColor = Color.FromArgb(33, 96, 104);
                 lblPatientId.ResetText();
-                if (txtPatientId.Text == dbManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 2))
+                if (txtPatientId.Text == SQLConnectionManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 2))
                 {
                     txtPatientId.BorderColor = Color.Silver;
                     txtPatientId.FocusedBorderColor = Color.FromArgb(33, 96, 104);
                     lblPatientId.ResetText();
-                    dct =  dbManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 8);
-                    txtWardNo.Text = dbManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 9);
-                    txtRoomNo.Text = dbManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 10);
-                    txtDctName.Text = dbManager.getValue("SELECT * FROM SPECIALIST_DOCTOR", dct, 1, 4);
+                    dct =  SQLConnectionManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 8);
+                    txtWardNo.Text = SQLConnectionManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 9);
+                    txtRoomNo.Text = SQLConnectionManager.getValue("SELECT * FROM IN_PATIENT", txtPatientId.Text, 2, 10);
+                    txtDctName.Text = SQLConnectionManager.getValue("SELECT * FROM SPECIALIST_DOCTOR", dct, 1, 4);
                 }
                 else
                 {

@@ -8,17 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Health_Street
 {
     public partial class frmWard : Form
     {
-
         clsOpnChild chFrmObj = new clsOpnChild();
         public frmWard()
         {
             InitializeComponent();
-
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
         }

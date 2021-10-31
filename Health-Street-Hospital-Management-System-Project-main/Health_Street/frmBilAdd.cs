@@ -8,18 +8,15 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmBilAdd : Form
     {
-        private SmdDbManager dbManager;
         public frmBilAdd(/*Form frm*/)
         {
             InitializeComponent();
             tmrDateTime.Start();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
         }
 
         public delegate void UpdateDelegate(Object sender, UpdateEvenetArgs args);
@@ -147,12 +144,12 @@ namespace Health_Street
             }
             else
             {
-                string addmitionOffId =dbManager.getValue("SELECT * FROM 'ADMISSION_OFFICER'", frmLogin.passingRoll,10,1);
+                string addmitionOffId = SQLConnectionManager.getValue("SELECT * FROM ADMISSION_OFFICER", frmLogin.passingRoll,10,1);
 
                 MessageBox.Show(addmitionOffId);
 
 
-                int i = dbManager.insrtUpdteDelt("INSERT INTO 'GUARDIAN' VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "')");
+                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "')");
                 
                
                 if (i == 1)

@@ -7,21 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmDctPatient : Form
     {
-        private SmdDbManager dbManager;
+
         //public static int patientCount;
         public frmDctPatient()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
 
-
-            for (int i=1; i<=7; i++)
+            for(int i=1; i<=7; i++)
             {
                 dgvPatient.Columns[i].ReadOnly = true;
             }
@@ -32,7 +29,7 @@ namespace Health_Street
         private void shoData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'OUT_PATIENT'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_PATIENT");
             dgvPatient.AutoGenerateColumns = false;
             dgvPatient.DataSource = dt;
         }
@@ -52,7 +49,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'OUT_PATIENT' WHERE Guardian_NIC LIKE '"+ txtSearch.text + "%' OR Patient_Name LIKE '"+ txtSearch.text + "%'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_PATIENT WHERE Guardian_NIC LIKE '"+ txtSearch.text + "%' OR Patient_Name LIKE '"+ txtSearch.text + "%'");
             dgvPatient.DataSource = dt;
 
         }
@@ -79,7 +76,7 @@ namespace Health_Street
             {
                 if(Convert.ToBoolean(dgr.Cells[0].Value)==true)
                 {
-                    n = dbManager.insrtUpdteDelt("DELETE FROM 'OUT_PATIENT' WHERE Out_Patient_Id_Number = '" + dgr.Cells[1].Value.ToString() + "'");
+                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM OUT_PATIENT WHERE Out_Patient_Id_Number = '" + dgr.Cells[1].Value.ToString() + "'");
                     c += 1;
                 }
             }

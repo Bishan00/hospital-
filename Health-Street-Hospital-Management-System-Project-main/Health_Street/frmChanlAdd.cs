@@ -10,17 +10,14 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmChanlAdd : Form
     {
-        private SmdDbManager dbManager;
         public frmChanlAdd(/*Form frm*/)
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
             tmrDateTime.Start();
             comboDoctor();
             txtApNumber.Focus();
@@ -51,7 +48,7 @@ namespace Health_Street
         private void comboDoctor()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT 'S_Doctor_Name' FROM SPECIALIST_DOCTOR");
+            dt = SQLConnectionManager.getdata("SELECT S_Doctor_Name FROM SPECIALIST_DOCTOR");
 
             foreach(DataRow dr in dt.Rows)
             {
@@ -199,7 +196,7 @@ namespace Health_Street
             else
             {
 
-                int i =dbManager.insrtUpdteDelt("INSERT INTO  'CUSTOMER' VALUES('" + txtApNumber.Text+"','"+cmbSpecialist.SelectedItem.ToString()+"','"+specialD+"','"+dtpSessionDate.Value.ToString("MM-dd-yyy")+"','"+txtPatientName.Text+"','"+txtTpNumber.Text+"','"+txtHsptlFee.Text+"','"+txtDctFee.Text+ "',SYSDATETIME(),SYSDATETIME(),'C0001')");
+                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO CUSTOMER VALUES('" + txtApNumber.Text+"','"+cmbSpecialist.SelectedItem.ToString()+"','"+specialD+"','"+dtpSessionDate.Value.ToString("MM-dd-yyy")+"','"+txtPatientName.Text+"','"+txtTpNumber.Text+"','"+txtHsptlFee.Text+"','"+txtDctFee.Text+ "',SYSDATETIME(),SYSDATETIME(),'C0001')");
 
                 if (i == 1 /*&& j == 1*/)
                 {
@@ -272,7 +269,7 @@ namespace Health_Street
         private void cmbSpecialist_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'SPECIALIST_DOCTOR'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM SPECIALIST_DOCTOR");
 
             if (!(cmbSpecialist.SelectedIndex == -1))
             {

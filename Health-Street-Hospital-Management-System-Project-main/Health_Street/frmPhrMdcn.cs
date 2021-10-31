@@ -7,19 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmPhrMdcn : Form
     {
-        private SmdDbManager dbManager;
         public frmPhrMdcn()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
             for (int i = 1; i <= 9; i++)
             {
                 dgvMedicine.Columns[i].ReadOnly = true;
@@ -30,7 +25,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'DRUG'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM DRUG");
             dgvMedicine.AutoGenerateColumns = false;
             dgvMedicine.DataSource = dt;
         }
@@ -48,7 +43,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM  'PHARMACY_MEDICINES' WHERE Pharmacy_Invoice_Number LIKE '" + txtSearch.text + "%' OR Drug_Code LIKE '" + txtSearch.text + "%' OR Quantity LIKE '" + txtSearch.text + "%' OR Number_Of_Days LIKE '" + txtSearch.text + "%'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM PHARMACY_MEDICINES WHERE Pharmacy_Invoice_Number LIKE '" + txtSearch.text + "%' OR Drug_Code LIKE '" + txtSearch.text + "%' OR Quantity LIKE '" + txtSearch.text + "%' OR Number_Of_Days LIKE '" + txtSearch.text + "%'");
             dgvMedicine.AutoGenerateColumns = false;
             dgvMedicine.DataSource = dt;
         }
@@ -74,7 +69,7 @@ namespace Health_Street
                 {
                     string drugId = dgr.Cells[2].Value.ToString();
 
-                    n = dbManager.insrtUpdteDelt("DELETE FROM  'DRUG' WHERE Drug_Code = '" + drugId + "'");
+                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM DRUG WHERE Drug_Code = '" + drugId + "'");
                     c += 1;
                 }
             }

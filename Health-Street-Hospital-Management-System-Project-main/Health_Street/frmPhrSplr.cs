@@ -7,13 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmPhrSplr : Form
     {
-        private SmdDbManager dbManager;
         public frmPhrSplr()
         {
             InitializeComponent();
@@ -22,22 +20,19 @@ namespace Health_Street
                 dgvSupplier.Columns[i].ReadOnly = true;
             }
             showData();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
         }
 
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM  'DRUG_SUPPLIER,DRUG_ORDER'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM DRUG_SUPPLIER,DRUG_ORDER");
             dgvSupplier.AutoGenerateColumns = false;
             dgvSupplier.DataSource = dt;
         }
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'DRUG_SUPPLIER,DRUG_ORDER' WHERE DRUG_SUPPLIER.Supplier_Id LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Supplier_Name LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Company LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Country LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Reg_Number LIKE '" + txtSearch.text + "%'");
+            dt = SQLConnectionManager.getdata("SELECT * FROM DRUG_SUPPLIER,DRUG_ORDER WHERE DRUG_SUPPLIER.Supplier_Id LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Supplier_Name LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Company LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Country LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Reg_Number LIKE '" + txtSearch.text + "%'");
             dgvSupplier.DataSource = dt;
         }
 
@@ -72,7 +67,7 @@ namespace Health_Street
                 {
                     string suppId =  dgr.Cells[1].Value.ToString();
 
-                    n = dbManager.insrtUpdteDelt("DELETE FROM 'DRUG_SUPPLIER' WHERE Supplier_Id = '" + suppId + "'");
+                    n = SQLConnectionManager.insrtUpdteDelt("DELETE FROM DRUG_SUPPLIER WHERE Supplier_Id = '" + suppId + "'");
                     c += 1;
                 }
             }

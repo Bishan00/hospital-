@@ -11,22 +11,16 @@ using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
 using System.IO;
-using SMDMySQLDBManager;
-
 
 namespace Health_Street
 {
     public partial class frmPhrMedAdd : Form
     {
-        private SmdDbManager dbManager;
         public frmPhrMedAdd(/*Form frm*/)
         {
             InitializeComponent();
             tmrDateTime.Start();
             txtDrugName.Focus();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
         }
 
         public delegate void UpdateDelegate(Object sender, UpdateEvenetArgs args);
@@ -116,7 +110,7 @@ namespace Health_Street
             else
             {
 
-                int i =dbManager.insrtUpdteDelt("INSERT INTO 'DRUG' VALUES('" + txtDrugName.Text + "','" + txtTradeNumber.Text + "','" + txtStorePlace.Text + "','" + txtDrugPrice.Text + "')");
+                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO DRUG VALUES('" + txtDrugName.Text + "','" + txtTradeNumber.Text + "','" + txtStorePlace.Text + "','" + txtDrugPrice.Text + "')");
 
                 if (i == 1)
                 {
@@ -164,11 +158,6 @@ namespace Health_Street
                 txtDrugPrice.BorderColor = Color.FromArgb(232, 17, 35);
                 lblDrugPrice.Text = "CAN'T HAVE STRINGS";
             }
-        }
-
-        private void txtTradeNumber_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

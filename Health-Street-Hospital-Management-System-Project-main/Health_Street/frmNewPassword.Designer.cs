@@ -38,8 +38,6 @@
             this.btnCancel = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSave = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaGradientPanel3 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnShwComfirmPassword = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblComfirmPassword = new Guna.UI.WinForms.GunaLabel();
@@ -50,6 +48,8 @@
             this.txtnewPassword = new Guna.UI.WinForms.GunaLineTextBox();
             this.drag = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.newPassword = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaGradientPanel3 = new Guna.UI.WinForms.GunaGradientPanel();
             this.drag2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnlDrag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
@@ -70,21 +70,18 @@
             this.pnlDrag.Controls.Add(this.gunaPictureBox2);
             this.pnlDrag.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDrag.Location = new System.Drawing.Point(0, 0);
-            this.pnlDrag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlDrag.Name = "pnlDrag";
-            this.pnlDrag.Size = new System.Drawing.Size(764, 272);
+            this.pnlDrag.Size = new System.Drawing.Size(1018, 335);
             this.pnlDrag.TabIndex = 0;
-            this.pnlDrag.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDrag_Paint);
             // 
             // gunaPictureBox2
             // 
             this.gunaPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.Maroon;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(127, 13);
-            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(169, 16);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(526, 270);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(701, 332);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox2.TabIndex = 0;
             this.gunaPictureBox2.TabStop = false;
@@ -100,10 +97,9 @@
             this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.White;
             this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.White;
             this.gunaGradientPanel1.GradientColor4 = System.Drawing.SystemColors.Control;
-            this.gunaGradientPanel1.Location = new System.Drawing.Point(148, 188);
-            this.gunaGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGradientPanel1.Location = new System.Drawing.Point(198, 232);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(482, 349);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(643, 430);
             this.gunaGradientPanel1.TabIndex = 0;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -126,8 +122,7 @@
             this.btnCancel.Image = null;
             this.btnCancel.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCancel.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnCancel.Location = new System.Drawing.Point(257, 302);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(343, 372);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -136,7 +131,7 @@
             this.btnCancel.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnCancel.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.btnCancel.Radius = 15;
-            this.btnCancel.Size = new System.Drawing.Size(109, 45);
+            this.btnCancel.Size = new System.Drawing.Size(145, 55);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -161,8 +156,7 @@
             this.btnSave.Image = null;
             this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
             this.btnSave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSave.Location = new System.Drawing.Point(370, 302);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(494, 372);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -171,7 +165,7 @@
             this.btnSave.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnSave.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.btnSave.Radius = 15;
-            this.btnSave.Size = new System.Drawing.Size(109, 45);
+            this.btnSave.Size = new System.Drawing.Size(145, 55);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -197,39 +191,10 @@
             this.gunaGradientPanel2.GradientColor3 = System.Drawing.Color.White;
             this.gunaGradientPanel2.GradientColor4 = System.Drawing.Color.White;
             this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.gunaGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(482, 297);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(643, 366);
             this.gunaGradientPanel2.TabIndex = 0;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
-            // 
-            // gunaGradientPanel3
-            // 
-            this.gunaGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel3.BackgroundImage")));
-            this.gunaGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel3.GradientColor1 = System.Drawing.SystemColors.Control;
-            this.gunaGradientPanel3.GradientColor2 = System.Drawing.Color.White;
-            this.gunaGradientPanel3.GradientColor3 = System.Drawing.SystemColors.Control;
-            this.gunaGradientPanel3.GradientColor4 = System.Drawing.Color.White;
-            this.gunaGradientPanel3.Location = new System.Drawing.Point(8, 114);
-            this.gunaGradientPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gunaGradientPanel3.Name = "gunaGradientPanel3";
-            this.gunaGradientPanel3.Size = new System.Drawing.Size(465, 4);
-            this.gunaGradientPanel3.TabIndex = 13;
-            this.gunaGradientPanel3.Text = "gunaGradientPanel3";
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(10, 60);
-            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(339, 42);
-            this.gunaLabel3.TabIndex = 12;
-            this.gunaLabel3.Text = "Enter a new password";
             // 
             // gunaPictureBox1
             // 
@@ -238,9 +203,8 @@
             this.gunaPictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
             this.gunaPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(482, 86);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(643, 106);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
@@ -254,10 +218,10 @@
             this.btnShwComfirmPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShwComfirmPassword.Image")));
             this.btnShwComfirmPassword.ImageActive = null;
             this.btnShwComfirmPassword.InitialImage = null;
-            this.btnShwComfirmPassword.Location = new System.Drawing.Point(329, 243);
+            this.btnShwComfirmPassword.Location = new System.Drawing.Point(439, 299);
             this.btnShwComfirmPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnShwComfirmPassword.Name = "btnShwComfirmPassword";
-            this.btnShwComfirmPassword.Size = new System.Drawing.Size(26, 27);
+            this.btnShwComfirmPassword.Size = new System.Drawing.Size(35, 33);
             this.btnShwComfirmPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnShwComfirmPassword.TabIndex = 11;
             this.btnShwComfirmPassword.TabStop = false;
@@ -271,10 +235,9 @@
             this.lblComfirmPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblComfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblComfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.lblComfirmPassword.Location = new System.Drawing.Point(29, 272);
-            this.lblComfirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblComfirmPassword.Location = new System.Drawing.Point(39, 335);
             this.lblComfirmPassword.Name = "lblComfirmPassword";
-            this.lblComfirmPassword.Size = new System.Drawing.Size(0, 15);
+            this.lblComfirmPassword.Size = new System.Drawing.Size(0, 20);
             this.lblComfirmPassword.TabIndex = 2;
             // 
             // lblNewPassword
@@ -283,10 +246,9 @@
             this.lblNewPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblNewPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblNewPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.lblNewPassword.Location = new System.Drawing.Point(29, 197);
-            this.lblNewPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNewPassword.Location = new System.Drawing.Point(39, 243);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(0, 15);
+            this.lblNewPassword.Size = new System.Drawing.Size(0, 20);
             this.lblNewPassword.TabIndex = 2;
             // 
             // gunaLabel2
@@ -295,10 +257,9 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.gunaLabel2.Location = new System.Drawing.Point(23, 217);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(31, 267);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(136, 19);
+            this.gunaLabel2.Size = new System.Drawing.Size(162, 23);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "Comfirm Password";
             // 
@@ -308,10 +269,9 @@
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.gunaLabel1.Location = new System.Drawing.Point(26, 140);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(35, 172);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(107, 19);
+            this.gunaLabel1.Size = new System.Drawing.Size(126, 23);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "New Password";
             // 
@@ -323,12 +283,11 @@
             this.txtComfrmPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txtComfrmPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtComfrmPassword.LineColor = System.Drawing.Color.Silver;
-            this.txtComfrmPassword.Location = new System.Drawing.Point(26, 236);
-            this.txtComfrmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtComfrmPassword.Location = new System.Drawing.Point(35, 291);
             this.txtComfrmPassword.Name = "txtComfrmPassword";
             this.txtComfrmPassword.PasswordChar = '●';
             this.txtComfrmPassword.SelectedText = "";
-            this.txtComfrmPassword.Size = new System.Drawing.Size(282, 33);
+            this.txtComfrmPassword.Size = new System.Drawing.Size(376, 41);
             this.txtComfrmPassword.TabIndex = 0;
             this.txtComfrmPassword.TextChanged += new System.EventHandler(this.txtComfrmPassword_TextChanged);
             // 
@@ -340,12 +299,11 @@
             this.txtnewPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txtnewPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtnewPassword.LineColor = System.Drawing.Color.Silver;
-            this.txtnewPassword.Location = new System.Drawing.Point(26, 162);
-            this.txtnewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnewPassword.Location = new System.Drawing.Point(35, 199);
             this.txtnewPassword.Name = "txtnewPassword";
             this.txtnewPassword.PasswordChar = '●';
             this.txtnewPassword.SelectedText = "";
-            this.txtnewPassword.Size = new System.Drawing.Size(282, 33);
+            this.txtnewPassword.Size = new System.Drawing.Size(376, 41);
             this.txtnewPassword.TabIndex = 0;
             this.txtnewPassword.TextChanged += new System.EventHandler(this.txtnewPassword_TextChanged);
             // 
@@ -359,20 +317,45 @@
             this.newPassword.Interval = 800;
             this.newPassword.TargetControl = this;
             // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
+            this.gunaLabel3.Location = new System.Drawing.Point(14, 74);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(424, 52);
+            this.gunaLabel3.TabIndex = 12;
+            this.gunaLabel3.Text = "Enter a new password";
+            // 
+            // gunaGradientPanel3
+            // 
+            this.gunaGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel3.BackgroundImage")));
+            this.gunaGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel3.GradientColor1 = System.Drawing.SystemColors.Control;
+            this.gunaGradientPanel3.GradientColor2 = System.Drawing.Color.White;
+            this.gunaGradientPanel3.GradientColor3 = System.Drawing.SystemColors.Control;
+            this.gunaGradientPanel3.GradientColor4 = System.Drawing.Color.White;
+            this.gunaGradientPanel3.Location = new System.Drawing.Point(11, 140);
+            this.gunaGradientPanel3.Name = "gunaGradientPanel3";
+            this.gunaGradientPanel3.Size = new System.Drawing.Size(620, 5);
+            this.gunaGradientPanel3.TabIndex = 13;
+            this.gunaGradientPanel3.Text = "gunaGradientPanel3";
+            // 
             // drag2
             // 
             this.drag2.TargetControl = this.gunaPictureBox2;
             // 
             // frmNewPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(764, 579);
+            this.ClientSize = new System.Drawing.Size(1018, 713);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Controls.Add(this.pnlDrag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmNewPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNewPassword";
