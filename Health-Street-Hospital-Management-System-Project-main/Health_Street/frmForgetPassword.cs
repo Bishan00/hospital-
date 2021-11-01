@@ -10,16 +10,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmForgetPassword : Form
     {
+        private SmdDbManager dbManager;
         string resetCode;
         public static string mail;
         public frmForgetPassword()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
         }
 
         private void frmForgetPassword_Load(object sender, EventArgs e)
@@ -56,7 +60,7 @@ namespace Health_Street
             }
             else
             {
-                if (SQLConnectionManager.chek("SELECT * FROM ACCOUNT WHERE E_mail = '" + txtGmail.Text + "'") == 1)
+                if (dbManager.chek("SELECT * FROM ACCOUNT WHERE E_mail = '" + txtGmail.Text + "'") == 1)
                 {
                     Random rand = new Random();
                     resetCode = (rand.Next(999999)).ToString();
