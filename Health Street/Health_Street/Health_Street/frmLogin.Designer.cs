@@ -71,7 +71,7 @@
             this.btnClose.HoverState.Parent = this.btnClose;
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.btnClose.Location = new System.Drawing.Point(742, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
@@ -88,7 +88,7 @@
             this.pnlClipart.Controls.Add(this.pnlDrag);
             this.pnlClipart.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlClipart.Location = new System.Drawing.Point(0, 0);
-            this.pnlClipart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlClipart.Margin = new System.Windows.Forms.Padding(2);
             this.pnlClipart.Name = "pnlClipart";
             this.pnlClipart.ShadowDecoration.Parent = this.pnlClipart;
             this.pnlClipart.Size = new System.Drawing.Size(453, 640);
@@ -113,7 +113,7 @@
             this.gunaPictureBox3.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox3.Image")));
             this.gunaPictureBox3.Location = new System.Drawing.Point(2, 320);
-            this.gunaPictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.gunaPictureBox3.Name = "gunaPictureBox3";
             this.gunaPictureBox3.Size = new System.Drawing.Size(352, 377);
             this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +125,7 @@
             this.pnlDrag.BackColor = System.Drawing.Color.Transparent;
             this.pnlDrag.BaseColor = System.Drawing.Color.Transparent;
             this.pnlDrag.Location = new System.Drawing.Point(-6, -9);
-            this.pnlDrag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlDrag.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDrag.Name = "pnlDrag";
             this.pnlDrag.Size = new System.Drawing.Size(806, 151);
             this.pnlDrag.TabIndex = 0;
@@ -174,6 +174,7 @@
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(296, 32);
             this.txtPassword.TabIndex = 2;
+            //this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // lblUserName
             // 
@@ -208,7 +209,7 @@
             this.chkbxRememberMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkbxRememberMe.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.chkbxRememberMe.Location = new System.Drawing.Point(470, 501);
-            this.chkbxRememberMe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkbxRememberMe.Margin = new System.Windows.Forms.Padding(2);
             this.chkbxRememberMe.Name = "chkbxRememberMe";
             this.chkbxRememberMe.Size = new System.Drawing.Size(114, 20);
             this.chkbxRememberMe.TabIndex = 6;
@@ -277,7 +278,7 @@
             this.btnLogin.IdleForecolor = System.Drawing.Color.White;
             this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.btnLogin.Location = new System.Drawing.Point(470, 525);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(296, 77);
             this.btnLogin.TabIndex = 11;
@@ -290,7 +291,7 @@
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
             this.gunaPictureBox1.Location = new System.Drawing.Point(505, 40);
-            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(254, 245);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +306,7 @@
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
             this.gunaPictureBox2.InitialImage = null;
             this.gunaPictureBox2.Location = new System.Drawing.Point(578, 226);
-            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
             this.gunaPictureBox2.Size = new System.Drawing.Size(107, 91);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,7 +331,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pnlClipart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

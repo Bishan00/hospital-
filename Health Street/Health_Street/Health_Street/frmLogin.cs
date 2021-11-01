@@ -77,7 +77,7 @@ namespace Health_Street
 
         private void rememberMe()
         {
-            if(chkbxRememberMe.Checked == false)
+            if (chkbxRememberMe.Checked == false)
             {
                 Properties.Settings.Default.Username = "";
                 Properties.Settings.Default.Password = "";
@@ -93,7 +93,7 @@ namespace Health_Street
 
         void LoadCredentials()
         {
-            if(Properties.Settings.Default.Username != string.Empty)
+            if (Properties.Settings.Default.Username != string.Empty)
             {
                 txtUsername.Text = Properties.Settings.Default.Username;
                 txtPassword.Text = Properties.Settings.Default.Password;
@@ -103,8 +103,8 @@ namespace Health_Street
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("");
-            string a = dbManager.ReadValue("SELECT * FROM account WHERE Login_Username = '" + txtUsername.Text + "' AND Login_Password = '" + txtPassword.Text + "' ",1);
+            MessageBox.Show("");
+            string a = dbManager.ReadValue("SELECT * FROM account WHERE Login_Username = '" + txtUsername.Text + "' AND Login_Password = '" + txtPassword.Text + "' ", 1);
 
             switch (a)
             {

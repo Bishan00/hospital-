@@ -97,11 +97,12 @@
     <Compile Include="frmADaddPatient.Designer.cs">
       <DependentUpon>frmADaddPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddDash.cs">
+    <Compile Include=".cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddDash.Designer.cs">
-      <DependentUpon>frmAddDash.cs</DependentUpon>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddmitionOfficer.cs">
       <SubType>Form</SubType>
@@ -109,11 +110,35 @@
     <Compile Include="frmAddmitionOfficer.Designer.cs">
       <DependentUpon>frmAddmitionOfficer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddOutPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOutPatients.designer.cs">
+      <DependentUpon>frmAddOutPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBilAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilAdd.designer.cs">
+      <DependentUpon>frmBilAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillDash.designer.cs">
+      <DependentUpon>frmBillDash.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChanlAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChanlAdd.designer.cs">
+      <DependentUpon>frmChanlAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDctSettingsAccount.cs">
       <SubType>Form</SubType>
@@ -322,14 +347,26 @@
     <EmbeddedResource Include="frmADaddPatient.resx">
       <DependentUpon>frmADaddPatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddDash.resx">
-      <DependentUpon>frmAddDash.cs</DependentUpon>
+    <EmbeddedResource Include=".resx">
+      <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddmitionOfficer.resx">
       <DependentUpon>frmAddmitionOfficer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutPatients.resx">
+      <DependentUpon>frmAddOutPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilAdd.resx">
+      <DependentUpon>frmBilAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillDash.resx">
+      <DependentUpon>frmBillDash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChanlAdd.resx">
+      <DependentUpon>frmChanlAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDctSettingsAccount.resx">
       <DependentUpon>frmDctSettingsAccount.cs</DependentUpon>
