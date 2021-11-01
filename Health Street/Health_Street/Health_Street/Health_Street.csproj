@@ -140,6 +140,18 @@
     <Compile Include="frmChanlAdd.designer.cs">
       <DependentUpon>frmChanlAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChanlDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChanlDash.designer.cs">
+      <DependentUpon>frmChanlDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDctSettingsAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +344,36 @@
     <Compile Include="frmPhrSplr.Designer.cs">
       <DependentUpon>frmPhrSplr.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmXrayAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayAdd.designer.cs">
+      <DependentUpon>frmXrayAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayAddOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayAddOut.designer.cs">
+      <DependentUpon>frmXrayAddOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayDash.designer.cs">
+      <DependentUpon>frmXrayDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayInpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayInpatient.designer.cs">
+      <DependentUpon>frmXrayInpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayOutpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayOutpatient.designer.cs">
+      <DependentUpon>frmXrayOutpatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="HSMessageBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -367,6 +409,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChanlAdd.resx">
       <DependentUpon>frmChanlAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChanlDash.resx">
+      <DependentUpon>frmChanlDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDctSettingsAccount.resx">
       <DependentUpon>frmDctSettingsAccount.cs</DependentUpon>
@@ -463,6 +511,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhrSplr.resx">
       <DependentUpon>frmPhrSplr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayAdd.resx">
+      <DependentUpon>frmXrayAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayAddOut.resx">
+      <DependentUpon>frmXrayAddOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayDash.resx">
+      <DependentUpon>frmXrayDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayInpatient.resx">
+      <DependentUpon>frmXrayInpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayOutpatient.resx">
+      <DependentUpon>frmXrayOutpatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

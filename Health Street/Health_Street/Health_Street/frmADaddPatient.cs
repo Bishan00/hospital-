@@ -592,5 +592,10 @@ namespace Health_Street
                 lblTPnumber.ResetText();
             }
         }
+
+        private void gunaGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
