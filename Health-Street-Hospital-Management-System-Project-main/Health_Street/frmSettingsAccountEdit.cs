@@ -9,19 +9,22 @@ using System.Data.SqlClient;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Data;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmSettingsAccountEdit : Form
     {
+        private SmdDbManager dbManager;
         public static Image ProfilePic;
         public frmSettingsAccountEdit()
         {
             InitializeComponent();
-
-            if (SQLConnectionManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
+            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = SQLConnectionManager.readAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     txtFirstName.Text = reader1["First_Name"].ToString();
@@ -54,9 +57,9 @@ namespace Health_Street
                 }
             }
 
-            if (SQLConnectionManager.chek("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader2 = SQLConnectionManager.readAndGet("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader2 = dbManager.ReadAndGet("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader2.Read())
                 {
                     txtGmail.Text = reader2["E_mail"].ToString();
@@ -219,11 +222,11 @@ namespace Health_Street
                 }
 
 
-                if (SQLConnectionManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 0)
+                if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 0)
                 {
 
-                    int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO LOG_IN_USER VALUES ('" + frmLogin.passingRoll + "','" + txtFirstName.Text + "','" + txtMiddleName.Text + "','" + txtSurname.Text + "','" + txtAddress.Text + "',@image,'" + gender + "','" + txtTpNumber.Text + "','" + dof + "','" + txtDesignation.Text + "','" + txtSalary.Text + "')", "@image", image);
-                    int j = SQLConnectionManager.insrtUpdteDelt("UPDATE ACCOUNT SET E_mail = '" + txtGmail.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                    int i = dbManager.insrtUpdteDelt("INSERT INTO LOG_IN_USER VALUES ('" + frmLogin.passingRoll + "','" + txtFirstName.Text + "','" + txtMiddleName.Text + "','" + txtSurname.Text + "','" + txtAddress.Text + "',@image,'" + gender + "','" + txtTpNumber.Text + "','" + dof + "','" + txtDesignation.Text + "','" + txtSalary.Text + "')", "@image", image);
+                    int j = dbManager.insrtUpdteDelt("UPDATE ACCOUNT SET E_mail = '" + txtGmail.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
 
                     if (i == 1 && j == 1)
                     {
@@ -237,8 +240,8 @@ namespace Health_Street
                 }
                 else
                 {
-                    int j = SQLConnectionManager.insrtUpdteDelt("UPDATE LOG_IN_USER SET First_Name='"+ txtFirstName.Text + "',Middle_Name='"+ txtMiddleName.Text + "',Surname='"+ txtSurname.Text + "',User_Address='"+ txtAddress.Text + "',Img=@image, Gender='" + gender + "', User_Tele_No='"+ txtTpNumber.Text + "', Date_Of_Birth='"+ dof + "', Designation='"+ txtDesignation.Text + "', Salary='"+ txtSalary.Text + "' WHERE Roll_Id='"+frmLogin.passingRoll+"'", "@image", image);
-                    int i = SQLConnectionManager.insrtUpdteDelt("UPDATE ACCOUNT SET E_mail = '" + txtGmail.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                    int j = dbManager.insrtUpdteDelt("UPDATE LOG_IN_USER SET First_Name='"+ txtFirstName.Text + "',Middle_Name='"+ txtMiddleName.Text + "',Surname='"+ txtSurname.Text + "',User_Address='"+ txtAddress.Text + "',Img=@image, Gender='" + gender + "', User_Tele_No='"+ txtTpNumber.Text + "', Date_Of_Birth='"+ dof + "', Designation='"+ txtDesignation.Text + "', Salary='"+ txtSalary.Text + "' WHERE Roll_Id='"+frmLogin.passingRoll+"'", "@image", image);
+                    int i = dbManager.insrtUpdteDelt("UPDATE ACCOUNT SET E_mail = '" + txtGmail.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
 
                     if (i == 1 && j == 1)
                     {
