@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmSettingsLogin : Form
     {
+        private SmdDbManager dbManager;
         public frmSettingsLogin()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
         }
 
         private void btnShwPass_Click(object sender, EventArgs e)
@@ -87,7 +91,7 @@ namespace Health_Street
                 lblOldpassword.ResetText();
                 btnDiable();
             }
-            else if (txtOldPassword.Text == SQLConnectionManager.getValue("SELECT * FROM ACCOUNT",frmLogin.passingRoll,1,4) )
+            else if (txtOldPassword.Text == dbManager.getValue("SELECT * FROM ACCOUNT",frmLogin.passingRoll,1,4) )
             {
                 lblOldpassword.ResetText();
                 txtOldPassword.FocusedBorderColor = Color.FromArgb(33, 96, 104);
@@ -130,7 +134,7 @@ namespace Health_Street
                 btnDiable();
                 txtOldPassword.Focus();
             }
-            else if(txtOldPassword.Text != SQLConnectionManager.getValue("SELECT * FROM ACCOUNT", frmLogin.passingRoll, 1, 4))
+            else if(txtOldPassword.Text != dbManager.getValue("SELECT * FROM ACCOUNT", frmLogin.passingRoll, 1, 4))
             {
                 txtOldPassword.BorderColor = Color.FromArgb(232, 17, 35);
                 lblOldpassword.Text = "*Password is incorrect";
@@ -142,7 +146,7 @@ namespace Health_Street
                 if (!string.IsNullOrEmpty(txtUsername.Text))
                 {
                     string sqlcmd1 = "UPDATE ACCOUNT SET Login_Username = '" + txtUsername.Text + "' WHERE Roll_Id = '"+ frmLogin.passingRoll + "'";
-                    if (SQLConnectionManager.insrtUpdteDelt(sqlcmd1) == 1)
+                    if (dbManager.insrtUpdteDelt(sqlcmd1) == 1)
                     {
                         MessageBox.Show("Successfull");
                     }
@@ -151,7 +155,7 @@ namespace Health_Street
                 if (!string.IsNullOrEmpty(txtCofirmPassword.Text) && !string.IsNullOrEmpty(txtNewPassword.Text))
                 {
                     string sqlcmd = "UPDATE ACCOUNT SET Login_Password = '" + txtCofirmPassword.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'";
-                    if (SQLConnectionManager.insrtUpdteDelt(sqlcmd) == 1)
+                    if (dbManager.insrtUpdteDelt(sqlcmd) == 1)
                     {
                         MessageBox.Show("Successfull");
                     }
