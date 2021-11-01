@@ -11,14 +11,18 @@ using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
 using System.IO;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmXrayAddOut : Form
     {
+        private SmdDbManager dbManager;
         public frmXrayAddOut(/*Form frm*/)
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             tmrDateTime.Start();
             txtPatientId.Focus();
         }
@@ -64,7 +68,7 @@ namespace Health_Street
                 IdNumber();
                 txtPatientId.Focus();
             }
-            else if(!(txtPatientId.Text == SQLConnectionManager.getValue("SELECT * FROM OUT_PATIENT", txtPatientId.Text, 0, 0)))
+            else if(!(txtPatientId.Text == dbManager.getValue("SELECT * FROM OUT_PATIENT", txtPatientId.Text, 0, 0)))
             {
                 IdNumber();
                 lblApNumber.Text = "*Can't Find";
@@ -89,7 +93,7 @@ namespace Health_Street
                     image = null;
                 }
 
-                int i = SQLConnectionManager.insrtUpdteDelt("INSERT INTO OUT_PATIENT_XRAY VALUES('" + txtPatientId.Text + "','@image',SYSDATETIME(),SYSDATETIME())", "@image", image);
+                int i = dbManager.insrtUpdteDelt("INSERT INTO OUT_PATIENT_XRAY VALUES('" + txtPatientId.Text + "','@image',SYSDATETIME(),SYSDATETIME())", "@image", image);
 
                 if (i == 1)
                 {
@@ -112,7 +116,7 @@ namespace Health_Street
                 txtPatientId.BorderColor = Color.Silver;
                 txtPatientId.FocusedBorderColor = Color.FromArgb(33, 96, 104);
                 lblApNumber.ResetText();
-                if (txtPatientId.Text == SQLConnectionManager.getValue("SELECT * FROM OUT_PATIENT", txtPatientId.Text, 0, 0))
+                if (txtPatientId.Text == dbManager.getValue("SELECT * FROM OUT_PATIENT", txtPatientId.Text, 0, 0))
                 {
                     txtPatientId.BorderColor = Color.Silver;
                     txtPatientId.FocusedBorderColor = Color.FromArgb(33, 96, 104);
