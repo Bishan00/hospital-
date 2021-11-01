@@ -8,18 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmWdDash : Form
     {
+        private SmdDbManager dbManager;
         public frmWdDash()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             show();
-            if (SQLConnectionManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = SQLConnectionManager.readAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblBillOfficer.Text = "Hi, " + reader1[2].ToString();
@@ -32,26 +36,26 @@ namespace Health_Street
         private void rowCount()
         {
             DataTable dt1 = new DataTable();
-            dt1 = SQLConnectionManager.getdata("SELECT * FROM ROOM");
+            dt1 = dbManager.getdata("SELECT * FROM ROOM");
             lblRooms.Text = "+" + dt1.Rows.Count.ToString();
 
             DataTable dt2 = new DataTable();
-            dt2 = SQLConnectionManager.getdata("SELECT * FROM WARD");
+            dt2 = dbManager.getdata("SELECT * FROM WARD");
             lblWards.Text = "+" + dt2.Rows.Count.ToString();
 
             DataTable dt3 = new DataTable();
-            dt3 = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT");
+            dt3 = dbManager.getdata("SELECT * FROM IN_PATIENT");
             lblPatient.Text = "+" + dt3.Rows.Count.ToString();
         }
         private void show()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM ROOM,WARD WHERE ROOM.Ward_Number = WARD.Ward_Number");
+            dt = dbManager.getdata("SELECT * FROM ROOM,WARD WHERE ROOM.Ward_Number = WARD.Ward_Number");
             dgvRooms.AutoGenerateColumns = false;
             dgvRooms.DataSource = dt;
 
             DataTable dt2 = new DataTable();
-            dt2 = SQLConnectionManager.getdata("SELECT * FROM IN_PATIENT");
+            dt2 = dbManager.getdata("SELECT * FROM IN_PATIENT");
             dgvPatient.AutoGenerateColumns = false;
             dgvPatient.DataSource = dt2;
         }
