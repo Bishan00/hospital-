@@ -1,0 +1,170 @@
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe.config
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.pdb
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Guna.UI2.dll
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csprojAssemblyReference.cache
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLogin.resources
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.Properties.Resources.resources
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.GenerateResource.cache
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.CoreCompileInputs.cache
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.CopyComplete
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.exe
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.pdb
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Guna.UI.dll
+D:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctMain.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe.config
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.pdb
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Bunifu_UI_v1.5.3.dll
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Guna.UI.dll
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Guna.UI2.dll
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctMain.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLogin.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPharmacy.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.Properties.Resources.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.GenerateResource.cache
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.CoreCompileInputs.cache
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.CopyComplete
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.exe
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.pdb
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrDash.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrCstmr.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrMdcn.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrPchas.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrSplr.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctPatient.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\MetroFramework.dll
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csprojAssemblyReference.cache
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmMessageQuestion.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmMessageError.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmBillingOfficer.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmXray.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmScanRoom.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmTheater.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmChanlingOfficer.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLaboratory.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWard.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmAddmitionOfficer.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctDash.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPatientDetails.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettings.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctGuardian.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabDash.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabStaff.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabSettings.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWdRoom.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWdDash.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmChangePassword.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmTranceparentBG.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Bunifu_UI.dll
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettingsLogin.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettingsAccount.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\FluentValidation.dll
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\FluentValidation.xml
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmForgetPassword.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmNewPassword.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmADaddPatient.resources
+E:\C# PROJECTS\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmADaddmitPatient.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe.config
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.pdb
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\FluentValidation.dll
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\FluentValidation.xml
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.AssemblyReference.cache
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmADaddmitPatient.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmADaddPatient.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmAddmitionOfficer.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmChangePassword.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettingsAccount.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettingsLogin.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmForgetPassword.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmNewPassword.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmTranceparentBG.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWdRoom.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWdDash.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabSettings.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabStaff.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabDash.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctDash.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctGuardian.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPatientDetails.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettings.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctPatient.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWard.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLaboratory.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmScanRoom.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmChanlingOfficer.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmTheater.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmXray.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmBillingOfficer.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctMain.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLogin.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmMessageError.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmMessageQuestion.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPharmacy.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrCstmr.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrDash.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrMdcn.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrPchas.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrSplr.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.Properties.Resources.resources
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.GenerateResource.cache
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.CoreCompileInputs.cache
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.exe
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.pdb
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\SMDMySQLDBManager.dll
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\MySql.Data.DLL
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\bin\Debug\Renci.SshNet.dll
+E:\Final Project\Easy Search\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmAddDash.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe.config
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.exe
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\Health_Street.pdb
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\FluentValidation.dll
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\MySql.Data.DLL
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\Renci.SshNet.dll
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\SMDMySQLDBManager.dll
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\bin\Debug\FluentValidation.xml
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.AssemblyReference.cache
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmADaddmitPatient.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmADaddPatient.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmAddDash.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmAddmitionOfficer.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmChangePassword.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettingsAccount.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettingsLogin.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmForgetPassword.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmNewPassword.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmTranceparentBG.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWdRoom.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWdDash.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabSettings.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabStaff.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLabDash.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctDash.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctGuardian.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPatientDetails.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctSettings.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctPatient.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmWard.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLaboratory.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmScanRoom.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmChanlingOfficer.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmTheater.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmXray.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmBillingOfficer.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmDctMain.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmLogin.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmMessageError.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmMessageQuestion.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPharmacy.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrCstmr.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrDash.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrMdcn.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrPchas.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.frmPhrSplr.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.Properties.Resources.resources
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.GenerateResource.cache
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.csproj.CoreCompileInputs.cache
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.exe
+C:\Users\PC-WORLD\Desktop\Health Street\Health_Street\Health_Street\obj\Debug\Health_Street.pdb
