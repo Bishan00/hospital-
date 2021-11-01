@@ -79,6 +79,11 @@ namespace Health_Street
 
         }
 
+        private void pnlTheme_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow dgr in dgvPatient.Rows)

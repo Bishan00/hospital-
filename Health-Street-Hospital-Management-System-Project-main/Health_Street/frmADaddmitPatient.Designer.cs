@@ -80,10 +80,11 @@
             this.pnlTheme.Controls.Add(this.lblPatient);
             this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTheme.Location = new System.Drawing.Point(0, 0);
-            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTheme.Name = "pnlTheme";
             this.pnlTheme.Size = new System.Drawing.Size(1040, 640);
             this.pnlTheme.TabIndex = 0;
+            this.pnlTheme.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTheme_Paint);
             // 
             // btnDelete
             // 
@@ -93,7 +94,7 @@
             this.btnDelete.ImageActive = null;
             this.btnDelete.InitialImage = null;
             this.btnDelete.Location = new System.Drawing.Point(401, 22);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(36, 31);
             this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,7 +111,7 @@
             this.btnAdd.ImageActive = null;
             this.btnAdd.InitialImage = null;
             this.btnAdd.Location = new System.Drawing.Point(348, 22);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(33, 31);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -184,7 +185,7 @@
             this.dgvPatient.EnableHeadersVisualStyles = false;
             this.dgvPatient.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dgvPatient.Location = new System.Drawing.Point(16, 72);
-            this.dgvPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPatient.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPatient.Name = "dgvPatient";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -344,7 +345,7 @@
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
             this.gunaPictureBox1.Location = new System.Drawing.Point(16, -106);
-            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(83, 85);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -372,7 +373,7 @@
             this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.pnlTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmADaddmitPatient";
             this.Text = "frmADaddmitPatient";
             this.Load += new System.EventHandler(this.frmADaddmitPatient_Load);
