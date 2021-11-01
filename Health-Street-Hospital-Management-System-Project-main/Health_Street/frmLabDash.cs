@@ -8,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmLabDash : Form
     {
+        private SmdDbManager dbManager;
         public frmLabDash()
         {
             InitializeComponent();
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             dataShow();
             DashName();
             rowCountInpatient();
@@ -26,13 +29,13 @@ namespace Health_Street
         private void rowCountInpatient()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM IN_SAMPLE");
+            dt = dbManager.getdata("SELECT * FROM IN_SAMPLE");
             lblInpatient.Text = "+" + dt.Rows.Count.ToString();
         }
         private void rowCountOutpatient()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM OUT_SAMPLE");
+            dt = dbManager.getdata("SELECT * FROM OUT_SAMPLE");
             lblOutpatient.Text = "+" + dt.Rows.Count.ToString();
         }
 
@@ -43,9 +46,9 @@ namespace Health_Street
 
         private void DashName()
         {
-            if (SQLConnectionManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = SQLConnectionManager.readAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblLabOfficer.Text = "Hi, " + reader1[2].ToString();
@@ -57,12 +60,12 @@ namespace Health_Street
         private void dataShow()
         {
             DataTable dt = new DataTable();
-            dt = SQLConnectionManager.getdata("SELECT * FROM LABORATORY_STAFF");
+            dt = dbManager.getdata("SELECT * FROM LABORATORY_STAFF");
             dgvStaff.AutoGenerateColumns = false;
             dgvStaff.DataSource = dt;
 
             DataTable dt2 = new DataTable();
-            dt2 = SQLConnectionManager.getdata("SELECT * FROM IN_SAMPLE");
+            dt2 = dbManager.getdata("SELECT * FROM IN_SAMPLE");
             dgvSample.AutoGenerateColumns = false;
             dgvSample.DataSource = dt2;
         }
