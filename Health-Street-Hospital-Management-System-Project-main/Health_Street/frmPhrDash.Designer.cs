@@ -52,14 +52,14 @@
             this.Manufacture_Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Manufacture_Reg_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.lblSupplier = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.lblMedicine = new Guna.UI.WinForms.GunaLabel();
             this.pnlBanner = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lblPharmacy = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicine)).BeginInit();
@@ -355,18 +355,6 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(249, 247);
             this.gunaShadowPanel2.TabIndex = 6;
             // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel5.Location = new System.Drawing.Point(19, 127);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(164, 41);
-            this.gunaLabel5.TabIndex = 0;
-            this.gunaLabel5.Text = "Suppliers";
-            this.gunaLabel5.Click += new System.EventHandler(this.gunaLabel4_Click);
-            // 
             // lblSupplier
             // 
             this.lblSupplier.AutoSize = true;
@@ -374,7 +362,7 @@
             this.lblSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblSupplier.Location = new System.Drawing.Point(28, 33);
             this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(114, 65);
+            this.lblSupplier.Size = new System.Drawing.Size(142, 81);
             this.lblSupplier.TabIndex = 0;
             this.lblSupplier.Text = "+78";
             this.lblSupplier.Click += new System.EventHandler(this.gunaLabel4_Click);
@@ -394,17 +382,6 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(249, 247);
             this.gunaShadowPanel1.TabIndex = 7;
             // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(24, 127);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(152, 41);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Medicine";
-            // 
             // lblMedicine
             // 
             this.lblMedicine.AutoSize = true;
@@ -412,7 +389,7 @@
             this.lblMedicine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblMedicine.Location = new System.Drawing.Point(30, 33);
             this.lblMedicine.Name = "lblMedicine";
-            this.lblMedicine.Size = new System.Drawing.Size(93, 65);
+            this.lblMedicine.Size = new System.Drawing.Size(114, 81);
             this.lblMedicine.TabIndex = 0;
             this.lblMedicine.Text = "+11";
             // 
@@ -430,7 +407,6 @@
             this.pnlBanner.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.pnlBanner.Size = new System.Drawing.Size(684, 202);
             this.pnlBanner.TabIndex = 8;
-            this.pnlBanner.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBanner_Paint);
             // 
             // gunaLabel2
             // 
@@ -439,7 +415,7 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.gunaLabel2.Location = new System.Drawing.Point(35, 92);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(295, 38);
+            this.gunaLabel2.Size = new System.Drawing.Size(365, 46);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
@@ -450,9 +426,32 @@
             this.lblPharmacy.ForeColor = System.Drawing.Color.White;
             this.lblPharmacy.Location = new System.Drawing.Point(34, 42);
             this.lblPharmacy.Name = "lblPharmacy";
-            this.lblPharmacy.Size = new System.Drawing.Size(136, 23);
+            this.lblPharmacy.Size = new System.Drawing.Size(163, 28);
             this.lblPharmacy.TabIndex = 0;
             this.lblPharmacy.Text = "Hi, Welcome";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(24, 127);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(190, 51);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Medicine";
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.gunaLabel5.Location = new System.Drawing.Point(19, 127);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(203, 51);
+            this.gunaLabel5.TabIndex = 0;
+            this.gunaLabel5.Text = "Suppliers";
+            this.gunaLabel5.Click += new System.EventHandler(this.gunaLabel4_Click);
             // 
             // frmPhrDash
             // 

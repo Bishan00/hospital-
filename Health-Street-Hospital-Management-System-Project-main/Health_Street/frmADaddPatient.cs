@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -18,6 +19,7 @@ namespace Health_Street
         public frmADaddPatient(/*Form frm*/)
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             tmrDateTime.Start();
             comboBlood();
             comboDoctor();
@@ -28,7 +30,6 @@ namespace Health_Street
             cmbSpecialist.SelectedItem = null;
             cmbWard.SelectedItem = null;
             cmbRoom.SelectedItem = null;
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
         }
 
         public delegate void UpdateDelegate(Object sender, UpdateEvenetArgs args);
@@ -352,7 +353,7 @@ namespace Health_Street
 
                 int i = dbManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "','B0002')");
                 string guardianId = dbManager.getValue("SELECT * FROM GUARDIAN", txtNic.Text, 2, 1);
-                int j =dbManager.insrtUpdteDelt("INSERT INTO PATIENT_PRIVATE_DETAIL VALUES ('" + txtFirstname.Text + "','" + txtMiddleName.Text + "','" + txtSurname.Text + "','" + gender + "','" + dtpDOF.Value.ToString("MM-dd-yyy") + "','" + age + "','" + cmbBlood.Text.ToString() + "','" + guardianId + "','" + specialD + "')");
+                int j = dbManager.insrtUpdteDelt("INSERT INTO PATIENT_PRIVATE_DETAIL VALUES ('" + txtFirstname.Text + "','" + txtMiddleName.Text + "','" + txtSurname.Text + "','" + gender + "','" + dtpDOF.Value.ToString("MM-dd-yyy") + "','" + age + "','" + cmbBlood.Text.ToString() + "','" + guardianId + "','" + specialD + "')");
 
                 if (i == 1 && j == 1)
                 {

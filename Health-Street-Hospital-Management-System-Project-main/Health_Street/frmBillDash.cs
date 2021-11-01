@@ -7,11 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using SMDMySQLDBManager;
 using MySql.Data.MySqlClient;
-
-
-
 
 namespace Health_Street
 {
@@ -21,17 +19,17 @@ namespace Health_Street
         public frmBillDash()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             ShowData();
 
-            if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-               string firstName = dbManager.ReadValue("SELECT * FROM 'log_in_user'",2);
-                //if (reader1.Read())
-                //{
-                lblBillOfficer.Text = "Hi, " + firstName;
+                 MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                if (reader1.Read())
+                {
+                    lblBillOfficer.Text = "Hi, " + reader1[2].ToString();
 
-                //}
+                }
             }
 
             rowCountGuardian();
@@ -41,20 +39,20 @@ namespace Health_Street
         private void rowCountGuardian()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'GUARDIAN'");
+            dt = dbManager.getdata("SELECT * FROM GUARDIAN");
             lblGuardian.Text = "+" + dt.Rows.Count.ToString();
         }
         private void rowCountOrganzation()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'ORGANIZATION'");
-            lblOrganization.Text = "-" + dt.Rows.Count.ToString();
+            dt = dbManager.getdata("SELECT * FROM ORGANIZATION");
+            lblOrganization.Text = "+" + dt.Rows.Count.ToString();
         }
 
         private void ShowData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'ORGANIZATION'");
+            dt = dbManager.getdata("SELECT * FROM ORGANIZATION");
             dgvOrgniz.AutoGenerateColumns = false;
             dgvOrgniz.DataSource = dt;
         }
@@ -68,14 +66,5 @@ namespace Health_Street
         {
 
         }
-
-        private void pnlBanner_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-    }
-
-    internal class MySqlDataReader
-    {
     }
 }

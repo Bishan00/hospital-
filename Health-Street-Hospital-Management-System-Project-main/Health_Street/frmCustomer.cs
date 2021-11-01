@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -17,8 +18,7 @@ namespace Health_Street
         public frmCustomer()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             showData();
             for (int i = 1; i <= 12; i++)
             {
@@ -33,7 +33,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'CUSTOMER'");
+            dt = dbManager.getdata("SELECT * FROM CUSTOMER");
             dgvCustomer.AutoGenerateColumns = false;
             dgvCustomer.DataSource = dt;
         }
@@ -73,7 +73,7 @@ namespace Health_Street
             {
                 if (Convert.ToBoolean(dgr.Cells[0].Value) == true)
                 {
-                    n =dbManager.insrtUpdteDelt("DELETE FROM 'CUSTOMER' WHERE Invoice_Number = '" + dgr.Cells[1].Value.ToString() + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM CUSTOMER WHERE Invoice_Number = '" + dgr.Cells[1].Value.ToString() + "'");
                     c += 1;
                 }
             }

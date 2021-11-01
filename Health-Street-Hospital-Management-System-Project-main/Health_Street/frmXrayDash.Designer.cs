@@ -53,14 +53,14 @@
             this.Issue_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Issue_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.lblOutpatients = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.lblInpatients = new Guna.UI.WinForms.GunaLabel();
             this.pnlBanner = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lblXrayOfficer = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -367,17 +367,6 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(249, 247);
             this.gunaShadowPanel2.TabIndex = 6;
             // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel5.Location = new System.Drawing.Point(19, 114);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(183, 82);
-            this.gunaLabel5.TabIndex = 0;
-            this.gunaLabel5.Text = "Outpatient \r\n   X-Rays";
-            // 
             // lblOutpatients
             // 
             this.lblOutpatients.AutoSize = true;
@@ -385,7 +374,7 @@
             this.lblOutpatients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblOutpatients.Location = new System.Drawing.Point(28, 33);
             this.lblOutpatients.Name = "lblOutpatients";
-            this.lblOutpatients.Size = new System.Drawing.Size(114, 65);
+            this.lblOutpatients.Size = new System.Drawing.Size(142, 81);
             this.lblOutpatients.TabIndex = 0;
             this.lblOutpatients.Text = "+78";
             // 
@@ -404,17 +393,6 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(249, 247);
             this.gunaShadowPanel1.TabIndex = 7;
             // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(25, 113);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(159, 82);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Inpatient \r\n X-Rays";
-            // 
             // lblInpatients
             // 
             this.lblInpatients.AutoSize = true;
@@ -422,7 +400,7 @@
             this.lblInpatients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
             this.lblInpatients.Location = new System.Drawing.Point(30, 33);
             this.lblInpatients.Name = "lblInpatients";
-            this.lblInpatients.Size = new System.Drawing.Size(93, 65);
+            this.lblInpatients.Size = new System.Drawing.Size(114, 81);
             this.lblInpatients.TabIndex = 0;
             this.lblInpatients.Text = "+11";
             // 
@@ -440,7 +418,6 @@
             this.pnlBanner.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.pnlBanner.Size = new System.Drawing.Size(684, 202);
             this.pnlBanner.TabIndex = 8;
-            this.pnlBanner.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBanner_Paint);
             // 
             // gunaLabel2
             // 
@@ -449,7 +426,7 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.gunaLabel2.Location = new System.Drawing.Point(35, 92);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(295, 38);
+            this.gunaLabel2.Size = new System.Drawing.Size(365, 46);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
@@ -460,9 +437,31 @@
             this.lblXrayOfficer.ForeColor = System.Drawing.Color.White;
             this.lblXrayOfficer.Location = new System.Drawing.Point(34, 42);
             this.lblXrayOfficer.Name = "lblXrayOfficer";
-            this.lblXrayOfficer.Size = new System.Drawing.Size(136, 23);
+            this.lblXrayOfficer.Size = new System.Drawing.Size(163, 28);
             this.lblXrayOfficer.TabIndex = 0;
             this.lblXrayOfficer.Text = "Hi, Welcome";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(25, 113);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(198, 102);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Inpatient \r\n X-Rays";
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.gunaLabel5.Location = new System.Drawing.Point(19, 114);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(227, 102);
+            this.gunaLabel5.TabIndex = 0;
+            this.gunaLabel5.Text = "Outpatient \r\n   X-Rays";
             // 
             // frmXrayDash
             // 

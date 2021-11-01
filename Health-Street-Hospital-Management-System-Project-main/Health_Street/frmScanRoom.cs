@@ -7,13 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmScanRoom : Form
     {
-
         clsOpnChild chFrmObj = new clsOpnChild();
         public frmScanRoom()
         {

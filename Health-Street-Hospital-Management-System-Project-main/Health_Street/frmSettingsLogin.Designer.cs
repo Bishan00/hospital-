@@ -81,24 +81,21 @@
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaGroupBox1.LineTop = 43;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(9, 39);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(12, 48);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(531, 289);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(708, 356);
             this.gunaGroupBox1.TabIndex = 3;
             this.gunaGroupBox1.Text = "Authontication";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
-            this.gunaGroupBox1.Click += new System.EventHandler(this.gunaGroupBox1_Click);
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.lblPassword.Location = new System.Drawing.Point(184, 269);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Location = new System.Drawing.Point(246, 331);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(0, 15);
+            this.lblPassword.Size = new System.Drawing.Size(0, 20);
             this.lblPassword.TabIndex = 11;
             // 
             // lblOldpassword
@@ -106,10 +103,9 @@
             this.lblOldpassword.AutoSize = true;
             this.lblOldpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblOldpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.lblOldpassword.Location = new System.Drawing.Point(184, 108);
-            this.lblOldpassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOldpassword.Location = new System.Drawing.Point(246, 133);
             this.lblOldpassword.Name = "lblOldpassword";
-            this.lblOldpassword.Size = new System.Drawing.Size(0, 15);
+            this.lblOldpassword.Size = new System.Drawing.Size(0, 20);
             this.lblOldpassword.TabIndex = 11;
             // 
             // btnShwComfirmPassword
@@ -119,10 +115,10 @@
             this.btnShwComfirmPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShwComfirmPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShwComfirmPassword.Image")));
             this.btnShwComfirmPassword.ImageActive = null;
-            this.btnShwComfirmPassword.Location = new System.Drawing.Point(503, 238);
+            this.btnShwComfirmPassword.Location = new System.Drawing.Point(671, 293);
             this.btnShwComfirmPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnShwComfirmPassword.Name = "btnShwComfirmPassword";
-            this.btnShwComfirmPassword.Size = new System.Drawing.Size(24, 27);
+            this.btnShwComfirmPassword.Size = new System.Drawing.Size(32, 33);
             this.btnShwComfirmPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnShwComfirmPassword.TabIndex = 10;
             this.btnShwComfirmPassword.TabStop = false;
@@ -138,10 +134,10 @@
             this.btnShwNewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShwNewPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShwNewPassword.Image")));
             this.btnShwNewPassword.ImageActive = null;
-            this.btnShwNewPassword.Location = new System.Drawing.Point(503, 183);
+            this.btnShwNewPassword.Location = new System.Drawing.Point(671, 225);
             this.btnShwNewPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnShwNewPassword.Name = "btnShwNewPassword";
-            this.btnShwNewPassword.Size = new System.Drawing.Size(24, 27);
+            this.btnShwNewPassword.Size = new System.Drawing.Size(32, 33);
             this.btnShwNewPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnShwNewPassword.TabIndex = 10;
             this.btnShwNewPassword.TabStop = false;
@@ -157,10 +153,10 @@
             this.btnShwOldPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShwOldPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShwOldPassword.Image")));
             this.btnShwOldPassword.ImageActive = null;
-            this.btnShwOldPassword.Location = new System.Drawing.Point(503, 76);
+            this.btnShwOldPassword.Location = new System.Drawing.Point(671, 93);
             this.btnShwOldPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnShwOldPassword.Name = "btnShwOldPassword";
-            this.btnShwOldPassword.Size = new System.Drawing.Size(24, 27);
+            this.btnShwOldPassword.Size = new System.Drawing.Size(32, 33);
             this.btnShwOldPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnShwOldPassword.TabIndex = 10;
             this.btnShwOldPassword.TabStop = false;
@@ -179,12 +175,11 @@
             this.txtCofirmPassword.FocusedForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtCofirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCofirmPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCofirmPassword.Location = new System.Drawing.Point(181, 234);
-            this.txtCofirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCofirmPassword.Location = new System.Drawing.Point(241, 288);
             this.txtCofirmPassword.Name = "txtCofirmPassword";
             this.txtCofirmPassword.PasswordChar = '●';
             this.txtCofirmPassword.SelectedText = "";
-            this.txtCofirmPassword.Size = new System.Drawing.Size(316, 32);
+            this.txtCofirmPassword.Size = new System.Drawing.Size(422, 40);
             this.txtCofirmPassword.TabIndex = 5;
             this.txtCofirmPassword.TextChanged += new System.EventHandler(this.txtCofirmPassword_TextChanged);
             // 
@@ -198,12 +193,11 @@
             this.txtUsername.FocusedForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtUsername.Location = new System.Drawing.Point(181, 127);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Location = new System.Drawing.Point(241, 156);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(316, 32);
+            this.txtUsername.Size = new System.Drawing.Size(422, 40);
             this.txtUsername.TabIndex = 6;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -217,12 +211,11 @@
             this.txtNewPassword.FocusedForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNewPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtNewPassword.Location = new System.Drawing.Point(181, 180);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNewPassword.Location = new System.Drawing.Point(241, 222);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '●';
             this.txtNewPassword.SelectedText = "";
-            this.txtNewPassword.Size = new System.Drawing.Size(316, 32);
+            this.txtNewPassword.Size = new System.Drawing.Size(422, 40);
             this.txtNewPassword.TabIndex = 6;
             this.txtNewPassword.TextChanged += new System.EventHandler(this.txtNewPassword_TextChanged);
             // 
@@ -236,12 +229,11 @@
             this.txtOldPassword.FocusedForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtOldPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtOldPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtOldPassword.Location = new System.Drawing.Point(181, 73);
-            this.txtOldPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOldPassword.Location = new System.Drawing.Point(241, 90);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.PasswordChar = '●';
             this.txtOldPassword.SelectedText = "";
-            this.txtOldPassword.Size = new System.Drawing.Size(316, 32);
+            this.txtOldPassword.Size = new System.Drawing.Size(422, 40);
             this.txtOldPassword.TabIndex = 7;
             this.txtOldPassword.TextChanged += new System.EventHandler(this.txtOldPassword_TextChanged);
             // 
@@ -250,10 +242,9 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblUsername.Location = new System.Drawing.Point(22, 135);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(29, 166);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(87, 21);
+            this.lblUsername.Size = new System.Drawing.Size(106, 28);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username";
             // 
@@ -262,10 +253,9 @@
             this.lblComPw.AutoSize = true;
             this.lblComPw.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblComPw.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblComPw.Location = new System.Drawing.Point(22, 242);
-            this.lblComPw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblComPw.Location = new System.Drawing.Point(29, 298);
             this.lblComPw.Name = "lblComPw";
-            this.lblComPw.Size = new System.Drawing.Size(153, 21);
+            this.lblComPw.Size = new System.Drawing.Size(189, 28);
             this.lblComPw.TabIndex = 2;
             this.lblComPw.Text = "Comfirm Password";
             // 
@@ -274,10 +264,9 @@
             this.lblNewPw.AutoSize = true;
             this.lblNewPw.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblNewPw.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNewPw.Location = new System.Drawing.Point(22, 188);
-            this.lblNewPw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNewPw.Location = new System.Drawing.Point(29, 232);
             this.lblNewPw.Name = "lblNewPw";
-            this.lblNewPw.Size = new System.Drawing.Size(121, 21);
+            this.lblNewPw.Size = new System.Drawing.Size(150, 28);
             this.lblNewPw.TabIndex = 3;
             this.lblNewPw.Text = "New Password";
             // 
@@ -286,10 +275,9 @@
             this.lblOld.AutoSize = true;
             this.lblOld.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblOld.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblOld.Location = new System.Drawing.Point(22, 81);
-            this.lblOld.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOld.Location = new System.Drawing.Point(29, 100);
             this.lblOld.Name = "lblOld";
-            this.lblOld.Size = new System.Drawing.Size(113, 21);
+            this.lblOld.Size = new System.Drawing.Size(140, 28);
             this.lblOld.TabIndex = 4;
             this.lblOld.Text = "Old Password";
             // 
@@ -312,8 +300,7 @@
             this.btnSubmit.Image = null;
             this.btnSubmit.ImageSize = new System.Drawing.Size(20, 20);
             this.btnSubmit.LineColor = System.Drawing.Color.Transparent;
-            this.btnSubmit.Location = new System.Drawing.Point(383, 333);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Location = new System.Drawing.Point(511, 410);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.btnSubmit.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -322,7 +309,7 @@
             this.btnSubmit.OnHoverLineColor = System.Drawing.Color.Transparent;
             this.btnSubmit.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.btnSubmit.Radius = 5;
-            this.btnSubmit.Size = new System.Drawing.Size(157, 67);
+            this.btnSubmit.Size = new System.Drawing.Size(209, 82);
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -332,24 +319,22 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(649, 28);
-            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(865, 34);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(421, 328);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(561, 404);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 5;
             this.gunaPictureBox1.TabStop = false;
             // 
             // frmSettingsLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 431);
+            this.ClientSize = new System.Drawing.Size(1438, 531);
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gunaGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmSettingsLogin";
             this.Text = "frmDctSettingsLogin";
             this.Load += new System.EventHandler(this.frmDctSettingsLogin_Load);

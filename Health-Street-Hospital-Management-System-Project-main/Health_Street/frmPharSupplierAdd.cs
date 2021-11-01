@@ -12,6 +12,7 @@ using System.Web.Services.Description;
 using System.Windows.Forms;
 using System.IO;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -21,6 +22,7 @@ namespace Health_Street
         public frmPharSupplierAdd(/*Form frm*/)
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             tmrDateTime.Start();
             txtSuppName.Focus();
         }
@@ -111,7 +113,7 @@ namespace Health_Street
             else
             {
 
-                int i = dbManager.insrtUpdteDelt("INSERT INTO 'DRUG_SUPPLIER' VALUES('" + txtSuppName.Text + "','" + txtManufaCompany.Text + "','" + txtManufaCountry.Text + "','" + txtManufaRegNumber.Text + "')");
+                int i = dbManager.insrtUpdteDelt("INSERT INTO DRUG_SUPPLIER VALUES('" + txtSuppName.Text + "','" + txtManufaCompany.Text + "','" + txtManufaCountry.Text + "','" + txtManufaRegNumber.Text + "')");
 
                 if (i == 1)
                 {

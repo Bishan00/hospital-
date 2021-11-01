@@ -1,0 +1,8 @@
+SQLConnectionManager
+
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
+
+private SmdDbManager dbManager;
+
+dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");

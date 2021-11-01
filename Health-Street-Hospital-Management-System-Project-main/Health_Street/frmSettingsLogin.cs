@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -17,9 +18,7 @@ namespace Health_Street
         public frmSettingsLogin()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
         }
 
         private void btnShwPass_Click(object sender, EventArgs e)
@@ -135,7 +134,7 @@ namespace Health_Street
                 btnDiable();
                 txtOldPassword.Focus();
             }
-            else if(txtOldPassword.Text != dbManager.getValue("SELECT * FROM 'ACCOUNT'", frmLogin.passingRoll, 1, 4))
+            else if(txtOldPassword.Text != dbManager.getValue("SELECT * FROM ACCOUNT", frmLogin.passingRoll, 1, 4))
             {
                 txtOldPassword.BorderColor = Color.FromArgb(232, 17, 35);
                 lblOldpassword.Text = "*Password is incorrect";
@@ -146,7 +145,7 @@ namespace Health_Street
             {
                 if (!string.IsNullOrEmpty(txtUsername.Text))
                 {
-                    string sqlcmd1 = "UPDATE 'ACCOUNT' SET Login_Username = '" + txtUsername.Text + "' WHERE Roll_Id = '"+ frmLogin.passingRoll + "'";
+                    string sqlcmd1 = "UPDATE ACCOUNT SET Login_Username = '" + txtUsername.Text + "' WHERE Roll_Id = '"+ frmLogin.passingRoll + "'";
                     if (dbManager.insrtUpdteDelt(sqlcmd1) == 1)
                     {
                         MessageBox.Show("Successfull");
@@ -155,7 +154,7 @@ namespace Health_Street
                 }
                 if (!string.IsNullOrEmpty(txtCofirmPassword.Text) && !string.IsNullOrEmpty(txtNewPassword.Text))
                 {
-                    string sqlcmd = "UPDATE 'ACCOUNT' SET Login_Password = '" + txtCofirmPassword.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'";
+                    string sqlcmd = "UPDATE ACCOUNT SET Login_Password = '" + txtCofirmPassword.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'";
                     if (dbManager.insrtUpdteDelt(sqlcmd) == 1)
                     {
                         MessageBox.Show("Successfull");
@@ -188,11 +187,6 @@ namespace Health_Street
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gunaGroupBox1_Click(object sender, EventArgs e)
         {
 
         }

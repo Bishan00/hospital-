@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -18,8 +19,7 @@ namespace Health_Street
         public frmChanlDash()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             DashName();
             tabeleLoad();
             rowCountDoctors();
@@ -51,12 +51,12 @@ namespace Health_Street
         private void tabeleLoad()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'SPECIALIST_DOCTOR'");
+            dt = dbManager.getdata("SELECT * FROM SPECIALIST_DOCTOR");
             dgvDoctor.AutoGenerateColumns = false;
             dgvDoctor.DataSource = dt;
 
             DataTable dt2 = new DataTable();
-            dt2 = dbManager.getdata("SELECT * FROM 'CUSTOMER'");
+            dt2 = dbManager.getdata("SELECT * FROM CUSTOMER");
             dgvCustomer.AutoGenerateColumns = false;
             dgvCustomer.DataSource = dt2;
         }
@@ -65,7 +65,7 @@ namespace Health_Street
         {
             if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblChanlOfficer.Text = "Hi, " + reader1[2].ToString();
@@ -80,11 +80,6 @@ namespace Health_Street
         }
 
         private void dgvCustomer_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
-        }
-
-        private void pnlBanner_Paint(object sender, PaintEventArgs e)
         {
 
         }

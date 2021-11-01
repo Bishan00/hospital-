@@ -6,17 +6,18 @@ using System.Text.RegularExpressions;
 using System.Windows.Automation.Peers;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmAddOutPatients : Form
-
     {
         private SmdDbManager dbManager;
         public frmAddOutPatients(/*Form frmOut*/)
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
+
         }
 
 
@@ -149,7 +150,7 @@ namespace Health_Street
             }
             else
             {
-                int i = dbManager.insrtUpdteDelt("INSERT INTO 'OUT_PATIENT' VALUES ('" + txtPatientName.Text + "','" + txtGuardianNic.Text + "','" + txtGuardianTP.Text + "','" + txtAge.Text + "','" + txtReason.Text + "',SYSDATETIME(), SYSDATETIME())");
+                int i = dbManager.insrtUpdteDelt("INSERT INTO OUT_PATIENT VALUES ('" + txtPatientName.Text + "','" + txtGuardianNic.Text + "','" + txtGuardianTP.Text + "','" + txtAge.Text + "','" + txtReason.Text + "',SYSDATETIME(), SYSDATETIME())");
                 if (i == 1)
                 {
                     MessageBox.Show("SUCCESSFULL");
@@ -232,11 +233,6 @@ namespace Health_Street
                 lblReason.Text = "*cannot have number";
                 txtReason.Focus();
             }
-        }
-
-        private void gunaPictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

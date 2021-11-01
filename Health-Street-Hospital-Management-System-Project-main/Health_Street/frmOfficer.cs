@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
-
-
 
 namespace Health_Street
 {
     public partial class frmOfficer : Form
     {
-        private SmdDbManager dbManager;
         public frmOfficer()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
 
             showData();
         }
@@ -28,7 +22,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'LOG_IN_USER' WHERE Roll_name = '" + frmLogin.passingRollName+"' ");
+            dt = SQLConnectionManager.getdata("SELECT * FROM LOG_IN_USER WHERE Roll_name = '" + frmLogin.passingRollName+"' ");
             dgvOfficer.AutoGenerateColumns = false;
             dgvOfficer.DataSource = dt;
         }
@@ -45,7 +39,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'LOG_IN_USER' WHERE Roll_name LIKE '" + frmLogin.passingRollName + "%' AND ( Roll_Id LIKE '" + txtSearch.text + "%' OR First_Name LIKE '" + txtSearch.text + "%' OR Middle_Name LIKE '" + txtSearch.text + "%' OR Gender LIKE '" + txtSearch.text + "%' )");
+            dt = SQLConnectionManager.getdata("SELECT * FROM LOG_IN_USER WHERE Roll_name LIKE '" + frmLogin.passingRollName + "%' AND ( Roll_Id LIKE '" + txtSearch.text + "%' OR First_Name LIKE '" + txtSearch.text + "%' OR Middle_Name LIKE '" + txtSearch.text + "%' OR Gender LIKE '" + txtSearch.text + "%' )");
             dgvOfficer.DataSource = dt;
         }
 

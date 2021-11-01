@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -18,13 +19,11 @@ namespace Health_Street
         public frmPhrDash()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             show();
-            if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = dbManager.readAndGet("SELECT * 'FROM LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblPharmacy.Text = "Hi, " + reader1[2].ToString();
@@ -39,25 +38,25 @@ namespace Health_Street
         private void rowCountMedicinet()
         {
             DataTable dt = new DataTable();
-            dt =dbManager.getdata("SELECT * FROM 'DRUG'");
+            dt = dbManager.getdata("SELECT * FROM DRUG");
             lblMedicine.Text = "+" + dt.Rows.Count.ToString();
         }
         private void rowCountSupplier()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'DRUG_SUPPLIER'");
+            dt = dbManager.getdata("SELECT * FROM DRUG_SUPPLIER");
             lblSupplier.Text = "+" + dt.Rows.Count.ToString();
         }
 
         private void show()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'DRUG'");
+            dt = dbManager.getdata("SELECT * FROM DRUG");
             dgvMedicine.AutoGenerateColumns = false;
             dgvMedicine.DataSource = dt;
 
             DataTable dt2 = new DataTable();
-            dt2 = dbManager.getdata("SELECT * FROM 'DRUG_SUPPLIER'");
+            dt2 = dbManager.getdata("SELECT * FROM DRUG_SUPPLIER");
             dgvSupplier.AutoGenerateColumns = false;
             dgvSupplier.DataSource = dt2;
         }
@@ -80,11 +79,6 @@ namespace Health_Street
         }
 
         private void gunaLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlBanner_Paint(object sender, PaintEventArgs e)
         {
 
         }

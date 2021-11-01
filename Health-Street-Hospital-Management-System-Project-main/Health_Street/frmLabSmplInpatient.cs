@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -17,9 +18,7 @@ namespace Health_Street
         public frmLabSmplInpatient()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             for (int i = 1; i <= 9; i++)
             {
                 dgvCustomer.Columns[i].ReadOnly = true;
@@ -36,7 +35,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt =dbManager.getdata("SELECT * 'FROM IN_SAMPLE'");
+            dt = dbManager.getdata("SELECT * FROM IN_SAMPLE");
             dgvCustomer.AutoGenerateColumns = false;
             dgvCustomer.DataSource = dt;
         }
@@ -49,7 +48,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt =dbManager.getdata("SELECT * 'FROM IN_SAMPLE' WHERE Sample_In_Number LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%' OR Sample_Type LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' OR Laboratory_Staff_Id LIKE '" + txtSearch.text + "%' ");
+            dt = dbManager.getdata("SELECT * FROM IN_SAMPLE WHERE Sample_In_Number LIKE '" + txtSearch.text + "%' OR Patient_Id_Number LIKE '" + txtSearch.text + "%' OR Sample_Type LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' OR Laboratory_Staff_Id LIKE '" + txtSearch.text + "%' ");
             dgvCustomer.DataSource = dt;
         }
 
@@ -74,7 +73,7 @@ namespace Health_Street
                 {
                     string sId = dgr.Cells[1].Value.ToString();
 
-                    n = dbManager.insrtUpdteDelt("DELETE FROM 'IN_SAMPLE' WHERE Sample_In_Number = '" + sId + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM IN_SAMPLE WHERE Sample_In_Number = '" + sId + "'");
                     c += 1;
                 }
             }

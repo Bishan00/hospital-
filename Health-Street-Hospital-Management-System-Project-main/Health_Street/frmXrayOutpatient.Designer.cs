@@ -100,7 +100,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageActive = null;
             this.btnAdd.InitialImage = null;
-            this.btnAdd.Location = new System.Drawing.Point(397, 125);
+            this.btnAdd.Location = new System.Drawing.Point(410, 125);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(45, 47);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +117,7 @@
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
             this.txtSearch.Location = new System.Drawing.Point(38, 136);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 36);
             this.txtSearch.TabIndex = 8;
@@ -143,7 +143,7 @@
             this.lblGuardians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblGuardians.Location = new System.Drawing.Point(150, 6);
             this.lblGuardians.Name = "lblGuardians";
-            this.lblGuardians.Size = new System.Drawing.Size(442, 62);
+            this.lblGuardians.Size = new System.Drawing.Size(559, 78);
             this.lblGuardians.TabIndex = 6;
             this.lblGuardians.Text = "X-Ray Out Patients";
             // 

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -18,10 +19,10 @@ namespace Health_Street
         public frmDctDash()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblDCTname.Text = "Hi, Dr."+reader1[2].ToString();
@@ -51,7 +52,7 @@ namespace Health_Street
         private void rowCountInPatient()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'PATIENT_PRIVATE_DETAIL,GUARDIAN,IN_PATIENT' WHERE PATIENT_PRIVATE_DETAIL.Guardian_Id_Number = GUARDIAN.Guardian_Id_Number AND PATIENT_PRIVATE_DETAIL.Patient_Id_Number=IN_PATIENT.Patient_Id_Number");
+            dt = dbManager.getdata("SELECT * FROM PATIENT_PRIVATE_DETAIL,GUARDIAN,IN_PATIENT WHERE PATIENT_PRIVATE_DETAIL.Guardian_Id_Number = GUARDIAN.Guardian_Id_Number AND PATIENT_PRIVATE_DETAIL.Patient_Id_Number=IN_PATIENT.Patient_Id_Number");
             lblInpatient.Text = "+" + dt.Rows.Count.ToString();
         }
 
@@ -61,9 +62,5 @@ namespace Health_Street
             rowCountInPatient();
         }
 
-        private void pnlBanner_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

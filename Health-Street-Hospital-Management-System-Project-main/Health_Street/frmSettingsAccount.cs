@@ -10,31 +10,29 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Data;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmSettingsAccount : Form
     {
-
         private SmdDbManager dbManager;
         public static Image ProfilePic;
         public frmSettingsAccount()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             showData();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
-
+            
         }
 
 
 
         private void showData()
         {
-            if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = dbManager.readAndGet("SELECT *FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblFname.Text = reader1["First_Name"].ToString();
@@ -71,7 +69,7 @@ namespace Health_Street
 
             if (dbManager.chek("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader2 = dbManager.readAndGet("SELECT * FROM 'ACCOUNT' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                MySqlDataReader reader2 = dbManager.ReadAndGet("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader2.Read())
                 {
                     lblGmail.Text = reader2["E_mail"].ToString();
@@ -89,11 +87,6 @@ namespace Health_Street
             frmSettingsAccountEdit frm = new frmSettingsAccountEdit();
             frm.updateEvent += frm_Update;
             new Health_Street.frmTranceparentBG(frm);
-        }
-
-        private void gunaGroupBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

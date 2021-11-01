@@ -8,26 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmDoctor : Form
     {
-        private SmdDbManager dbManager; 
+        private SmdDbManager dbManager;
         public frmDoctor()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             showData();
         }
 
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'LOG_IN_USER' WHERE Roll_name = 'DOCTOR' ");
+            dt = dbManager.getdata("SELECT * FROM LOG_IN_USER WHERE Roll_name = 'DOCTOR' ");
             dgvOfficer.AutoGenerateColumns = false;
             dgvOfficer.DataSource = dt;
         }
@@ -44,7 +42,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt =dbManager.getdata("SELECT * FROM LOG_IN_USER WHERE Roll_name LIKE '" + frmLogin.passingRollName + "%' AND ( Roll_Id LIKE '" + txtSearch.text + "%' OR First_Name LIKE '" + txtSearch.text + "%' OR Middle_Name LIKE '" + txtSearch.text + "%' OR Gender LIKE '" + txtSearch.text + "%' )");
+            dt = dbManager.getdata("SELECT * FROM LOG_IN_USER WHERE Roll_name LIKE '" + frmLogin.passingRollName + "%' AND ( Roll_Id LIKE '" + txtSearch.text + "%' OR First_Name LIKE '" + txtSearch.text + "%' OR Middle_Name LIKE '" + txtSearch.text + "%' OR Gender LIKE '" + txtSearch.text + "%' )");
             dgvOfficer.DataSource = dt;
         }
 

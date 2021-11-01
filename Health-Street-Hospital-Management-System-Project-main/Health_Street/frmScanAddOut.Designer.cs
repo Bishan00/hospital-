@@ -34,8 +34,6 @@
             this.btnClose = new Guna.UI.WinForms.GunaControlBox();
             this.gunaLabel18 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.txtDctName = new Guna.UI.WinForms.GunaTextBox();
             this.pctbXray = new Guna.UI.WinForms.GunaPictureBox();
             this.btnAddPic = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnPSave = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -51,6 +49,8 @@
             this.txtPatientId = new Guna.UI.WinForms.GunaTextBox();
             this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
             this.Animate = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.txtDctName = new Guna.UI.WinForms.GunaTextBox();
             this.pnlTheme.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctbXray)).BeginInit();
@@ -70,9 +70,8 @@
             this.pnlTheme.Controls.Add(this.gunaGroupBox1);
             this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTheme.Location = new System.Drawing.Point(0, 0);
-            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlTheme.Name = "pnlTheme";
-            this.pnlTheme.Size = new System.Drawing.Size(638, 500);
+            this.pnlTheme.Size = new System.Drawing.Size(851, 615);
             this.pnlTheme.TabIndex = 0;
             // 
             // btnClose
@@ -82,13 +81,12 @@
             this.btnClose.AnimationSpeed = 0.03F;
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconSize = 15F;
-            this.btnClose.Location = new System.Drawing.Point(580, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(773, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnClose.OnHoverIconColor = System.Drawing.Color.White;
             this.btnClose.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(112)))), ((int)(((byte)(122)))));
-            this.btnClose.Size = new System.Drawing.Size(59, 35);
+            this.btnClose.Size = new System.Drawing.Size(79, 43);
             this.btnClose.TabIndex = 4;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -97,10 +95,9 @@
             this.gunaLabel18.AutoSize = true;
             this.gunaLabel18.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
             this.gunaLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
-            this.gunaLabel18.Location = new System.Drawing.Point(22, 22);
-            this.gunaLabel18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel18.Location = new System.Drawing.Point(30, 27);
             this.gunaLabel18.Name = "gunaLabel18";
-            this.gunaLabel18.Size = new System.Drawing.Size(426, 54);
+            this.gunaLabel18.Size = new System.Drawing.Size(530, 67);
             this.gunaLabel18.TabIndex = 1;
             this.gunaLabel18.Text = "Add Scan Out Patient";
             // 
@@ -129,54 +126,19 @@
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaGroupBox1.LineTop = 40;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(32, 88);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(43, 108);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(568, 407);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(758, 501);
             this.gunaGroupBox1.TabIndex = 0;
             this.gunaGroupBox1.Text = "Add Scan";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
-            this.gunaGroupBox1.Click += new System.EventHandler(this.gunaGroupBox1_Click);
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel5.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaLabel5.Location = new System.Drawing.Point(11, 213);
-            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(99, 19);
-            this.gunaLabel5.TabIndex = 9;
-            this.gunaLabel5.Text = "Doctor Name";
-            // 
-            // txtDctName
-            // 
-            this.txtDctName.BaseColor = System.Drawing.Color.White;
-            this.txtDctName.BorderColor = System.Drawing.Color.Gainsboro;
-            this.txtDctName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDctName.Enabled = false;
-            this.txtDctName.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtDctName.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
-            this.txtDctName.FocusedForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtDctName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDctName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtDctName.Location = new System.Drawing.Point(14, 234);
-            this.txtDctName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtDctName.Name = "txtDctName";
-            this.txtDctName.PasswordChar = '\0';
-            this.txtDctName.ReadOnly = true;
-            this.txtDctName.SelectedText = "";
-            this.txtDctName.Size = new System.Drawing.Size(280, 32);
-            this.txtDctName.TabIndex = 8;
             // 
             // pctbXray
             // 
             this.pctbXray.BaseColor = System.Drawing.Color.White;
-            this.pctbXray.Location = new System.Drawing.Point(314, 79);
-            this.pctbXray.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pctbXray.Location = new System.Drawing.Point(419, 97);
             this.pctbXray.Name = "pctbXray";
-            this.pctbXray.Size = new System.Drawing.Size(239, 194);
+            this.pctbXray.Size = new System.Drawing.Size(319, 239);
             this.pctbXray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbXray.TabIndex = 7;
             this.pctbXray.TabStop = false;
@@ -201,8 +163,7 @@
             this.btnAddPic.Image = null;
             this.btnAddPic.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAddPic.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnAddPic.Location = new System.Drawing.Point(268, 158);
-            this.btnAddPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddPic.Location = new System.Drawing.Point(357, 195);
             this.btnAddPic.Name = "btnAddPic";
             this.btnAddPic.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.btnAddPic.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -210,7 +171,7 @@
             this.btnAddPic.OnHoverImage = null;
             this.btnAddPic.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnAddPic.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAddPic.Size = new System.Drawing.Size(37, 32);
+            this.btnAddPic.Size = new System.Drawing.Size(49, 39);
             this.btnAddPic.TabIndex = 5;
             this.btnAddPic.Text = "...";
             this.btnAddPic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -235,8 +196,7 @@
             this.btnPSave.Image = null;
             this.btnPSave.ImageSize = new System.Drawing.Size(20, 20);
             this.btnPSave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnPSave.Location = new System.Drawing.Point(416, 317);
-            this.btnPSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPSave.Location = new System.Drawing.Point(554, 390);
             this.btnPSave.Name = "btnPSave";
             this.btnPSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.btnPSave.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -245,7 +205,7 @@
             this.btnPSave.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnPSave.OnPressedColor = System.Drawing.Color.Black;
             this.btnPSave.Radius = 22;
-            this.btnPSave.Size = new System.Drawing.Size(137, 58);
+            this.btnPSave.Size = new System.Drawing.Size(183, 71);
             this.btnPSave.TabIndex = 5;
             this.btnPSave.Text = "Save";
             this.btnPSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -256,10 +216,9 @@
             this.gunaLabel13.AutoSize = true;
             this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.gunaLabel13.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaLabel13.Location = new System.Drawing.Point(14, 356);
-            this.gunaLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel13.Location = new System.Drawing.Point(18, 438);
             this.gunaLabel13.Name = "gunaLabel13";
-            this.gunaLabel13.Size = new System.Drawing.Size(44, 19);
+            this.gunaLabel13.Size = new System.Drawing.Size(53, 23);
             this.gunaLabel13.TabIndex = 1;
             this.gunaLabel13.Text = "Date:";
             // 
@@ -268,10 +227,9 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblTime.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTime.Location = new System.Drawing.Point(311, 356);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTime.Location = new System.Drawing.Point(415, 438);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(0, 19);
+            this.lblTime.Size = new System.Drawing.Size(0, 23);
             this.lblTime.TabIndex = 1;
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
@@ -280,10 +238,9 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblDate.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDate.Location = new System.Drawing.Point(58, 356);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDate.Location = new System.Drawing.Point(77, 438);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 19);
+            this.lblDate.Size = new System.Drawing.Size(0, 23);
             this.lblDate.TabIndex = 1;
             // 
             // gunaLabel14
@@ -291,10 +248,9 @@
             this.gunaLabel14.AutoSize = true;
             this.gunaLabel14.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.gunaLabel14.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaLabel14.Location = new System.Drawing.Point(266, 356);
-            this.gunaLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel14.Location = new System.Drawing.Point(354, 438);
             this.gunaLabel14.Name = "gunaLabel14";
-            this.gunaLabel14.Size = new System.Drawing.Size(46, 19);
+            this.gunaLabel14.Size = new System.Drawing.Size(55, 23);
             this.gunaLabel14.TabIndex = 1;
             this.gunaLabel14.Text = "Time:";
             // 
@@ -303,10 +259,9 @@
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.gunaLabel6.Location = new System.Drawing.Point(18, 193);
-            this.gunaLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel6.Location = new System.Drawing.Point(24, 237);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(0, 15);
+            this.gunaLabel6.Size = new System.Drawing.Size(0, 20);
             this.gunaLabel6.TabIndex = 6;
             // 
             // lblApNumber
@@ -314,10 +269,9 @@
             this.lblApNumber.AutoSize = true;
             this.lblApNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblApNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.lblApNumber.Location = new System.Drawing.Point(14, 114);
-            this.lblApNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApNumber.Location = new System.Drawing.Point(19, 140);
             this.lblApNumber.Name = "lblApNumber";
-            this.lblApNumber.Size = new System.Drawing.Size(0, 15);
+            this.lblApNumber.Size = new System.Drawing.Size(0, 20);
             this.lblApNumber.TabIndex = 6;
             // 
             // gunaLabel2
@@ -325,10 +279,9 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.gunaLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaLabel2.Location = new System.Drawing.Point(11, 137);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(15, 169);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(49, 19);
+            this.gunaLabel2.Size = new System.Drawing.Size(57, 23);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "X-Ray";
             // 
@@ -337,10 +290,9 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.gunaLabel1.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaLabel1.Location = new System.Drawing.Point(11, 58);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(15, 71);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(74, 19);
+            this.gunaLabel1.Size = new System.Drawing.Size(90, 23);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "Patient ID";
             // 
@@ -355,12 +307,11 @@
             this.txtXrayPath.FocusedForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtXrayPath.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtXrayPath.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtXrayPath.Location = new System.Drawing.Point(14, 158);
-            this.txtXrayPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtXrayPath.Location = new System.Drawing.Point(19, 195);
             this.txtXrayPath.Name = "txtXrayPath";
             this.txtXrayPath.PasswordChar = '\0';
             this.txtXrayPath.SelectedText = "";
-            this.txtXrayPath.Size = new System.Drawing.Size(249, 32);
+            this.txtXrayPath.Size = new System.Drawing.Size(332, 39);
             this.txtXrayPath.TabIndex = 0;
             // 
             // txtPatientId
@@ -373,12 +324,11 @@
             this.txtPatientId.FocusedForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtPatientId.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtPatientId.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtPatientId.Location = new System.Drawing.Point(14, 79);
-            this.txtPatientId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPatientId.Location = new System.Drawing.Point(19, 97);
             this.txtPatientId.Name = "txtPatientId";
             this.txtPatientId.PasswordChar = '\0';
             this.txtPatientId.SelectedText = "";
-            this.txtPatientId.Size = new System.Drawing.Size(280, 32);
+            this.txtPatientId.Size = new System.Drawing.Size(374, 39);
             this.txtPatientId.TabIndex = 0;
             this.txtPatientId.TextChanged += new System.EventHandler(this.txtApNumber_TextChanged);
             // 
@@ -392,15 +342,44 @@
             this.Animate.Interval = 800;
             this.Animate.TargetControl = this;
             // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel5.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaLabel5.Location = new System.Drawing.Point(15, 262);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(117, 23);
+            this.gunaLabel5.TabIndex = 9;
+            this.gunaLabel5.Text = "Doctor Name";
+            // 
+            // txtDctName
+            // 
+            this.txtDctName.BaseColor = System.Drawing.Color.White;
+            this.txtDctName.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txtDctName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDctName.Enabled = false;
+            this.txtDctName.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtDctName.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
+            this.txtDctName.FocusedForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtDctName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtDctName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtDctName.Location = new System.Drawing.Point(19, 288);
+            this.txtDctName.Name = "txtDctName";
+            this.txtDctName.PasswordChar = '\0';
+            this.txtDctName.ReadOnly = true;
+            this.txtDctName.SelectedText = "";
+            this.txtDctName.Size = new System.Drawing.Size(374, 39);
+            this.txtDctName.TabIndex = 8;
+            // 
             // frmScanAddOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(638, 500);
+            this.ClientSize = new System.Drawing.Size(851, 615);
             this.Controls.Add(this.pnlTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmScanAddOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmADAddmitPatient";

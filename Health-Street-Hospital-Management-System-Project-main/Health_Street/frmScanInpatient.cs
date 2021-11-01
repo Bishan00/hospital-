@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -17,8 +18,7 @@ namespace Health_Street
         public frmScanInpatient()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             for (int i = 1; i <= 8; i++)
             {
                 dgvInScan.Columns[i].ReadOnly = true;
@@ -34,7 +34,7 @@ namespace Health_Street
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT_SCAN'");
+            dt = dbManager.getdata("SELECT * FROM IN_PATIENT_SCAN");
             dgvInScan.AutoGenerateColumns = false;
             dgvInScan.DataSource = dt;
         }
@@ -47,7 +47,7 @@ namespace Health_Street
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'IN_PATIENT_SCAN' WHERE In_Patient_Scan_No LIKE '" + txtSearch.text + "%' OR Admission_Number LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' ");
+            dt = dbManager.getdata("SELECT * FROM IN_PATIENT_SCAN WHERE In_Patient_Scan_No LIKE '" + txtSearch.text + "%' OR Admission_Number LIKE '" + txtSearch.text + "%' OR Ward_Number LIKE '" + txtSearch.text + "%' OR Room_Number LIKE '" + txtSearch.text + "%' OR Specialist_Doctor_Id LIKE '" + txtSearch.text + "%' ");
             dgvInScan.DataSource = dt;
         }
 

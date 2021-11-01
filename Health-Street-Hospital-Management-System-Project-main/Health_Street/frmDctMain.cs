@@ -9,24 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
 
 namespace Health_Street
 {
     public partial class frmDctMain : Form
     {
-        private SmdDbManager dbManager;
         clsOpnChild chld = new clsOpnChild();
         public frmDctMain()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
 
-
-
-            if (dbManager.chek("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (SQLConnectionManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader1 = dbManager.readAndGet("SELECT * FROM 'LOG_IN_USER' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                SqlDataReader reader1 = SQLConnectionManager.readAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblDesignation.Text = reader1[10].ToString();
@@ -56,9 +51,9 @@ namespace Health_Street
 
                 }
             }
-            if (dbManager.chek("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
+            if (SQLConnectionManager.chek("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                SqlDataReader reader2 = dbManager.readAndGet("SELECT * FROM 'ACCOUNT' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                SqlDataReader reader2 = SQLConnectionManager.readAndGet("SELECT * FROM ACCOUNT WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader2.Read())
                 {
                     lblEmail.Text = reader2[5].ToString();
@@ -157,11 +152,6 @@ namespace Health_Street
         }
 
         private void gunaLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlChildForms_Paint(object sender, PaintEventArgs e)
         {
 
         }

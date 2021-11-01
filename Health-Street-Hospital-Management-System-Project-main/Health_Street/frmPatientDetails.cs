@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -17,9 +18,7 @@ namespace Health_Street
         public frmPatientDetails()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             MessageBox.Show(frmDctInpatient.admitionNumber);
             show();
         }
@@ -32,12 +31,12 @@ namespace Health_Street
         private void show()
         {
             DataTable dt1 = new DataTable();
-            dt1 = dbManager.getdata("SELECT * FROM 'IN_PATIENT_REPORT' WHERE Admission_Number = '"+frmDctInpatient.admitionNumber+"'");
+            dt1 = dbManager.getdata("SELECT * FROM IN_PATIENT_REPORT WHERE Admission_Number = '"+frmDctInpatient.admitionNumber+"'");
             dgvReports.AutoGenerateColumns = false;
             dgvReports.DataSource = dt1;
 
             DataTable dt2 = new DataTable();
-            dt2 = dbManager.getdata("SELECT * FROM 'IN_PATIENT_MEDICINE' WHERE Admission_Number = '" + frmDctInpatient.admitionNumber + "'");
+            dt2 = dbManager.getdata("SELECT * FROM IN_PATIENT_MEDICINE WHERE Admission_Number = '" + frmDctInpatient.admitionNumber + "'");
             dgvMedicine.AutoGenerateColumns = false;
             dgvMedicine.DataSource = dt2;
         }
@@ -58,11 +57,6 @@ namespace Health_Street
         }
 
         private void gunaDataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
-        }
-
-        private void dgvReports_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

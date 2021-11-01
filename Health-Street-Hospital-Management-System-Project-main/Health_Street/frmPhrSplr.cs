@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
@@ -17,27 +18,25 @@ namespace Health_Street
         public frmPhrSplr()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             for (int i = 1; i <= 7; i++)
             {
                 dgvSupplier.Columns[i].ReadOnly = true;
             }
             showData();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
-
-
         }
 
         private void showData()
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM  'DRUG_SUPPLIER,DRUG_ORDER'");
+            dt = dbManager.getdata("SELECT * FROM DRUG_SUPPLIER,DRUG_ORDER");
             dgvSupplier.AutoGenerateColumns = false;
             dgvSupplier.DataSource = dt;
         }
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = dbManager.getdata("SELECT * FROM 'DRUG_SUPPLIER,DRUG_ORDER' WHERE DRUG_SUPPLIER.Supplier_Id LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Supplier_Name LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Company LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Country LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Reg_Number LIKE '" + txtSearch.text + "%'");
+            dt = dbManager.getdata("SELECT * FROM DRUG_SUPPLIER,DRUG_ORDER WHERE DRUG_SUPPLIER.Supplier_Id LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Supplier_Name LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Company LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Country LIKE '" + txtSearch.text + "%' OR DRUG_SUPPLIER.Manufacture_Reg_Number LIKE '" + txtSearch.text + "%'");
             dgvSupplier.DataSource = dt;
         }
 
@@ -72,7 +71,7 @@ namespace Health_Street
                 {
                     string suppId =  dgr.Cells[1].Value.ToString();
 
-                    n = dbManager.insrtUpdteDelt("DELETE FROM 'DRUG_SUPPLIER' WHERE Supplier_Id = '" + suppId + "'");
+                    n = dbManager.insrtUpdteDelt("DELETE FROM DRUG_SUPPLIER WHERE Supplier_Id = '" + suppId + "'");
                     c += 1;
                 }
             }
