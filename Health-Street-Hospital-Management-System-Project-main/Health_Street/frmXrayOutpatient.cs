@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMDMySQLDBManager;
+using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmXrayOutpatient : Form
     {
+        private SmdDbManager dbManager;
         public frmXrayOutpatient()
         {
             InitializeComponent();
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             for (int i = 1; i <= 5; i++)
             {
                 dgvXrayOutPatient.Columns[i].ReadOnly = true;
