@@ -38,16 +38,16 @@
             this.pnlTheme = new Guna.UI.WinForms.GunaPanel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.lblPatient = new Guna.UI.WinForms.GunaLabel();
-            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.txtSearch = new Bunifu.Framework.UI.BunifuTextbox();
             this.dgvPatient = new Guna.UI.WinForms.GunaDataGridView();
-            this.Patient_Id_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Patient_First_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Patient_Middle_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Patient_Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date_Of_Birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Out_Patient_Id_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Patient_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Guardian_NIC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Guardian_Tele_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Blood_Group = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTheme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
@@ -66,19 +66,20 @@
             this.pnlTheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlTheme.Controls.Add(this.gunaPictureBox1);
             this.pnlTheme.Controls.Add(this.lblPatient);
-            this.pnlTheme.Controls.Add(this.bunifuTextbox1);
+            this.pnlTheme.Controls.Add(this.txtSearch);
             this.pnlTheme.Controls.Add(this.dgvPatient);
             this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTheme.Location = new System.Drawing.Point(0, 0);
             this.pnlTheme.Name = "pnlTheme";
             this.pnlTheme.Size = new System.Drawing.Size(1265, 764);
             this.pnlTheme.TabIndex = 6;
+            this.pnlTheme.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTheme_Paint);
             // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(37, -4);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(37, 4);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(111, 105);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,33 +92,38 @@
             this.lblPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPatient.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold);
             this.lblPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.lblPatient.Location = new System.Drawing.Point(148, 9);
+            this.lblPatient.Location = new System.Drawing.Point(148, 17);
             this.lblPatient.Name = "lblPatient";
             this.lblPatient.Size = new System.Drawing.Size(257, 78);
             this.lblPatient.TabIndex = 2;
             this.lblPatient.Text = "Patients";
             // 
-            // bunifuTextbox1
+            // txtSearch
             // 
-            this.bunifuTextbox1.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
-            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
-            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(31, 115);
-            this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(420, 44);
-            this.bunifuTextbox1.TabIndex = 1;
-            this.bunifuTextbox1.text = "";
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.txtSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSearch.BackgroundImage")));
+            this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
+            this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
+            this.txtSearch.Location = new System.Drawing.Point(31, 129);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(420, 38);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.text = "";
+            this.txtSearch.OnTextChange += new System.EventHandler(this.txtSearch_OnTextChange);
             // 
             // dgvPatient
             // 
+            this.dgvPatient.AllowUserToAddRows = false;
+            this.dgvPatient.AllowUserToDeleteRows = false;
+            this.dgvPatient.AllowUserToResizeColumns = false;
+            this.dgvPatient.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.dgvPatient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPatient.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPatient.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPatient.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPatient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -131,14 +137,14 @@
             this.dgvPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPatient.ColumnHeadersHeight = 52;
             this.dgvPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Patient_Id_Number,
-            this.Patient_First_Name,
-            this.Patient_Middle_Name,
-            this.Patient_Surname,
-            this.Gender,
-            this.Date_Of_Birth,
+            this.Column1,
+            this.Out_Patient_Id_Number,
+            this.Patient_Name,
+            this.Guardian_NIC,
+            this.Guardian_Tele_No,
             this.Age,
-            this.Blood_Group});
+            this.Reason,
+            this.C_Date});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -149,7 +155,7 @@
             this.dgvPatient.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPatient.EnableHeadersVisualStyles = false;
             this.dgvPatient.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvPatient.Location = new System.Drawing.Point(31, 168);
+            this.dgvPatient.Location = new System.Drawing.Point(31, 176);
             this.dgvPatient.Name = "dgvPatient";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -171,7 +177,7 @@
             this.dgvPatient.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvPatient.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvPatient.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvPatient.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPatient.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dgvPatient.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dgvPatient.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.dgvPatient.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -187,54 +193,70 @@
             this.dgvPatient.ThemeStyle.RowsStyle.Height = 24;
             this.dgvPatient.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(181)))), ((int)(((byte)(189)))));
             this.dgvPatient.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPatient.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPatient_DataError);
             // 
-            // Patient_Id_Number
+            // Column1
             // 
-            this.Patient_Id_Number.HeaderText = "Patient ID";
-            this.Patient_Id_Number.MinimumWidth = 6;
-            this.Patient_Id_Number.Name = "Patient_Id_Number";
+            this.Column1.FillWeight = 20F;
+            this.Column1.HeaderText = "";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
             // 
-            // Patient_First_Name
+            // Out_Patient_Id_Number
             // 
-            this.Patient_First_Name.HeaderText = "First Name";
-            this.Patient_First_Name.MinimumWidth = 6;
-            this.Patient_First_Name.Name = "Patient_First_Name";
+            this.Out_Patient_Id_Number.DataPropertyName = "Out_Patient_Id_Number";
+            this.Out_Patient_Id_Number.FillWeight = 61.64503F;
+            this.Out_Patient_Id_Number.HeaderText = "Patient ID";
+            this.Out_Patient_Id_Number.MinimumWidth = 6;
+            this.Out_Patient_Id_Number.Name = "Out_Patient_Id_Number";
             // 
-            // Patient_Middle_Name
+            // Patient_Name
             // 
-            this.Patient_Middle_Name.HeaderText = "Middle Name";
-            this.Patient_Middle_Name.MinimumWidth = 6;
-            this.Patient_Middle_Name.Name = "Patient_Middle_Name";
+            this.Patient_Name.DataPropertyName = "Patient_Name";
+            this.Patient_Name.FillWeight = 61.64503F;
+            this.Patient_Name.HeaderText = "Patients Name";
+            this.Patient_Name.MinimumWidth = 6;
+            this.Patient_Name.Name = "Patient_Name";
             // 
-            // Patient_Surname
+            // Guardian_NIC
             // 
-            this.Patient_Surname.HeaderText = "Surname";
-            this.Patient_Surname.MinimumWidth = 6;
-            this.Patient_Surname.Name = "Patient_Surname";
+            this.Guardian_NIC.DataPropertyName = "Guardian_NIC";
+            this.Guardian_NIC.FillWeight = 61.64503F;
+            this.Guardian_NIC.HeaderText = "Guardian NIC";
+            this.Guardian_NIC.MinimumWidth = 6;
+            this.Guardian_NIC.Name = "Guardian_NIC";
             // 
-            // Gender
+            // Guardian_Tele_No
             // 
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            // 
-            // Date_Of_Birth
-            // 
-            this.Date_Of_Birth.HeaderText = "Date Of Birth";
-            this.Date_Of_Birth.MinimumWidth = 6;
-            this.Date_Of_Birth.Name = "Date_Of_Birth";
+            this.Guardian_Tele_No.DataPropertyName = "Guardian_Tele_No";
+            this.Guardian_Tele_No.FillWeight = 61.64503F;
+            this.Guardian_Tele_No.HeaderText = "Guardian TP No.";
+            this.Guardian_Tele_No.MinimumWidth = 6;
+            this.Guardian_Tele_No.Name = "Guardian_Tele_No";
             // 
             // Age
             // 
+            this.Age.DataPropertyName = "Age";
+            this.Age.FillWeight = 61.64503F;
             this.Age.HeaderText = "Age";
             this.Age.MinimumWidth = 6;
             this.Age.Name = "Age";
             // 
-            // Blood_Group
+            // Reason
             // 
-            this.Blood_Group.HeaderText = "Blood Group";
-            this.Blood_Group.MinimumWidth = 6;
-            this.Blood_Group.Name = "Blood_Group";
+            this.Reason.DataPropertyName = "Reason";
+            this.Reason.FillWeight = 61.64503F;
+            this.Reason.HeaderText = "Reason";
+            this.Reason.MinimumWidth = 6;
+            this.Reason.Name = "Reason";
+            // 
+            // C_Date
+            // 
+            this.C_Date.DataPropertyName = "C_Date";
+            this.C_Date.FillWeight = 61.64503F;
+            this.C_Date.HeaderText = "Date";
+            this.C_Date.MinimumWidth = 6;
+            this.C_Date.Name = "C_Date";
             // 
             // frmDctPatient
             // 
@@ -257,17 +279,17 @@
 
         private Bunifu.Framework.UI.BunifuElipse elips;
         private Guna.UI.WinForms.GunaPanel pnlTheme;
-        private Guna.UI.WinForms.GunaDataGridView dgvPatient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Patient_Id_Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Patient_First_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Patient_Middle_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Patient_Surname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Of_Birth;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Blood_Group;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
+        private Bunifu.Framework.UI.BunifuTextbox txtSearch;
         private Guna.UI.WinForms.GunaLabel lblPatient;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        public Guna.UI.WinForms.GunaDataGridView dgvPatient;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Out_Patient_Id_Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Patient_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Guardian_NIC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Guardian_Tele_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reason;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_Date;
     }
 }

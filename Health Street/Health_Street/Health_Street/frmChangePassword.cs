@@ -13,7 +13,7 @@ namespace Health_Street
         public frmChangePassword()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
         }
 
         private void frmChangePassword_Load(object sender, EventArgs e)
@@ -272,18 +272,12 @@ namespace Health_Street
             }
             else
             {
-                /*string sql1 = "INSERT INTO ACCOUNT VALUES ( 'Pa'	,'ho',	'ho',' ', ' ',SYSDATETIME(),SYSDATETIME())";
-                int i = SQLConnectionManager.insrtUpdteDelt(sql1);
-                if(i==1)
-                {
-                    MessageBox.Show("Success");
-                }*/
 
-                string sql2 = "UPDATE ACCOUNT SET Login_Password = '"+txtComfirmPassword.Text+ "' WHERE Roll_Id = 'R0006'";
-                int j = dbManager.insrtUpdteDelt(sql2);
-                if(j==1)
+                int i = dbManager.insrtUpdteDelt("UPDATE LOG_IN_USER SET First_Name = '" + txtFirstName.Text + "',Surname = '" + txtLastName.Text + "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                int j = dbManager.insrtUpdteDelt("UPDATE ACCOUNT SET Login_Password = '"+txtComfirmPassword.Text+"',E_mail='"+txtGmail.Text+ "' WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                if (i == 1 && j==1)
                 {
-                    MessageBox.Show("Successfull");
+                    MessageBox.Show("SUCESSFULL");
                 }
             }
         }

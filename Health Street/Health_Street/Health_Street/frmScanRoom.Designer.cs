@@ -261,7 +261,8 @@
             this.btnOutpatient.Radius = 22;
             this.btnOutpatient.Size = new System.Drawing.Size(221, 61);
             this.btnOutpatient.TabIndex = 5;
-            this.btnOutpatient.Text = "Guardian";
+            this.btnOutpatient.Text = "Out Patients";
+            this.btnOutpatient.Click += new System.EventHandler(this.btnOutpatient_Click);
             // 
             // btnInpatient
             // 
@@ -294,7 +295,7 @@
             this.btnInpatient.Radius = 22;
             this.btnInpatient.Size = new System.Drawing.Size(221, 61);
             this.btnInpatient.TabIndex = 4;
-            this.btnInpatient.Text = "Guardian";
+            this.btnInpatient.Text = "In Patients";
             this.btnInpatient.Click += new System.EventHandler(this.btnInpatient_Click);
             // 
             // btnPatient
@@ -329,7 +330,7 @@
             this.btnPatient.Radius = 22;
             this.btnPatient.Size = new System.Drawing.Size(258, 61);
             this.btnPatient.TabIndex = 3;
-            this.btnPatient.Text = "Patients";
+            this.btnPatient.Text = "Patient Scans";
             this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
             // 
             // btnDashboard

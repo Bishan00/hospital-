@@ -7,20 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
-using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmNewPassword : Form
     {
-        private SmdDbManager dbManager;
         string gmail = frmForgetPassword.mail;
         public frmNewPassword()
         {
             InitializeComponent();
             txtnewPassword.Focus();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
         }
 
         private void frmNewPassword_Load(object sender, EventArgs e)
@@ -59,9 +55,9 @@ namespace Health_Street
             else
             {
                 string sqlcmd = "UPDATE ACCOUNT SET Login_Password = '" + txtComfrmPassword.Text + "' WHERE E_mail = '"+gmail+"'";
-                if (dbManager.insrtUpdteDelt(sqlcmd) == 1)
+                if (SQLConnectionManager.insrtUpdteDelt(sqlcmd) == 1)
                 {
-                    MessageBox.Show("Successfull");
+                    MessageBox.Show("SUCCESSFULL");
                     new frmLogin().Show();
                     this.Close();
                 }

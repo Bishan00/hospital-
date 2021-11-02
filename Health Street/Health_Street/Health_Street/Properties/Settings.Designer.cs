@@ -46,5 +46,16 @@ namespace Health_Street.Properties {
                 this["Password"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Sachintha;Initial Catalog=GUI_Hospital_Management_System;Integrated S" +
+            "ecurity=True")]
+        public string GUI_Hospital_Management_SystemConnectionString {
+            get {
+                return ((string)(this["GUI_Hospital_Management_SystemConnectionString"]));
+            }
+        }
     }
 }

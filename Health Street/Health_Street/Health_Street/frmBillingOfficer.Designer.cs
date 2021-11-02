@@ -46,6 +46,7 @@
             this.btnClose = new Guna.UI.WinForms.GunaControlBox();
             this.btnMaximize = new Guna.UI.WinForms.GunaControlBox();
             this.dragPhr = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.btnOfficer = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnlPhr.SuspendLayout();
             this.pnlPhrLeft.SuspendLayout();
             this.pnlCmm.SuspendLayout();
@@ -69,7 +70,7 @@
             this.pnlPhr.Location = new System.Drawing.Point(0, 0);
             this.pnlPhr.Name = "pnlPhr";
             this.pnlPhr.ShadowDecoration.Parent = this.pnlPhr;
-            this.pnlPhr.Size = new System.Drawing.Size(1509, 887);
+            this.pnlPhr.Size = new System.Drawing.Size(1942, 1000);
             this.pnlPhr.TabIndex = 0;
             // 
             // pnlPhrChild
@@ -81,7 +82,7 @@
             this.pnlPhrChild.BaseColor = System.Drawing.SystemColors.Control;
             this.pnlPhrChild.Location = new System.Drawing.Point(321, 48);
             this.pnlPhrChild.Name = "pnlPhrChild";
-            this.pnlPhrChild.Size = new System.Drawing.Size(1176, 827);
+            this.pnlPhrChild.Size = new System.Drawing.Size(1609, 940);
             this.pnlPhrChild.TabIndex = 6;
             // 
             // pnlPhrLeft
@@ -93,7 +94,7 @@
             this.pnlPhrLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlPhrLeft.Name = "pnlPhrLeft";
             this.pnlPhrLeft.ShadowDecoration.Parent = this.pnlPhrLeft;
-            this.pnlPhrLeft.Size = new System.Drawing.Size(322, 887);
+            this.pnlPhrLeft.Size = new System.Drawing.Size(322, 1000);
             this.pnlPhrLeft.TabIndex = 5;
             // 
             // btnLogout
@@ -117,7 +118,7 @@
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageSize = new System.Drawing.Size(23, 23);
             this.btnLogout.LineColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Location = new System.Drawing.Point(71, 806);
+            this.btnLogout.Location = new System.Drawing.Point(71, 919);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnLogout.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -132,6 +133,7 @@
             // 
             // pnlCmm
             // 
+            this.pnlCmm.Controls.Add(this.btnOfficer);
             this.pnlCmm.Controls.Add(this.btnSettings);
             this.pnlCmm.Controls.Add(this.btnOrg);
             this.pnlCmm.Controls.Add(this.btnGud);
@@ -139,7 +141,7 @@
             this.pnlCmm.Location = new System.Drawing.Point(46, 284);
             this.pnlCmm.Name = "pnlCmm";
             this.pnlCmm.ShadowDecoration.Parent = this.pnlCmm;
-            this.pnlCmm.Size = new System.Drawing.Size(258, 265);
+            this.pnlCmm.Size = new System.Drawing.Size(258, 340);
             this.pnlCmm.TabIndex = 4;
             // 
             // btnSettings
@@ -162,7 +164,7 @@
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSettings.LineColor = System.Drawing.Color.Transparent;
-            this.btnSettings.Location = new System.Drawing.Point(0, 201);
+            this.btnSettings.Location = new System.Drawing.Point(0, 268);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.btnSettings.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
@@ -310,7 +312,7 @@
             this.btnMinimize.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
             this.btnMinimize.IconSize = 15F;
-            this.btnMinimize.Location = new System.Drawing.Point(1324, -1);
+            this.btnMinimize.Location = new System.Drawing.Point(1757, -1);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(203)))));
             this.btnMinimize.OnHoverIconColor = System.Drawing.Color.Black;
@@ -326,7 +328,7 @@
             this.btnClose.AnimationSpeed = 0.03F;
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconSize = 15F;
-            this.btnClose.Location = new System.Drawing.Point(1431, -1);
+            this.btnClose.Location = new System.Drawing.Point(1864, -1);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnClose.OnHoverIconColor = System.Drawing.Color.White;
@@ -343,7 +345,7 @@
             this.btnMaximize.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.btnMaximize.IconColor = System.Drawing.Color.Black;
             this.btnMaximize.IconSize = 15F;
-            this.btnMaximize.Location = new System.Drawing.Point(1375, -1);
+            this.btnMaximize.Location = new System.Drawing.Point(1808, -1);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(203)))));
             this.btnMaximize.OnHoverIconColor = System.Drawing.Color.Black;
@@ -359,12 +361,47 @@
             this.dragPhr.TargetControl = this.pnlPhr;
             this.dragPhr.Vertical = true;
             // 
+            // btnOfficer
+            // 
+            this.btnOfficer.AnimationHoverSpeed = 0.07F;
+            this.btnOfficer.AnimationSpeed = 0.03F;
+            this.btnOfficer.BackColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.BaseColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.BorderColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btnOfficer.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.CheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.CheckedForeColor = System.Drawing.Color.White;
+            this.btnOfficer.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnOfficer.CheckedImage")));
+            this.btnOfficer.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnOfficer.FocusedColor = System.Drawing.Color.Empty;
+            this.btnOfficer.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnOfficer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.Image = ((System.Drawing.Image)(resources.GetObject("btnOfficer.Image")));
+            this.btnOfficer.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnOfficer.LineColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.Location = new System.Drawing.Point(0, 201);
+            this.btnOfficer.Name = "btnOfficer";
+            this.btnOfficer.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOfficer.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOfficer.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnOfficer.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnOfficer.OnHoverImage")));
+            this.btnOfficer.OnHoverLineColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(84)))), ((int)(((byte)(81)))));
+            this.btnOfficer.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnOfficer.Radius = 23;
+            this.btnOfficer.Size = new System.Drawing.Size(258, 61);
+            this.btnOfficer.TabIndex = 8;
+            this.btnOfficer.Text = "Officer";
+            this.btnOfficer.Click += new System.EventHandler(this.btnOfficer_Click);
+            // 
             // frmBillingOfficer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1509, 887);
+            this.ClientSize = new System.Drawing.Size(1942, 1000);
             this.Controls.Add(this.pnlPhr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBillingOfficer";
@@ -398,5 +435,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI.WinForms.GunaAdvenceButton btnLogout;
         private Bunifu.Framework.UI.BunifuDragControl dragPhr;
+        private Guna.UI.WinForms.GunaAdvenceButton btnOfficer;
     }
 }

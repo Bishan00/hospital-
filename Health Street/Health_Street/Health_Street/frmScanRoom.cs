@@ -16,6 +16,9 @@ namespace Health_Street
         public frmScanRoom()
         {
             InitializeComponent();
+
+            MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private const int CS_Dropshadow = 0x00020000;
@@ -45,7 +48,7 @@ namespace Health_Street
         private void frmPharmacy_Load(object sender, EventArgs e)
         {
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            chFrmObj.openChild(new frmPhrDash(), pnlPhrChild);
+            chFrmObj.openChild(new frmScannRoomDash(), pnlPhrChild);
         }
 
 
@@ -74,7 +77,7 @@ namespace Health_Street
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             subPnlClose();
-            chFrmObj.openChild(new frmPhrDash(), pnlPhrChild);
+            chFrmObj.openChild(new frmScannRoomDash(), pnlPhrChild);
         }
 
         private void btnPatient_Click(object sender, EventArgs e)
@@ -99,11 +102,13 @@ namespace Health_Street
         {
             subPnlClose();
             this.btnStaf.Checked = true;
+            chFrmObj.openChild(new frmOfficer(), pnlPhrChild);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
             subPnlClose();
+            chFrmObj.openChild(new frmSettings(), pnlPhrChild);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -125,14 +130,15 @@ namespace Health_Street
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if(HSMessageBox.Show("Sachintha","Madhawa",MessageBoxButtons.YesNo,MessageBoxIcon.Question)!=DialogResult.No)
+            if (HSMessageBox.Show("ARE YOU SURE TO EXIT ?", "QUESTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) != DialogResult.No)
             {
                 this.Hide();
+                new frmLogin().Show();
             }
         }
 
@@ -141,6 +147,15 @@ namespace Health_Street
             btnDashboard.Checked = false;
             btnStaf.Checked = false;
             btnSettings.Checked = false;
+            chFrmObj.openChild(new frmScanInpatient(), pnlPhrChild);
+        }
+
+        private void btnOutpatient_Click(object sender, EventArgs e)
+        {
+            btnDashboard.Checked = false;
+            btnStaf.Checked = false;
+            btnSettings.Checked = false;
+            chFrmObj.openChild(new frmScanOutpatient(), pnlPhrChild);
         }
     }
 }

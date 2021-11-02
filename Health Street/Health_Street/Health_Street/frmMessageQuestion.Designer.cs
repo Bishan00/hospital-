@@ -61,7 +61,7 @@
             // pnlDrag
             // 
             this.pnlDrag.BackColor = System.Drawing.Color.Transparent;
-            this.pnlDrag.BaseColor = System.Drawing.SystemColors.Control;
+            this.pnlDrag.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.pnlDrag.Controls.Add(this.lblCaption);
             this.pnlDrag.Controls.Add(this.gunaCirclePictureBox1);
             this.pnlDrag.Controls.Add(this.pnlMessage);
@@ -214,6 +214,7 @@
             this.AcceptButton = this.btnYes;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(600, 285);
             this.Controls.Add(this.pnlDrag);
             this.gunaTransition1.SetDecoration(this, Guna.UI.Animation.DecorationType.None);

@@ -7,19 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
-using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmBillingOfficer : Form
     {
-        private SmdDbManager dbManager;
-        clsOpnChild chFrmObj = new clsOpnChild();
+        clsOpnChild chld = new clsOpnChild();
         public frmBillingOfficer()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private const int CS_Dropshadow = 0x00020000;
@@ -37,7 +36,7 @@ namespace Health_Street
         private void frmPharmacy_Load(object sender, EventArgs e)
         {
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            chFrmObj.openChild(new frmPhrDash(), pnlPhrChild);
+            chld.openChild(new frmBillDash(), pnlPhrChild);
         }
 
 
@@ -65,20 +64,23 @@ namespace Health_Street
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            chFrmObj.openChild(new frmPhrDash(), pnlPhrChild);
+            chld.openChild(new frmBillDash(), pnlPhrChild);
         }
 
         private void btnMed_Click(object sender, EventArgs e)
         {
+            chld.openChild(new frmGuardian(), pnlPhrChild);
         }
 
         private void btnPchas_Click(object sender, EventArgs e)
         {
             this.btnOrg.Checked = true;
+            chld.openChild(new frmOrganization(), pnlPhrChild);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
+            chld.openChild(new frmSettings(), pnlPhrChild);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -100,15 +102,21 @@ namespace Health_Street
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if(HSMessageBox.Show("Sachintha","Madhawa",MessageBoxButtons.YesNo,MessageBoxIcon.Question)!=DialogResult.No)
+            if (HSMessageBox.Show("ARE YOU SURE TO EXIT", "QUESTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) != DialogResult.No)
             {
                 this.Hide();
+                new frmLogin().Show();
             }
+        }
+
+        private void btnOfficer_Click(object sender, EventArgs e)
+        {
+            chld.openChild(new frmOfficer(), pnlPhrChild);
         }
     }
 }

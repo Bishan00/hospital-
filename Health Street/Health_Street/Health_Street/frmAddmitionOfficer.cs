@@ -7,19 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
-using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmAddmitionOfficer : Form
     {
-        private SmdDbManager dbManager;
         clsOpnChild chFrmObj = new clsOpnChild();
         public frmAddmitionOfficer()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
         }
@@ -40,7 +36,7 @@ namespace Health_Street
         {
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
-            chFrmObj.openChild(new frmPhrDash(), pnlPhrChild);
+            chFrmObj.openChild(new frmAddDash(), pnlPhrChild);
         }
 
 
@@ -68,11 +64,12 @@ namespace Health_Street
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            chFrmObj.openChild(new frmPhrDash(), pnlPhrChild);
+            chFrmObj.openChild(new frmAddDash(), pnlPhrChild);
         }
 
         private void btnMed_Click(object sender, EventArgs e)
         {
+            chFrmObj.openChild(new frmOfficer(), pnlPhrChild);
         }
 
         private void btnPchas_Click(object sender, EventArgs e)
@@ -83,6 +80,7 @@ namespace Health_Street
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
+            chFrmObj.openChild(new frmSettings(), pnlPhrChild);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -109,9 +107,10 @@ namespace Health_Street
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if(HSMessageBox.Show("Sachintha","Madhawa",MessageBoxButtons.YesNo,MessageBoxIcon.Question)!=DialogResult.No)
+            if (HSMessageBox.Show("ARE YOU SURE TO EXIT?", "QUESTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) != DialogResult.No)
             {
                 this.Hide();
+                new frmLogin().Show();
             }
         }
     }

@@ -84,6 +84,7 @@
             this.pnlPhrChild.Name = "pnlPhrChild";
             this.pnlPhrChild.Size = new System.Drawing.Size(1176, 827);
             this.pnlPhrChild.TabIndex = 6;
+            this.pnlPhrChild.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPhrChild_Paint);
             // 
             // pnlPhrLeft
             // 
@@ -177,7 +178,7 @@
             this.btnOfficer.Size = new System.Drawing.Size(244, 61);
             this.btnOfficer.TabIndex = 7;
             this.btnOfficer.Text = "Officer";
-            this.btnOfficer.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnOfficer.Click += new System.EventHandler(this.btnOfficer_Click);
             // 
             // btnSettings
             // 

@@ -37,7 +37,7 @@
             this.btnLogout = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnlCmm = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSettings = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnPchas = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnOfficer = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnlCmSubBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSupp = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnCus = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -139,7 +139,7 @@
             // pnlCmm
             // 
             this.pnlCmm.Controls.Add(this.btnSettings);
-            this.pnlCmm.Controls.Add(this.btnPchas);
+            this.pnlCmm.Controls.Add(this.btnOfficer);
             this.pnlCmm.Controls.Add(this.pnlCmSubBtn);
             this.pnlCmm.Controls.Add(this.btnCmt);
             this.pnlCmm.Controls.Add(this.btnMed);
@@ -186,41 +186,41 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
-            // btnPchas
+            // btnOfficer
             // 
-            this.btnPchas.AnimationHoverSpeed = 0.07F;
-            this.btnPchas.AnimationSpeed = 0.03F;
-            this.btnPchas.BackColor = System.Drawing.Color.Transparent;
-            this.btnPchas.BaseColor = System.Drawing.Color.Transparent;
-            this.btnPchas.BorderColor = System.Drawing.Color.Transparent;
-            this.btnPchas.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.btnPchas.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.btnPchas.CheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.btnPchas.CheckedForeColor = System.Drawing.Color.White;
-            this.btnPchas.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnPchas.CheckedImage")));
-            this.btnPchas.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.btnPchas.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPchas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPchas.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPchas.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnPchas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.btnPchas.Image = ((System.Drawing.Image)(resources.GetObject("btnPchas.Image")));
-            this.btnPchas.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPchas.LineColor = System.Drawing.Color.Transparent;
-            this.btnPchas.Location = new System.Drawing.Point(0, 308);
-            this.btnPchas.Name = "btnPchas";
-            this.btnPchas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.btnPchas.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.btnPchas.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPchas.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnPchas.OnHoverImage")));
-            this.btnPchas.OnHoverLineColor = System.Drawing.Color.Transparent;
-            this.btnPchas.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(84)))), ((int)(((byte)(81)))));
-            this.btnPchas.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnPchas.Radius = 23;
-            this.btnPchas.Size = new System.Drawing.Size(258, 61);
-            this.btnPchas.TabIndex = 6;
-            this.btnPchas.Text = "Purchase";
-            this.btnPchas.Click += new System.EventHandler(this.btnPchas_Click);
+            this.btnOfficer.AnimationHoverSpeed = 0.07F;
+            this.btnOfficer.AnimationSpeed = 0.03F;
+            this.btnOfficer.BackColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.BaseColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.BorderColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btnOfficer.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.CheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.CheckedForeColor = System.Drawing.Color.White;
+            this.btnOfficer.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnOfficer.CheckedImage")));
+            this.btnOfficer.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnOfficer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOfficer.FocusedColor = System.Drawing.Color.Empty;
+            this.btnOfficer.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnOfficer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.btnOfficer.Image = ((System.Drawing.Image)(resources.GetObject("btnOfficer.Image")));
+            this.btnOfficer.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnOfficer.LineColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.Location = new System.Drawing.Point(0, 308);
+            this.btnOfficer.Name = "btnOfficer";
+            this.btnOfficer.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOfficer.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOfficer.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnOfficer.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnOfficer.OnHoverImage")));
+            this.btnOfficer.OnHoverLineColor = System.Drawing.Color.Transparent;
+            this.btnOfficer.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(84)))), ((int)(((byte)(81)))));
+            this.btnOfficer.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnOfficer.Radius = 23;
+            this.btnOfficer.Size = new System.Drawing.Size(258, 61);
+            this.btnOfficer.TabIndex = 6;
+            this.btnOfficer.Text = "Officer";
+            this.btnOfficer.Click += new System.EventHandler(this.btnPchas_Click);
             // 
             // pnlCmSubBtn
             // 
@@ -541,7 +541,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnlCmm;
         private Guna.UI.WinForms.GunaAdvenceButton btnSettings;
         private Guna.UI2.WinForms.Guna2Panel pnlCmSubBtn;
-        private Guna.UI.WinForms.GunaAdvenceButton btnPchas;
+        private Guna.UI.WinForms.GunaAdvenceButton btnOfficer;
         private Guna.UI.WinForms.GunaAdvenceButton btnCus;
         private Guna.UI.WinForms.GunaAdvenceButton btnSupp;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

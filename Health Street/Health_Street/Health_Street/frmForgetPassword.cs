@@ -17,13 +17,13 @@ namespace Health_Street
 {
     public partial class frmForgetPassword : Form
     {
-        string resetCode;
         private SmdDbManager dbManager;
+        string resetCode;
         public static string mail;
         public frmForgetPassword()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
         }
 
         private void frmForgetPassword_Load(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace Health_Street
                     }
                     catch(SmtpException)
                     {
-                        MessageBox.Show("error");
+                        MessageBox.Show("ERROR");
                     }
                     catch(Exception)
                     {
@@ -95,7 +95,7 @@ namespace Health_Street
                 }
                 else
                 {
-                    MessageBox.Show("dosen't match");
+                    MessageBox.Show("DOESN'T MATCH");
                 }
             }
         }

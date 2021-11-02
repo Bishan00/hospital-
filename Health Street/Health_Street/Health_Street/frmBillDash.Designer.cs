@@ -220,7 +220,7 @@
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaLabel3.Location = new System.Drawing.Point(34, 139);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(153, 36);
+            this.gunaLabel3.Size = new System.Drawing.Size(190, 45);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Guardians";
             // 
@@ -231,7 +231,7 @@
             this.lblGuardian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblGuardian.Location = new System.Drawing.Point(28, 33);
             this.lblGuardian.Name = "lblGuardian";
-            this.lblGuardian.Size = new System.Drawing.Size(114, 65);
+            this.lblGuardian.Size = new System.Drawing.Size(142, 81);
             this.lblGuardian.TabIndex = 0;
             this.lblGuardian.Text = "+78";
             // 
@@ -257,7 +257,7 @@
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaLabel1.Location = new System.Drawing.Point(10, 139);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(186, 36);
+            this.gunaLabel1.Size = new System.Drawing.Size(230, 45);
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Organization";
             // 
@@ -268,7 +268,7 @@
             this.lblOrganization.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblOrganization.Location = new System.Drawing.Point(30, 33);
             this.lblOrganization.Name = "lblOrganization";
-            this.lblOrganization.Size = new System.Drawing.Size(93, 65);
+            this.lblOrganization.Size = new System.Drawing.Size(114, 81);
             this.lblOrganization.TabIndex = 0;
             this.lblOrganization.Text = "+11";
             // 
@@ -286,7 +286,6 @@
             this.pnlBanner.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.pnlBanner.Size = new System.Drawing.Size(684, 202);
             this.pnlBanner.TabIndex = 8;
-            //this.pnlBanner.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBanner_Paint);
             // 
             // gunaLabel2
             // 
@@ -295,7 +294,7 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.gunaLabel2.Location = new System.Drawing.Point(35, 92);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(295, 38);
+            this.gunaLabel2.Size = new System.Drawing.Size(365, 46);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
@@ -306,7 +305,7 @@
             this.lblBillOfficer.ForeColor = System.Drawing.Color.White;
             this.lblBillOfficer.Location = new System.Drawing.Point(34, 42);
             this.lblBillOfficer.Name = "lblBillOfficer";
-            this.lblBillOfficer.Size = new System.Drawing.Size(136, 23);
+            this.lblBillOfficer.Size = new System.Drawing.Size(163, 28);
             this.lblBillOfficer.TabIndex = 0;
             this.lblBillOfficer.Text = "Hi, Welcome";
             // 

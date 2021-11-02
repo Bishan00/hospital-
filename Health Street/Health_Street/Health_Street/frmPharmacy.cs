@@ -7,24 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
-using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmPharmacy : Form
     {
-
-        private SmdDbManager dbManager;
         clsOpnChild chFrmObj = new clsOpnChild();
         public frmPharmacy()
         {
             InitializeComponent();
-            phrAnimate.Start();
-            pnlCmSubBtn.Visible = false;
+
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+            //phrAnimate.Start();
+            pnlCmSubBtn.Visible = false;
+            
         }
 
         private const int CS_Dropshadow = 0x00020000;
@@ -41,9 +38,9 @@ namespace Health_Street
 
         private void frmPharmacy_Load(object sender, EventArgs e)
         {
-            phrAnimate.Start();
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
+            //phrAnimate.Start();
             chFrmObj.openChild(new frmPhrDash(), pnlPhrChild);
         }
 
@@ -54,7 +51,7 @@ namespace Health_Street
                 pnlCmSubBtn.Visible = false;
                 btnSupp.Checked = false;
                 btnCus.Checked = false;
-                btnPchas.Checked = false;
+                btnOfficer.Checked = false;
             }
         }
 
@@ -79,7 +76,7 @@ namespace Health_Street
         {
             btnDashboard.Checked = false;
             btnMed.Checked = false;
-            btnPchas.Checked = false;
+            btnOfficer.Checked = false;
             btnSettings.Checked = false;
             chFrmObj.openChild(new frmPhrSplr(), pnlPhrChild);
 
@@ -89,7 +86,7 @@ namespace Health_Street
         {
             btnDashboard.Checked = false;
             btnMed.Checked = false;
-            btnPchas.Checked = false;
+            btnOfficer.Checked = false;
             btnSettings.Checked = false;
             chFrmObj.openChild(new frmPhrCstmr(), pnlPhrChild);
         }
@@ -108,14 +105,15 @@ namespace Health_Street
 
         private void btnPchas_Click(object sender, EventArgs e)
         {
+            chFrmObj.openChild(new frmOfficer(), pnlPhrChild);
             subPnlClose();
-            this.btnPchas.Checked = true;
+            this.btnOfficer.Checked = true;
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
             subPnlClose();
-            //chFrmObj.openChild(new frmPhrSettings(), pnlPhrChild);
+            chFrmObj.openChild(new frmSettings(), pnlPhrChild);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -142,6 +140,11 @@ namespace Health_Street
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            if (HSMessageBox.Show("ARE YOU SURE TO EXIT ?", "QUESTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) != DialogResult.No)
+            {
+                this.Hide();
+                new frmLogin().Show();
+            }
         }
     }
 }

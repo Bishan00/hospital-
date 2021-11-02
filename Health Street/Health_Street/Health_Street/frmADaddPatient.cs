@@ -16,10 +16,10 @@ namespace Health_Street
     public partial class frmADaddPatient : Form
     {
         private SmdDbManager dbManager;
-        public frmADaddPatient()
+        public frmADaddPatient(/*Form frm*/)
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
+            dbManager = new SmdDbManager("SERVER=127.0.0.1; PORT=3306; DATABASE=hospital; UID=root; PASSWORD=;");
             tmrDateTime.Start();
             comboBlood();
             comboDoctor();
@@ -30,6 +30,20 @@ namespace Health_Street
             cmbSpecialist.SelectedItem = null;
             cmbWard.SelectedItem = null;
             cmbRoom.SelectedItem = null;
+        }
+
+        public delegate void UpdateDelegate(Object sender, UpdateEvenetArgs args);
+        public event UpdateDelegate UpdateEvenetHanler;
+
+        public class UpdateEvenetArgs : EventArgs
+        {
+            public string Data { get; set; }
+        }
+
+        private void insert()
+        {
+            UpdateEvenetArgs args = new UpdateEvenetArgs();
+            UpdateEvenetHanler.Invoke(this, args);
         }
 
         private void frmADAddmitPatient_Load(object sender, EventArgs e)
@@ -196,7 +210,7 @@ namespace Health_Street
         }
         private void btnPSave_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtFirstname.Text) && string.IsNullOrEmpty(txtMiddleName.Text) && string.IsNullOrEmpty(txtReson.Text) && string.IsNullOrEmpty(txtSurname.Text) && (DateTime.Now.Year == dtpDOF.Value.Year) && (!rdBtnM.Checked && !rdBtnF.Checked) && (cmbBlood.SelectedIndex == -1) && (cmbSpecialist.SelectedIndex == -1) && (cmbWard.SelectedIndex == -1) && (cmbRoom.SelectedIndex == -1) && string.IsNullOrEmpty(txtName.Text) && string.IsNullOrEmpty(txtNic.Text) && string.IsNullOrEmpty(txtAddress.Text) && string.IsNullOrEmpty(txtTpNumber.Text) && string.IsNullOrEmpty(txtRelationship.Text))
+            if(string.IsNullOrEmpty(txtFirstname.Text) && string.IsNullOrEmpty(txtReson.Text) && string.IsNullOrEmpty(txtSurname.Text) && (DateTime.Now.Year == dtpDOF.Value.Year) && (!rdBtnM.Checked && !rdBtnF.Checked) && (cmbBlood.SelectedIndex == -1) && (cmbSpecialist.SelectedIndex == -1) && (cmbWard.SelectedIndex == -1) && (cmbRoom.SelectedIndex == -1) && string.IsNullOrEmpty(txtName.Text) && string.IsNullOrEmpty(txtNic.Text) && string.IsNullOrEmpty(txtAddress.Text) && string.IsNullOrEmpty(txtTpNumber.Text) && string.IsNullOrEmpty(txtRelationship.Text))
             {
                 firstName();
                 middleName();
@@ -255,11 +269,6 @@ namespace Health_Street
             {
                 firstName();
                 txtFirstname.Focus();
-            }
-            else if(string.IsNullOrEmpty(txtMiddleName.Text))
-            {
-                middleName();
-                txtMiddleName.Focus();
             }
             else if (string.IsNullOrEmpty(txtSurname.Text))
             {
@@ -339,7 +348,24 @@ namespace Health_Street
             }
             else
             {
-                //SQLConnectionManager.insrtUpdteDelt("INSERT INTO IN_PATIENT VALUES ('"+txt+"',)")
+                string addmitionOffId = dbManager.getValue("SELECT * FROM ADMISSION_OFFICER", frmLogin.passingRoll,10,1);
+
+
+                int i = dbManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "','B0002')");
+                string guardianId = dbManager.getValue("SELECT * FROM GUARDIAN", txtNic.Text, 2, 1);
+                int j = dbManager.insrtUpdteDelt("INSERT INTO PATIENT_PRIVATE_DETAIL VALUES ('" + txtFirstname.Text + "','" + txtMiddleName.Text + "','" + txtSurname.Text + "','" + gender + "','" + dtpDOF.Value.ToString("MM-dd-yyy") + "','" + age + "','" + cmbBlood.Text.ToString() + "','" + guardianId + "','" + specialD + "')");
+
+                if (i == 1 && j == 1)
+                {
+                    HSMessageBox.Show("DATA ADDED SUCCESSFULLY", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("DATA ADDED UNSUCCESSFULLY", "ERROR");
+                }
+                insert();
+
+
             }
         }
 
@@ -391,10 +417,12 @@ namespace Health_Street
             }
         }
 
+        string age;
         private void dtpDOF_ValueChanged(object sender, EventArgs e)
         {
             if (!(DateTime.Now.Date == dtpDOF.Value.Date || DateTime.Now.Date < dtpDOF.Value.Date))
             {
+                age = Convert.ToString(DateTime.Now.Year - dtpDOF.Value.Year);
                 dtpDOF.BorderColor = Color.Silver;
                 dtpDOF.FocusedColor = Color.FromArgb(33, 96, 104);
                 lblDOF.ResetText();
@@ -406,8 +434,10 @@ namespace Health_Street
             }
         }
 
+        string gender = string.Empty;
         private void rdBtnM_CheckedChanged(object sender, EventArgs e)
         {
+            gender = "MALE";
             if (rdBtnM.Checked)
             {
                 lblGender.ResetText();
@@ -416,6 +446,7 @@ namespace Health_Street
 
         private void rdBtnF_CheckedChanged(object sender, EventArgs e)
         {
+            gender = "FEMALE";
             if (rdBtnF.Checked)
             {
                 lblGender.ResetText();
@@ -443,6 +474,8 @@ namespace Health_Street
             }
         }
 
+        string specialD = string.Empty;
+
         private void cmbBlood_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(!(cmbBlood.SelectedIndex == -1))
@@ -460,8 +493,18 @@ namespace Health_Street
 
         private void cmbSpecialist_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            dt = dbManager.getdata("SELECT * FROM SPECIALIST_DOCTOR");
+
             if (!(cmbSpecialist.SelectedIndex == -1))
             {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (cmbSpecialist.SelectedItem.ToString() == dr["S_Doctor_Name"].ToString())
+                    {
+                        specialD = dr["Specialist_Doctor_Id"].ToString();
+                    }
+                }
                 cmbSpecialist.BorderColor = Color.Silver;
                 cmbSpecialist.FocusedColor = Color.FromArgb(33, 96, 104);
                 lblSpecialist.ResetText();
@@ -471,12 +514,31 @@ namespace Health_Street
                 specialist();
                 cmbSpecialist.Focus();
             }
+
+            
         }
 
+        string wardNum = string.Empty;
         private void cmbWard_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!(cmbWard.SelectedIndex == -1))
             {
+                if (cmbWard.SelectedIndex == 0)
+                {
+                    wardNum = "W01";
+                }
+                else if (cmbWard.SelectedIndex == 1)
+                {
+                    wardNum = "W02";
+                }
+                else if (cmbWard.SelectedIndex == 2)
+                {
+                    wardNum = "W03";
+                }
+                else if (cmbWard.SelectedIndex == 3)
+                {
+                    wardNum = "W04";
+                }
                 cmbWard.BorderColor = Color.Silver;
                 cmbWard.FocusedColor = Color.FromArgb(33, 96, 104);
                 lblWard.ResetText();
@@ -486,12 +548,39 @@ namespace Health_Street
                 ward();
                 cmbWard.Focus();
             }
+
+            
         }
 
+        string roomNum = string.Empty;
         private void cmbRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!(cmbRoom.SelectedIndex == -1))
             {
+                if (cmbRoom.SelectedIndex == 0)
+                {
+                    roomNum = "R001";
+                }
+                else if (cmbRoom.SelectedIndex == 1)
+                {
+                    roomNum = "R002";
+                }
+                else if (cmbRoom.SelectedIndex == 2)
+                {
+                    roomNum = "R003";
+                }
+                else if (cmbRoom.SelectedIndex == 3)
+                {
+                    roomNum = "R004";
+                }
+                else if (cmbRoom.SelectedIndex == 4)
+                {
+                    roomNum = "R005";
+                }
+                else if (cmbRoom.SelectedIndex == 5)
+                {
+                    roomNum = "R006";
+                }
                 cmbRoom.BorderColor = Color.Silver;
                 cmbRoom.FocusedColor = Color.FromArgb(33, 96, 104);
                 lblRoom.ResetText();
@@ -501,8 +590,9 @@ namespace Health_Street
                 room();
                 cmbRoom.Focus();
             }
-        }
 
+            
+        }
         private void txtNic_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNic.Text))
@@ -510,7 +600,7 @@ namespace Health_Street
                 nic();
                 txtNic.Focus();
             }
-            else if (!((txtNic.Text.Count(char.IsDigit) == 9) && (txtNic.Text.EndsWith("X") || txtNic.Text.EndsWith("V")) && (txtNic.Text[2] != '4' && txtNic.Text[2] != '9')))
+            else if (!((txtNic.Text.Count(char.IsDigit) == 9) && (txtNic.Text.EndsWith("v") || txtNic.Text.EndsWith("V")) && (txtNic.Text[2] != '4' && txtNic.Text[2] != '9')))
             {
                 nic();
                 lblNic.Text = "EX: 200015500V";
@@ -591,11 +681,6 @@ namespace Health_Street
                 txtTpNumber.FocusedBorderColor = Color.FromArgb(33, 96, 104);
                 lblTPnumber.ResetText();
             }
-        }
-
-        private void gunaGroupBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

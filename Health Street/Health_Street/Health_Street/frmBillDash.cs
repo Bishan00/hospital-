@@ -24,7 +24,7 @@ namespace Health_Street
 
             if (dbManager.chek("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'") == 1)
             {
-                MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
+                 MySqlDataReader reader1 = dbManager.ReadAndGet("SELECT * FROM LOG_IN_USER WHERE Roll_Id = '" + frmLogin.passingRoll + "'");
                 if (reader1.Read())
                 {
                     lblBillOfficer.Text = "Hi, " + reader1[2].ToString();
@@ -63,11 +63,6 @@ namespace Health_Street
         }
 
         private void dgvOrgniz_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
-        }
-
-        private void gunaLabel2_Click(object sender, EventArgs e)
         {
 
         }

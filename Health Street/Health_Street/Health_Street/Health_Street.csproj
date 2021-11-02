@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +48,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6FC3544D9E4436CC15A5E54ED8D7F66A0E417DA6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Health_Street_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI">
       <HintPath>..\..\..\..\..\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Bunifu_UI.dll</HintPath>
@@ -51,23 +82,47 @@
     <Reference Include="MetroFramework">
       <HintPath>..\..\..\..\..\PcWonderland.com_Guna_UI_Framework_Ultimate_2\lib\net\MetroFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\PC-WORLD\Desktop\GitHub\hospital-\Health-Street-Hospital-Management-System-Project-main\DLLS\MySql.Data.DLL</HintPath>
+    <Reference Include="MySql.Data">
+      <HintPath>..\DLLS\MySql.Data.DLL</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Renci.SshNet">
-      <HintPath>C:\Users\PC-WORLD\Desktop\GitHub\hospital-\Health-Street-Hospital-Management-System-Project-main\DLLS\Renci.SshNet.dll</HintPath>
+      <HintPath>..\..\DLLS\Renci.SshNet.dll</HintPath>
     </Reference>
     <Reference Include="SMDMySQLDBManager">
-      <HintPath>C:\Users\PC-WORLD\Desktop\GitHub\hospital-\Health-Street-Hospital-Management-System-Project-main\DLLS\SMDMySQLDBManager.dll</HintPath>
+      <HintPath>..\..\DLLS\SMDMySQLDBManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -85,6 +140,156 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsOpnChild.cs" />
+    <Compile Include="frmLabAddOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabAddOut.Designer.cs">
+      <DependentUpon>frmLabAddOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPharSupplierAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPharSupplierAdd.Designer.cs">
+      <DependentUpon>frmPharSupplierAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhrMedAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhrMedAdd.Designer.cs">
+      <DependentUpon>frmPhrMedAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanAdd.Designer.cs">
+      <DependentUpon>frmScanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanAddOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanAddOut.Designer.cs">
+      <DependentUpon>frmScanAddOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLabAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabAdd.Designer.cs">
+      <DependentUpon>frmLabAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayAddOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayAddOut.Designer.cs">
+      <DependentUpon>frmXrayAddOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayAdd.Designer.cs">
+      <DependentUpon>frmXrayAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChanlAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChanlAdd.Designer.cs">
+      <DependentUpon>frmChanlAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBilAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilAdd.Designer.cs">
+      <DependentUpon>frmBilAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillDash.Designer.cs">
+      <DependentUpon>frmBillDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctor.Designer.cs">
+      <DependentUpon>frmDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrganization.Designer.cs">
+      <DependentUpon>frmOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGuardian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGuardian.Designer.cs">
+      <DependentUpon>frmGuardian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChanlDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChanlDash.Designer.cs">
+      <DependentUpon>frmChanlDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDash.Designer.cs">
+      <DependentUpon>frmAddDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayDash.Designer.cs">
+      <DependentUpon>frmXrayDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScannRoomDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScannRoomDash.Designer.cs">
+      <DependentUpon>frmScannRoomDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanInpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanInpatient.Designer.cs">
+      <DependentUpon>frmScanInpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanOutpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanOutpatient.Designer.cs">
+      <DependentUpon>frmScanOutpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLabSmplOutpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabSmplOutpatient.Designer.cs">
+      <DependentUpon>frmLabSmplOutpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLabSmplInpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabSmplInpatient.Designer.cs">
+      <DependentUpon>frmLabSmplInpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettingsAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettingsAccount.Designer.cs">
+      <DependentUpon>frmSettingsAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOfficer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOfficer.Designer.cs">
+      <DependentUpon>frmOfficer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmADaddmitPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,13 +302,6 @@
     <Compile Include="frmADaddPatient.Designer.cs">
       <DependentUpon>frmADaddPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include=".cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmAddmitionOfficer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,20 +311,8 @@
     <Compile Include="frmAddOutPatients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddOutPatients.designer.cs">
+    <Compile Include="frmAddOutPatients.Designer.cs">
       <DependentUpon>frmAddOutPatients.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBilAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBilAdd.designer.cs">
-      <DependentUpon>frmBilAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBillDash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBillDash.designer.cs">
-      <DependentUpon>frmBillDash.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
@@ -134,35 +320,17 @@
     <Compile Include="frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChanlAdd.cs">
+    <Compile Include="frmSettingsAccountEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChanlAdd.designer.cs">
-      <DependentUpon>frmChanlAdd.cs</DependentUpon>
+    <Compile Include="frmSettingsAccountEdit.Designer.cs">
+      <DependentUpon>frmSettingsAccountEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChanlDash.cs">
+    <Compile Include="frmSettingsLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChanlDash.designer.cs">
-      <DependentUpon>frmChanlDash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCustomer.designer.cs">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDctSettingsAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDctSettingsAccount.Designer.cs">
-      <DependentUpon>frmDctSettingsAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDctSettingsLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDctSettingsLogin.Designer.cs">
-      <DependentUpon>frmDctSettingsLogin.cs</DependentUpon>
+    <Compile Include="frmSettingsLogin.Designer.cs">
+      <DependentUpon>frmSettingsLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmForgetPassword.cs">
       <SubType>Form</SubType>
@@ -182,6 +350,18 @@
     <Compile Include="frmTranceparentBG.Designer.cs">
       <DependentUpon>frmTranceparentBG.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmXrayOutpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayOutpatient.Designer.cs">
+      <DependentUpon>frmXrayOutpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXrayInpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXrayInpatient.Designer.cs">
+      <DependentUpon>frmXrayInpatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWdRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,18 +373,6 @@
     </Compile>
     <Compile Include="frmWdDash.Designer.cs">
       <DependentUpon>frmWdDash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLabSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLabSettings.Designer.cs">
-      <DependentUpon>frmLabSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLabStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLabStaff.Designer.cs">
-      <DependentUpon>frmLabStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLabDash.cs">
       <SubType>Form</SubType>
@@ -218,11 +386,11 @@
     <Compile Include="frmDctDash.Designer.cs">
       <DependentUpon>frmDctDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDctGuardian.cs">
+    <Compile Include="frmDctInpatient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDctGuardian.Designer.cs">
-      <DependentUpon>frmDctGuardian.cs</DependentUpon>
+    <Compile Include="frmDctInpatient.Designer.cs">
+      <DependentUpon>frmDctInpatient.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPatientDetails.cs">
       <SubType>Form</SubType>
@@ -230,11 +398,11 @@
     <Compile Include="frmPatientDetails.Designer.cs">
       <DependentUpon>frmPatientDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDctSettings.cs">
+    <Compile Include="frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDctSettings.Designer.cs">
-      <DependentUpon>frmDctSettings.cs</DependentUpon>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDctPatient.cs">
       <SubType>Form</SubType>
@@ -265,12 +433,6 @@
     </Compile>
     <Compile Include="frmChanlingOfficer.Designer.cs">
       <DependentUpon>frmChanlingOfficer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTheater.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTheater.Designer.cs">
-      <DependentUpon>frmTheater.cs</DependentUpon>
     </Compile>
     <Compile Include="frmXray.cs">
       <SubType>Form</SubType>
@@ -332,47 +494,11 @@
     <Compile Include="frmPhrMdcn.Designer.cs">
       <DependentUpon>frmPhrMdcn.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhrPchas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPhrPchas.Designer.cs">
-      <DependentUpon>frmPhrPchas.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPhrSplr.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPhrSplr.Designer.cs">
       <DependentUpon>frmPhrSplr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXrayAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXrayAdd.designer.cs">
-      <DependentUpon>frmXrayAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXrayAddOut.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXrayAddOut.designer.cs">
-      <DependentUpon>frmXrayAddOut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXrayDash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXrayDash.designer.cs">
-      <DependentUpon>frmXrayDash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXrayInpatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXrayInpatient.designer.cs">
-      <DependentUpon>frmXrayInpatient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXrayOutpatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXrayOutpatient.designer.cs">
-      <DependentUpon>frmXrayOutpatient.cs</DependentUpon>
     </Compile>
     <Compile Include="HSMessageBox.cs" />
     <Compile Include="Program.cs" />
@@ -382,21 +508,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\frmPrintBillPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmPrintBillPatient.Designer.cs">
+      <DependentUpon>frmPrintBillPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQLConnectionManager.cs" />
-    <EmbeddedResource Include="frmADaddmitPatient.resx">
-      <DependentUpon>frmADaddmitPatient.cs</DependentUpon>
+    <EmbeddedResource Include="frmLabAddOut.resx">
+      <DependentUpon>frmLabAddOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmADaddPatient.resx">
-      <DependentUpon>frmADaddPatient.cs</DependentUpon>
+    <EmbeddedResource Include="frmPharSupplierAdd.resx">
+      <DependentUpon>frmPharSupplierAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include=".resx">
-      <DependentUpon>.cs</DependentUpon>
+    <EmbeddedResource Include="frmPhrMedAdd.resx">
+      <DependentUpon>frmPhrMedAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddmitionOfficer.resx">
-      <DependentUpon>frmAddmitionOfficer.cs</DependentUpon>
+    <EmbeddedResource Include="frmScanAdd.resx">
+      <DependentUpon>frmScanAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddOutPatients.resx">
-      <DependentUpon>frmAddOutPatients.cs</DependentUpon>
+    <EmbeddedResource Include="frmScanAddOut.resx">
+      <DependentUpon>frmScanAddOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLabAdd.resx">
+      <DependentUpon>frmLabAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayAddOut.resx">
+      <DependentUpon>frmXrayAddOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayAdd.resx">
+      <DependentUpon>frmXrayAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChanlAdd.resx">
+      <DependentUpon>frmChanlAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBilAdd.resx">
       <DependentUpon>frmBilAdd.cs</DependentUpon>
@@ -404,23 +548,68 @@
     <EmbeddedResource Include="frmBillDash.resx">
       <DependentUpon>frmBillDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChangePassword.resx">
-      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="frmDoctor.resx">
+      <DependentUpon>frmDoctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChanlAdd.resx">
-      <DependentUpon>frmChanlAdd.cs</DependentUpon>
+    <EmbeddedResource Include="frmOrganization.resx">
+      <DependentUpon>frmOrganization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChanlDash.resx">
-      <DependentUpon>frmChanlDash.cs</DependentUpon>
+    <EmbeddedResource Include="frmGuardian.resx">
+      <DependentUpon>frmGuardian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDctSettingsAccount.resx">
-      <DependentUpon>frmDctSettingsAccount.cs</DependentUpon>
+    <EmbeddedResource Include="frmChanlDash.resx">
+      <DependentUpon>frmChanlDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDctSettingsLogin.resx">
-      <DependentUpon>frmDctSettingsLogin.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddDash.resx">
+      <DependentUpon>frmAddDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayDash.resx">
+      <DependentUpon>frmXrayDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScannRoomDash.resx">
+      <DependentUpon>frmScannRoomDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScanInpatient.resx">
+      <DependentUpon>frmScanInpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScanOutpatient.resx">
+      <DependentUpon>frmScanOutpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLabSmplOutpatient.resx">
+      <DependentUpon>frmLabSmplOutpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLabSmplInpatient.resx">
+      <DependentUpon>frmLabSmplInpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettingsAccount.resx">
+      <DependentUpon>frmSettingsAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOfficer.resx">
+      <DependentUpon>frmOfficer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADaddmitPatient.resx">
+      <DependentUpon>frmADaddmitPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADaddPatient.resx">
+      <DependentUpon>frmADaddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddmitionOfficer.resx">
+      <DependentUpon>frmAddmitionOfficer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutPatients.resx">
+      <DependentUpon>frmAddOutPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettingsAccountEdit.resx">
+      <DependentUpon>frmSettingsAccountEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettingsLogin.resx">
+      <DependentUpon>frmSettingsLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmForgetPassword.resx">
       <DependentUpon>frmForgetPassword.cs</DependentUpon>
@@ -431,17 +620,17 @@
     <EmbeddedResource Include="frmTranceparentBG.resx">
       <DependentUpon>frmTranceparentBG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayOutpatient.resx">
+      <DependentUpon>frmXrayOutpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXrayInpatient.resx">
+      <DependentUpon>frmXrayInpatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWdRoom.resx">
       <DependentUpon>frmWdRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWdDash.resx">
       <DependentUpon>frmWdDash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLabSettings.resx">
-      <DependentUpon>frmLabSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLabStaff.resx">
-      <DependentUpon>frmLabStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLabDash.resx">
       <DependentUpon>frmLabDash.cs</DependentUpon>
@@ -449,14 +638,14 @@
     <EmbeddedResource Include="frmDctDash.resx">
       <DependentUpon>frmDctDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDctGuardian.resx">
-      <DependentUpon>frmDctGuardian.cs</DependentUpon>
+    <EmbeddedResource Include="frmDctInpatient.resx">
+      <DependentUpon>frmDctInpatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPatientDetails.resx">
       <DependentUpon>frmPatientDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDctSettings.resx">
-      <DependentUpon>frmDctSettings.cs</DependentUpon>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDctPatient.resx">
       <DependentUpon>frmDctPatient.cs</DependentUpon>
@@ -472,9 +661,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChanlingOfficer.resx">
       <DependentUpon>frmChanlingOfficer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTheater.resx">
-      <DependentUpon>frmTheater.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmXray.resx">
       <DependentUpon>frmXray.cs</DependentUpon>
@@ -506,32 +692,18 @@
     <EmbeddedResource Include="frmPhrMdcn.resx">
       <DependentUpon>frmPhrMdcn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhrPchas.resx">
-      <DependentUpon>frmPhrPchas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmPhrSplr.resx">
       <DependentUpon>frmPhrSplr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXrayAdd.resx">
-      <DependentUpon>frmXrayAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXrayAddOut.resx">
-      <DependentUpon>frmXrayAddOut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXrayDash.resx">
-      <DependentUpon>frmXrayDash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXrayInpatient.resx">
-      <DependentUpon>frmXrayInpatient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXrayOutpatient.resx">
-      <DependentUpon>frmXrayOutpatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmPrintBillPatient.resx">
+      <DependentUpon>frmPrintBillPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -560,6 +732,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ContactUs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor-consulting-with-patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor-gif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

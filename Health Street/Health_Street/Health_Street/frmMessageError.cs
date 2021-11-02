@@ -8,14 +8,11 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SMDMySQLDBManager;
-using MySql.Data.MySqlClient;
 
 namespace Health_Street
 {
     public partial class frmMessageError : Form
     {
-        private SmdDbManager dbManager;
         [DllImport("Gdi32.dll",EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn
@@ -30,7 +27,6 @@ namespace Health_Street
         public frmMessageError()
         {
             InitializeComponent();
-            dbManager = new SmdDbManager("SERVER=127.0.0.1;PORT=3306;DATABASE=hospital;UID=root;PASSWORD=;");
         }
 
         private const int CS_Dropshadow = 0x00020000;
@@ -97,6 +93,11 @@ namespace Health_Street
         private void frmMessageQuestion_Load(object sender, EventArgs e)
         {
             btnOk.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,btnOk.Width,btnOk.Height,21,21));
+        }
+
+        private void pnlDrag_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

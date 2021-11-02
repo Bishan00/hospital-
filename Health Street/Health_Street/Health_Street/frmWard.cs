@@ -64,15 +64,18 @@ namespace Health_Street
 
         private void btnPatient_Click(object sender, EventArgs e)
         {
+            chFrmObj.openChild(new frmDctInpatient(), pnlPhrChild);
         }
 
         private void btnPchas_Click(object sender, EventArgs e)
         {
             this.btnStaff.Checked = true;
+            chFrmObj.openChild(new frmOfficer(), pnlPhrChild);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
+            chFrmObj.openChild(new frmSettings(), pnlPhrChild);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -99,9 +102,10 @@ namespace Health_Street
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if(HSMessageBox.Show("Sachintha","Madhawa",MessageBoxButtons.YesNo,MessageBoxIcon.Question)!=DialogResult.No)
+            if (HSMessageBox.Show("ARE YOU SURE TO EXIT?", "ERROR", MessageBoxButtons.YesNo, MessageBoxIcon.Error) != DialogResult.No)
             {
                 this.Hide();
+                new frmLogin().Show();
             }
         }
 

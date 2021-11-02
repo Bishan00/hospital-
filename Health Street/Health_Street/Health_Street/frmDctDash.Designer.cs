@@ -30,26 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDctDash));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.pnlThemeDash = new Guna.UI.WinForms.GunaPanel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.lblOutpatient = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.lblInpatient = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.pnlBanner = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.lblDCTname = new Guna.UI.WinForms.GunaLabel();
             this.pnlThemeDash.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.gunaShadowPanel2.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
             this.gunaShadowPanel3.SuspendLayout();
@@ -66,10 +60,8 @@
             this.pnlThemeDash.AutoScroll = true;
             this.pnlThemeDash.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlThemeDash.BackgroundImage")));
             this.pnlThemeDash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlThemeDash.Controls.Add(this.chart1);
             this.pnlThemeDash.Controls.Add(this.gunaShadowPanel2);
             this.pnlThemeDash.Controls.Add(this.gunaShadowPanel1);
-            this.pnlThemeDash.Controls.Add(this.gunaShadowPanel5);
             this.pnlThemeDash.Controls.Add(this.gunaShadowPanel3);
             this.pnlThemeDash.Controls.Add(this.pnlBanner);
             this.pnlThemeDash.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -78,30 +70,13 @@
             this.pnlThemeDash.Size = new System.Drawing.Size(1112, 763);
             this.pnlThemeDash.TabIndex = 10;
             // 
-            // chart1
-            // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(366, 275);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(615, 320);
-            this.chart1.TabIndex = 16;
-            this.chart1.Text = "chart1";
-            // 
             // gunaShadowPanel2
             // 
             this.gunaShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel2.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel2.Controls.Add(this.gunaLabel9);
-            this.gunaShadowPanel2.Controls.Add(this.gunaLabel4);
+            this.gunaShadowPanel2.Controls.Add(this.lblOutpatient);
             this.gunaShadowPanel2.Location = new System.Drawing.Point(854, 8);
             this.gunaShadowPanel2.Name = "gunaShadowPanel2";
             this.gunaShadowPanel2.Radius = 10;
@@ -122,16 +97,16 @@
             this.gunaLabel9.TabIndex = 1;
             this.gunaLabel9.Text = "Out-Patients";
             // 
-            // gunaLabel4
+            // lblOutpatient
             // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 40F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel4.Location = new System.Drawing.Point(28, 33);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(142, 81);
-            this.gunaLabel4.TabIndex = 0;
-            this.gunaLabel4.Text = "+78";
+            this.lblOutpatient.AutoSize = true;
+            this.lblOutpatient.Font = new System.Drawing.Font("Bahnschrift SemiBold", 40F, System.Drawing.FontStyle.Bold);
+            this.lblOutpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.lblOutpatient.Location = new System.Drawing.Point(28, 33);
+            this.lblOutpatient.Name = "lblOutpatient";
+            this.lblOutpatient.Size = new System.Drawing.Size(142, 81);
+            this.lblOutpatient.TabIndex = 0;
+            this.lblOutpatient.Text = "+78";
             // 
             // gunaShadowPanel1
             // 
@@ -139,7 +114,7 @@
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel1.Controls.Add(this.gunaLabel8);
-            this.gunaShadowPanel1.Controls.Add(this.gunaLabel3);
+            this.gunaShadowPanel1.Controls.Add(this.lblInpatient);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(626, 8);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.Radius = 10;
@@ -160,30 +135,16 @@
             this.gunaLabel8.TabIndex = 1;
             this.gunaLabel8.Text = "In-Patients";
             // 
-            // gunaLabel3
+            // lblInpatient
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 40F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(30, 33);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(114, 81);
-            this.gunaLabel3.TabIndex = 0;
-            this.gunaLabel3.Text = "+11";
-            // 
-            // gunaShadowPanel5
-            // 
-            this.gunaShadowPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gunaShadowPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaShadowPanel5.Location = new System.Drawing.Point(12, 442);
-            this.gunaShadowPanel5.Name = "gunaShadowPanel5";
-            this.gunaShadowPanel5.Radius = 10;
-            this.gunaShadowPanel5.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel5.ShadowShift = 10;
-            this.gunaShadowPanel5.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
-            this.gunaShadowPanel5.Size = new System.Drawing.Size(332, 153);
-            this.gunaShadowPanel5.TabIndex = 10;
+            this.lblInpatient.AutoSize = true;
+            this.lblInpatient.Font = new System.Drawing.Font("Bahnschrift SemiBold", 40F, System.Drawing.FontStyle.Bold);
+            this.lblInpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
+            this.lblInpatient.Location = new System.Drawing.Point(30, 33);
+            this.lblInpatient.Name = "lblInpatient";
+            this.lblInpatient.Size = new System.Drawing.Size(114, 81);
+            this.lblInpatient.TabIndex = 0;
+            this.lblInpatient.Text = "+11";
             // 
             // gunaShadowPanel3
             // 
@@ -217,7 +178,7 @@
             this.pnlBanner.BackColor = System.Drawing.Color.Transparent;
             this.pnlBanner.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.pnlBanner.Controls.Add(this.gunaLabel2);
-            this.pnlBanner.Controls.Add(this.gunaLabel1);
+            this.pnlBanner.Controls.Add(this.lblDCTname);
             this.pnlBanner.Location = new System.Drawing.Point(12, 57);
             this.pnlBanner.Name = "pnlBanner";
             this.pnlBanner.Radius = 10;
@@ -238,16 +199,16 @@
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
-            // gunaLabel1
+            // lblDCTname
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(34, 42);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(139, 28);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Hi, Doctor";
+            this.lblDCTname.AutoSize = true;
+            this.lblDCTname.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Bold);
+            this.lblDCTname.ForeColor = System.Drawing.Color.White;
+            this.lblDCTname.Location = new System.Drawing.Point(34, 42);
+            this.lblDCTname.Name = "lblDCTname";
+            this.lblDCTname.Size = new System.Drawing.Size(139, 28);
+            this.lblDCTname.TabIndex = 0;
+            this.lblDCTname.Text = "Hi, Doctor";
             // 
             // frmDctDash
             // 
@@ -259,7 +220,6 @@
             this.Text = "frmDctDash";
             this.Load += new System.EventHandler(this.frmDctDash_Load);
             this.pnlThemeDash.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.gunaShadowPanel2.ResumeLayout(false);
             this.gunaShadowPanel2.PerformLayout();
             this.gunaShadowPanel1.ResumeLayout(false);
@@ -277,17 +237,15 @@
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaPanel pnlThemeDash;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel lblOutpatient;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel5;
+        private Guna.UI.WinForms.GunaLabel lblInpatient;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaShadowPanel pnlBanner;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel lblDCTname;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

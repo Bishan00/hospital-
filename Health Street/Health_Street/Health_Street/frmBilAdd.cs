@@ -79,7 +79,7 @@ namespace Health_Street
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void tmrDateTime_Tick(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace Health_Street
         }
         private void btnPSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtName.Text) && string.IsNullOrEmpty(txtNic.Text) && string.IsNullOrEmpty(txtAddress.Text) && string.IsNullOrEmpty(txtTpNumber.Text) && string.IsNullOrEmpty(txtRelationship.Text))
+            if(string.IsNullOrEmpty(txtName.Text) && string.IsNullOrEmpty(txtNic.Text) && string.IsNullOrEmpty(txtAddress.Text) && string.IsNullOrEmpty(txtTpNumber.Text) && string.IsNullOrEmpty(txtRelationship.Text))
             {
                 name();
                 nic();
@@ -114,17 +114,17 @@ namespace Health_Street
                 name();
                 txtName.Focus();
             }
-            else if (string.IsNullOrEmpty(txtNic.Text))
+            else if(string.IsNullOrEmpty(txtNic.Text))
             {
                 nic();
                 txtNic.Focus();
             }
-            else if (string.IsNullOrEmpty(txtAddress.Text))
+            else if(string.IsNullOrEmpty(txtAddress.Text))
             {
                 address();
                 txtAddress.Focus();
             }
-            else if (string.IsNullOrEmpty(txtTpNumber.Text))
+            else if(string.IsNullOrEmpty(txtTpNumber.Text))
             {
                 tpNumber();
                 txtTpNumber.Focus();
@@ -148,14 +148,14 @@ namespace Health_Street
             }
             else
             {
-                string addmitionOffId = dbManager.getValue("SELECT * FROM ADMISSION_OFFICER", frmLogin.passingRoll, 10, 1);
+                string addmitionOffId = dbManager.getValue("SELECT * FROM ADMISSION_OFFICER", frmLogin.passingRoll,10,1);
 
                 MessageBox.Show(addmitionOffId);
 
 
                 int i = dbManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "')");
-
-
+                
+               
                 if (i == 1)
                 {
                     HSMessageBox.Show("DATA ADDED SUCCESSFULY", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -267,11 +267,6 @@ namespace Health_Street
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void gunaGroupBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

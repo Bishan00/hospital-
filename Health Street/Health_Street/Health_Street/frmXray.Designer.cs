@@ -262,6 +262,7 @@
             this.btnOutpatient.Size = new System.Drawing.Size(221, 61);
             this.btnOutpatient.TabIndex = 5;
             this.btnOutpatient.Text = "Out Patients";
+            this.btnOutpatient.Click += new System.EventHandler(this.btnOutpatient_Click);
             // 
             // btnInpatient
             // 

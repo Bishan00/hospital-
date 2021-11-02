@@ -37,9 +37,19 @@
             this.pnlChildForms = new Guna.UI.WinForms.GunaElipsePanel();
             this.pnlRighUserd = new System.Windows.Forms.Panel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.lblEmail = new Guna.UI.WinForms.GunaLabel();
+            this.lblAddress = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.lblGender = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.lblsalary = new Guna.UI.WinForms.GunaLabel();
+            this.lblDesignation = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.lblProfileName = new Guna.UI.WinForms.GunaLabel();
+            this.pbProPic = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnlDctLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -56,7 +66,9 @@
             this.pnlDctmain.SuspendLayout();
             this.pnlChildForms.SuspendLayout();
             this.pnlRighUserd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            this.gunaShadowPanel2.SuspendLayout();
+            this.gunaShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.pnlDctLeft.SuspendLayout();
             this.pnlLeftSub.SuspendLayout();
@@ -150,8 +162,8 @@
             this.pnlRighUserd.BackColor = System.Drawing.Color.White;
             this.pnlRighUserd.Controls.Add(this.gunaShadowPanel2);
             this.pnlRighUserd.Controls.Add(this.gunaShadowPanel1);
-            this.pnlRighUserd.Controls.Add(this.gunaLabel1);
-            this.pnlRighUserd.Controls.Add(this.gunaCirclePictureBox1);
+            this.pnlRighUserd.Controls.Add(this.lblProfileName);
+            this.pnlRighUserd.Controls.Add(this.pbProPic);
             this.pnlRighUserd.Controls.Add(this.gunaPictureBox1);
             this.pnlRighUserd.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRighUserd.Location = new System.Drawing.Point(1367, 0);
@@ -163,6 +175,10 @@
             // 
             this.gunaShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel2.BaseColor = System.Drawing.Color.LightGray;
+            this.gunaShadowPanel2.Controls.Add(this.gunaLabel7);
+            this.gunaShadowPanel2.Controls.Add(this.gunaLabel3);
+            this.gunaShadowPanel2.Controls.Add(this.lblEmail);
+            this.gunaShadowPanel2.Controls.Add(this.lblAddress);
             this.gunaShadowPanel2.Location = new System.Drawing.Point(10, 744);
             this.gunaShadowPanel2.Name = "gunaShadowPanel2";
             this.gunaShadowPanel2.Radius = 7;
@@ -171,10 +187,64 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(321, 201);
             this.gunaShadowPanel2.TabIndex = 2;
             // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Sitka Display", 14F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel7.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaLabel7.Location = new System.Drawing.Point(12, 103);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(94, 35);
+            this.gunaLabel7.TabIndex = 1;
+            this.gunaLabel7.Text = "Email  :";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Sitka Display", 14F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaLabel3.Location = new System.Drawing.Point(14, 25);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(115, 35);
+            this.gunaLabel3.TabIndex = 1;
+            this.gunaLabel3.Text = "Address  :";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEmail.Location = new System.Drawing.Point(41, 146);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(122, 25);
+            this.lblEmail.TabIndex = 1;
+            this.lblEmail.Text = "Designation :";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmail.Click += new System.EventHandler(this.gunaLabel5_Click);
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAddress.Location = new System.Drawing.Point(43, 68);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(122, 25);
+            this.lblAddress.TabIndex = 1;
+            this.lblAddress.Text = "Designation :";
+            this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAddress.Click += new System.EventHandler(this.gunaLabel5_Click);
+            // 
             // gunaShadowPanel1
             // 
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.LightGray;
+            this.gunaShadowPanel1.Controls.Add(this.gunaLabel4);
+            this.gunaShadowPanel1.Controls.Add(this.lblGender);
+            this.gunaShadowPanel1.Controls.Add(this.gunaLabel2);
+            this.gunaShadowPanel1.Controls.Add(this.lblsalary);
+            this.gunaShadowPanel1.Controls.Add(this.lblDesignation);
+            this.gunaShadowPanel1.Controls.Add(this.gunaLabel1);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(10, 523);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.Radius = 7;
@@ -183,28 +253,99 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(321, 201);
             this.gunaShadowPanel1.TabIndex = 2;
             // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Sitka Display", 13F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel4.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaLabel4.Location = new System.Drawing.Point(14, 141);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(119, 32);
+            this.gunaLabel4.TabIndex = 1;
+            this.gunaLabel4.Text = "Gender      :";
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblGender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblGender.Location = new System.Drawing.Point(154, 145);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(122, 25);
+            this.lblGender.TabIndex = 1;
+            this.lblGender.Text = "Designation :";
+            this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Sitka Display", 13F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel2.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaLabel2.Location = new System.Drawing.Point(14, 93);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(117, 32);
+            this.gunaLabel2.TabIndex = 1;
+            this.gunaLabel2.Text = "Salary       :";
+            // 
+            // lblsalary
+            // 
+            this.lblsalary.AutoSize = true;
+            this.lblsalary.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblsalary.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblsalary.Location = new System.Drawing.Point(154, 97);
+            this.lblsalary.Name = "lblsalary";
+            this.lblsalary.Size = new System.Drawing.Size(122, 25);
+            this.lblsalary.TabIndex = 1;
+            this.lblsalary.Text = "Designation :";
+            this.lblsalary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDesignation
+            // 
+            this.lblDesignation.AutoSize = true;
+            this.lblDesignation.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblDesignation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDesignation.Location = new System.Drawing.Point(169, 49);
+            this.lblDesignation.Name = "lblDesignation";
+            this.lblDesignation.Size = new System.Drawing.Size(122, 25);
+            this.lblDesignation.TabIndex = 1;
+            this.lblDesignation.Text = "Designation :";
+            this.lblDesignation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(65, 310);
+            this.gunaLabel1.Font = new System.Drawing.Font("Sitka Display", 13F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaLabel1.Location = new System.Drawing.Point(14, 45);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(222, 30);
+            this.gunaLabel1.Size = new System.Drawing.Size(137, 32);
             this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "Sachintha Madhawa";
+            this.gunaLabel1.Text = "Designation :";
             // 
-            // gunaCirclePictureBox1
+            // lblProfileName
             // 
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox1.Image")));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(30, 33);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(283, 253);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 0;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            this.lblProfileName.AutoEllipsis = true;
+            this.lblProfileName.AutoSize = true;
+            this.lblProfileName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lblProfileName.ForeColor = System.Drawing.Color.Gray;
+            this.lblProfileName.Location = new System.Drawing.Point(64, 305);
+            this.lblProfileName.Name = "lblProfileName";
+            this.lblProfileName.Size = new System.Drawing.Size(219, 35);
+            this.lblProfileName.TabIndex = 1;
+            this.lblProfileName.Text = "Sachintha Madhawa";
+            this.lblProfileName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblProfileName.UseCompatibleTextRendering = true;
+            // 
+            // pbProPic
+            // 
+            this.pbProPic.BaseColor = System.Drawing.Color.White;
+            this.pbProPic.Location = new System.Drawing.Point(30, 33);
+            this.pbProPic.Name = "pbProPic";
+            this.pbProPic.Size = new System.Drawing.Size(283, 253);
+            this.pbProPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProPic.TabIndex = 0;
+            this.pbProPic.TabStop = false;
+            this.pbProPic.UseTransfarantBackground = false;
             // 
             // gunaPictureBox1
             // 
@@ -342,7 +483,7 @@
             this.btnGuardian.Radius = 22;
             this.btnGuardian.Size = new System.Drawing.Size(204, 58);
             this.btnGuardian.TabIndex = 0;
-            this.btnGuardian.Text = "Guardian";
+            this.btnGuardian.Text = "In Patinets";
             this.btnGuardian.Click += new System.EventHandler(this.btnGuardian_Click);
             // 
             // btnPatinents
@@ -376,7 +517,7 @@
             this.btnPatinents.Radius = 22;
             this.btnPatinents.Size = new System.Drawing.Size(204, 58);
             this.btnPatinents.TabIndex = 0;
-            this.btnPatinents.Text = "Patients";
+            this.btnPatinents.Text = "Out Patients";
             this.btnPatinents.Click += new System.EventHandler(this.btnPatinents_Click_1);
             // 
             // btnDashboard
@@ -467,7 +608,11 @@
             this.pnlChildForms.ResumeLayout(false);
             this.pnlRighUserd.ResumeLayout(false);
             this.pnlRighUserd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            this.gunaShadowPanel2.ResumeLayout(false);
+            this.gunaShadowPanel2.PerformLayout();
+            this.gunaShadowPanel1.ResumeLayout(false);
+            this.gunaShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.pnlDctLeft.ResumeLayout(false);
             this.pnlLeftSub.ResumeLayout(false);
@@ -496,10 +641,20 @@
         private Guna.UI.WinForms.GunaElipse elips;
         private Guna.UI.WinForms.GunaAnimateWindow dctAnimate;
         private Guna.UI.WinForms.GunaControlBox btnMaximize;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
+        private Guna.UI.WinForms.GunaCirclePictureBox pbProPic;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel lblProfileName;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel2;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaLabel lblsalary;
+        private Guna.UI.WinForms.GunaLabel lblDesignation;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel lblGender;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel lblAddress;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
+        private Guna.UI.WinForms.GunaLabel lblEmail;
     }
 }
