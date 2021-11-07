@@ -153,7 +153,7 @@ namespace Health_Street
                 MessageBox.Show(addmitionOffId);
 
 
-                int i = dbManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "')");
+                int i = dbManager.insrtUpdteDelt("INSERT INTO guardian VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "')");
                 
                
                 if (i == 1)
@@ -267,6 +267,16 @@ namespace Health_Street
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gunaLabel14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

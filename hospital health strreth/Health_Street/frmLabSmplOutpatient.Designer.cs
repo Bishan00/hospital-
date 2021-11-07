@@ -74,8 +74,9 @@
             this.pnlTheme.Controls.Add(this.dgvOutSample);
             this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTheme.Location = new System.Drawing.Point(0, 0);
+            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlTheme.Name = "pnlTheme";
-            this.pnlTheme.Size = new System.Drawing.Size(1542, 953);
+            this.pnlTheme.Size = new System.Drawing.Size(1040, 640);
             this.pnlTheme.TabIndex = 0;
             // 
             // btnDelete
@@ -85,9 +86,10 @@
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageActive = null;
             this.btnDelete.InitialImage = null;
-            this.btnDelete.Location = new System.Drawing.Point(513, 205);
+            this.btnDelete.Location = new System.Drawing.Point(551, 71);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(49, 47);
+            this.btnDelete.Size = new System.Drawing.Size(37, 38);
             this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnDelete.TabIndex = 23;
             this.btnDelete.TabStop = false;
@@ -101,9 +103,10 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageActive = null;
             this.btnAdd.InitialImage = null;
-            this.btnAdd.Location = new System.Drawing.Point(467, 205);
+            this.btnAdd.Location = new System.Drawing.Point(504, 73);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(45, 47);
+            this.btnAdd.Size = new System.Drawing.Size(34, 38);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAdd.TabIndex = 22;
             this.btnAdd.TabStop = false;
@@ -117,9 +120,10 @@
             this.lblMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblMedicine.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Bold);
             this.lblMedicine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.lblMedicine.Location = new System.Drawing.Point(231, 13);
+            this.lblMedicine.Location = new System.Drawing.Point(173, -123);
+            this.lblMedicine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMedicine.Name = "lblMedicine";
-            this.lblMedicine.Size = new System.Drawing.Size(886, 112);
+            this.lblMedicine.Size = new System.Drawing.Size(705, 89);
             this.lblMedicine.TabIndex = 15;
             this.lblMedicine.Text = "Out Patients Samples";
             // 
@@ -127,9 +131,10 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(25, 12);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(11, 11);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(200, 120);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(150, 98);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 14;
             this.gunaPictureBox1.TabStop = false;
@@ -142,10 +147,9 @@
             this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
-            this.txtSearch.Location = new System.Drawing.Point(25, 208);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(184, 73);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(420, 44);
+            this.txtSearch.Size = new System.Drawing.Size(315, 36);
             this.txtSearch.TabIndex = 11;
             this.txtSearch.text = "";
             this.txtSearch.OnTextChange += new System.EventHandler(this.txtSearch_OnTextChange);
@@ -193,7 +197,8 @@
             this.dgvOutSample.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOutSample.EnableHeadersVisualStyles = false;
             this.dgvOutSample.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvOutSample.Location = new System.Drawing.Point(25, 275);
+            this.dgvOutSample.Location = new System.Drawing.Point(11, 132);
+            this.dgvOutSample.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvOutSample.Name = "dgvOutSample";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -208,7 +213,7 @@
             this.dgvOutSample.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvOutSample.RowTemplate.Height = 24;
             this.dgvOutSample.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOutSample.Size = new System.Drawing.Size(1278, 486);
+            this.dgvOutSample.Size = new System.Drawing.Size(958, 357);
             this.dgvOutSample.TabIndex = 10;
             this.dgvOutSample.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvOutSample.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -291,11 +296,12 @@
             // 
             // frmLabSmplOutpatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1542, 953);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.pnlTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLabSmplOutpatient";
             this.Text = "frmPhrCstmr";
             this.Load += new System.EventHandler(this.frmPhrCstmr_Load);

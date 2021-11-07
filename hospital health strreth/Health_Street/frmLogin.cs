@@ -221,6 +221,11 @@ namespace Health_Street
 
         }
 
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void lnkLblForgotPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
