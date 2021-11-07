@@ -16,7 +16,7 @@ namespace Health_Street
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLabSmplInpatient());
+            Application.Run(new frmADaddPatient());
         }
     }
 }
