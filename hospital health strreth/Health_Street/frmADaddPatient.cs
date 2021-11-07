@@ -348,7 +348,7 @@ namespace Health_Street
             }
             else
             {
-                string addmitionOffId = dbManager.getValue("SELECT * FROM ADMISSION_OFFICER", frmLogin.passingRoll,10,1);
+                string addmitionOffId = dbManager.getValue("SELECT * FROM 'ADMISSION_OFFICER'", frmLogin.passingRoll,10,1);
 
 
                 int i = dbManager.insrtUpdteDelt("INSERT INTO GUARDIAN VALUES ('" + txtNic.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtTpNumber.Text + "','" + txtRelationship.Text + "','" + addmitionOffId + "','B0002')");
@@ -681,6 +681,11 @@ namespace Health_Street
                 txtTpNumber.FocusedBorderColor = Color.FromArgb(33, 96, 104);
                 lblTPnumber.ResetText();
             }
+        }
+
+        private void pnlTheme_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -109,10 +109,11 @@
             this.pnlTheme.Controls.Add(this.gunaGroupBox1);
             this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTheme.Location = new System.Drawing.Point(0, 0);
-            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTheme.Name = "pnlTheme";
-            this.pnlTheme.Size = new System.Drawing.Size(1040, 640);
+            this.pnlTheme.Size = new System.Drawing.Size(1332, 750);
             this.pnlTheme.TabIndex = 0;
+            this.pnlTheme.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTheme_Paint);
             // 
             // gunaLabel18
             // 
@@ -157,8 +158,8 @@
             this.gunaGroupBox2.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaGroupBox2.LineTop = 40;
-            this.gunaGroupBox2.Location = new System.Drawing.Point(655, 0);
-            this.gunaGroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox2.Location = new System.Drawing.Point(721, 110);
+            this.gunaGroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.gunaGroupBox2.Name = "gunaGroupBox2";
             this.gunaGroupBox2.Size = new System.Drawing.Size(494, 444);
             this.gunaGroupBox2.TabIndex = 0;
@@ -288,7 +289,7 @@
             this.btnCancel.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCancel.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnCancel.Location = new System.Drawing.Point(172, 367);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -323,7 +324,7 @@
             this.btnPSave.ImageSize = new System.Drawing.Size(20, 20);
             this.btnPSave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnPSave.Location = new System.Drawing.Point(329, 367);
-            this.btnPSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnPSave.Name = "btnPSave";
             this.btnPSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.btnPSave.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -361,7 +362,7 @@
             this.txtNic.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtNic.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtNic.Location = new System.Drawing.Point(240, 79);
-            this.txtNic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNic.Margin = new System.Windows.Forms.Padding(2);
             this.txtNic.Name = "txtNic";
             this.txtNic.PasswordChar = '\0';
             this.txtNic.SelectedText = "";
@@ -380,7 +381,7 @@
             this.txtRelationship.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtRelationship.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtRelationship.Location = new System.Drawing.Point(240, 220);
-            this.txtRelationship.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRelationship.Margin = new System.Windows.Forms.Padding(2);
             this.txtRelationship.Name = "txtRelationship";
             this.txtRelationship.PasswordChar = '\0';
             this.txtRelationship.SelectedText = "";
@@ -399,7 +400,7 @@
             this.txtTpNumber.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTpNumber.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtTpNumber.Location = new System.Drawing.Point(14, 222);
-            this.txtTpNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTpNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtTpNumber.Name = "txtTpNumber";
             this.txtTpNumber.PasswordChar = '\0';
             this.txtTpNumber.SelectedText = "";
@@ -418,7 +419,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtAddress.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtAddress.Location = new System.Drawing.Point(14, 150);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.SelectedText = "";
@@ -437,7 +438,7 @@
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtName.Location = new System.Drawing.Point(14, 79);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.SelectedText = "";
@@ -533,8 +534,8 @@
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.gunaGroupBox1.LineTop = 40;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(17, 0);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(60, 110);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Size = new System.Drawing.Size(622, 444);
             this.gunaGroupBox1.TabIndex = 0;
@@ -659,9 +660,9 @@
             this.rdBtnF.FillColor = System.Drawing.Color.White;
             this.rdBtnF.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.rdBtnF.Location = new System.Drawing.Point(98, 230);
-            this.rdBtnF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnF.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnF.Name = "rdBtnF";
-            this.rdBtnF.Size = new System.Drawing.Size(88, 22);
+            this.rdBtnF.Size = new System.Drawing.Size(68, 20);
             this.rdBtnF.TabIndex = 4;
             this.rdBtnF.Text = "Female";
             this.rdBtnF.CheckedChanged += new System.EventHandler(this.rdBtnF_CheckedChanged);
@@ -674,9 +675,9 @@
             this.rdBtnM.FillColor = System.Drawing.Color.White;
             this.rdBtnM.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.rdBtnM.Location = new System.Drawing.Point(25, 230);
-            this.rdBtnM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnM.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnM.Name = "rdBtnM";
-            this.rdBtnM.Size = new System.Drawing.Size(68, 22);
+            this.rdBtnM.Size = new System.Drawing.Size(54, 20);
             this.rdBtnM.TabIndex = 4;
             this.rdBtnM.Text = "Male";
             this.rdBtnM.CheckedChanged += new System.EventHandler(this.rdBtnM_CheckedChanged);
@@ -693,7 +694,7 @@
             this.cmbRoom.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbRoom.FormattingEnabled = true;
             this.cmbRoom.Location = new System.Drawing.Point(419, 381);
-            this.cmbRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRoom.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRoom.Name = "cmbRoom";
             this.cmbRoom.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.cmbRoom.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -713,7 +714,7 @@
             this.cmbWard.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbWard.FormattingEnabled = true;
             this.cmbWard.Location = new System.Drawing.Point(217, 381);
-            this.cmbWard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbWard.Margin = new System.Windows.Forms.Padding(2);
             this.cmbWard.Name = "cmbWard";
             this.cmbWard.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.cmbWard.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -733,7 +734,7 @@
             this.cmbSpecialist.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbSpecialist.FormattingEnabled = true;
             this.cmbSpecialist.Location = new System.Drawing.Point(14, 381);
-            this.cmbSpecialist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbSpecialist.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSpecialist.Name = "cmbSpecialist";
             this.cmbSpecialist.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.cmbSpecialist.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -753,7 +754,7 @@
             this.cmbBlood.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbBlood.FormattingEnabled = true;
             this.cmbBlood.Location = new System.Drawing.Point(14, 292);
-            this.cmbBlood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBlood.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBlood.Name = "cmbBlood";
             this.cmbBlood.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.cmbBlood.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -771,7 +772,7 @@
             this.dtpDOF.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.dtpDOF.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dtpDOF.Location = new System.Drawing.Point(14, 150);
-            this.dtpDOF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDOF.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDOF.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDOF.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDOF.Name = "dtpDOF";
@@ -916,7 +917,7 @@
             this.txtSurname.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtSurname.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtSurname.Location = new System.Drawing.Point(395, 79);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.PasswordChar = '\0';
             this.txtSurname.SelectedText = "";
@@ -935,7 +936,7 @@
             this.txtMiddleName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtMiddleName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtMiddleName.Location = new System.Drawing.Point(205, 79);
-            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(2);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.PasswordChar = '\0';
             this.txtMiddleName.SelectedText = "";
@@ -954,7 +955,7 @@
             this.txtReson.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtReson.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtReson.Location = new System.Drawing.Point(246, 149);
-            this.txtReson.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReson.Margin = new System.Windows.Forms.Padding(2);
             this.txtReson.Multiline = true;
             this.txtReson.Name = "txtReson";
             this.txtReson.PasswordChar = '\0';
@@ -974,7 +975,7 @@
             this.txtFirstname.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtFirstname.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtFirstname.Location = new System.Drawing.Point(14, 79);
-            this.txtFirstname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirstname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.PasswordChar = '\0';
             this.txtFirstname.SelectedText = "";
@@ -997,10 +998,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.ClientSize = new System.Drawing.Size(1332, 750);
             this.Controls.Add(this.pnlTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmADaddPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmADAddmitPatient";
