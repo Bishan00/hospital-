@@ -117,7 +117,7 @@
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
             this.txtSearch.Location = new System.Drawing.Point(38, 136);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 36);
             this.txtSearch.TabIndex = 8;
@@ -128,7 +128,7 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(33, -2);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(33, 12);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(111, 105);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +143,7 @@
             this.lblGuardians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblGuardians.Location = new System.Drawing.Point(150, 6);
             this.lblGuardians.Name = "lblGuardians";
-            this.lblGuardians.Size = new System.Drawing.Size(559, 78);
+            this.lblGuardians.Size = new System.Drawing.Size(442, 62);
             this.lblGuardians.TabIndex = 6;
             this.lblGuardians.Text = "X-Ray Out Patients";
             // 

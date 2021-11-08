@@ -79,6 +79,11 @@ namespace Health_Street
 
         }
 
+        private void gunaPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow dgr in dgvPatient.Rows)

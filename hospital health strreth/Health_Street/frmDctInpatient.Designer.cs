@@ -100,7 +100,7 @@
             this.lblGuardians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblGuardians.Location = new System.Drawing.Point(153, 14);
             this.lblGuardians.Name = "lblGuardians";
-            this.lblGuardians.Size = new System.Drawing.Size(328, 78);
+            this.lblGuardians.Size = new System.Drawing.Size(259, 62);
             this.lblGuardians.TabIndex = 4;
             this.lblGuardians.Text = "In Patients";
             // 
@@ -112,7 +112,7 @@
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
             this.txtSearch.Location = new System.Drawing.Point(31, 120);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 36);
             this.txtSearch.TabIndex = 3;
@@ -168,7 +168,7 @@
             this.dgvInpatient.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInpatient.EnableHeadersVisualStyles = false;
             this.dgvInpatient.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvInpatient.Location = new System.Drawing.Point(31, 173);
+            this.dgvInpatient.Location = new System.Drawing.Point(31, 180);
             this.dgvInpatient.Name = "dgvInpatient";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;

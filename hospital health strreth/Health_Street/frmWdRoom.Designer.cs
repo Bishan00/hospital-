@@ -77,8 +77,8 @@
             this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
-            this.txtSearch.Location = new System.Drawing.Point(38, 136);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(4, 115);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 36);
             this.txtSearch.TabIndex = 8;
@@ -89,7 +89,7 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(33, -2);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(12, 3);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(111, 105);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,9 +102,9 @@
             this.lblGuardians.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblGuardians.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold);
             this.lblGuardians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.lblGuardians.Location = new System.Drawing.Point(150, 6);
+            this.lblGuardians.Location = new System.Drawing.Point(140, 3);
             this.lblGuardians.Name = "lblGuardians";
-            this.lblGuardians.Size = new System.Drawing.Size(223, 78);
+            this.lblGuardians.Size = new System.Drawing.Size(179, 62);
             this.lblGuardians.TabIndex = 6;
             this.lblGuardians.Text = "Rooms";
             // 
@@ -147,7 +147,7 @@
             this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRooms.EnableHeadersVisualStyles = false;
             this.dgvRooms.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvRooms.Location = new System.Drawing.Point(38, 190);
+            this.dgvRooms.Location = new System.Drawing.Point(3, 183);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

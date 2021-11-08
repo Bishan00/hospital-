@@ -498,16 +498,6 @@
     <Compile Include="frmPhrSplr.Designer.cs">
       <DependentUpon>frmPhrSplr.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Hospital_Management_SystemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GUI_Hospital_Management_SystemDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GUI_Hospital_Management_SystemDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GUI_Hospital_Management_SystemDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="HSMessageBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -712,28 +702,6 @@
       <DependentUpon>frmPrintBillPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.rdlc" />
-    <None Include="GUI_Hospital_Management_SystemDataSet.xsc">
-      <DependentUpon>GUI_Hospital_Management_SystemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GUI_Hospital_Management_SystemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GUI_Hospital_Management_SystemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GUI_Hospital_Management_SystemDataSet.xss">
-      <DependentUpon>GUI_Hospital_Management_SystemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GUI_Hospital_Management_SystemDataSet1.xsc">
-      <DependentUpon>GUI_Hospital_Management_SystemDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="GUI_Hospital_Management_SystemDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GUI_Hospital_Management_SystemDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GUI_Hospital_Management_SystemDataSet1.xss">
-      <DependentUpon>GUI_Hospital_Management_SystemDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Health_Street_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

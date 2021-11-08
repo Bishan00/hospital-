@@ -53,17 +53,17 @@
             this.Specialist_Doctor_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.lblWards = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.lblRooms = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.lblPatient = new Guna.UI.WinForms.GunaLabel();
             this.pnlBanner = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lblBillOfficer = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
@@ -93,7 +93,7 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1296, 809);
+            this.gunaPanel1.Size = new System.Drawing.Size(1296, 788);
             this.gunaPanel1.TabIndex = 10;
             // 
             // gunaGroupBox2
@@ -348,10 +348,10 @@
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Montserrat Alternates ExtraBold", 15F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.gunaLabel5.Location = new System.Drawing.Point(12, 263);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(245, 34);
+            this.gunaLabel5.Size = new System.Drawing.Size(170, 25);
             this.gunaLabel5.TabIndex = 16;
             this.gunaLabel5.Text = "Patient analytics";
             // 
@@ -370,6 +370,17 @@
             this.gunaShadowPanel3.Size = new System.Drawing.Size(209, 247);
             this.gunaShadowPanel3.TabIndex = 14;
             // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.gunaLabel8.Location = new System.Drawing.Point(33, 136);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(115, 41);
+            this.gunaLabel8.TabIndex = 0;
+            this.gunaLabel8.Text = "Wards";
+            // 
             // lblWards
             // 
             this.lblWards.AutoSize = true;
@@ -377,7 +388,7 @@
             this.lblWards.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblWards.Location = new System.Drawing.Point(28, 33);
             this.lblWards.Name = "lblWards";
-            this.lblWards.Size = new System.Drawing.Size(142, 81);
+            this.lblWards.Size = new System.Drawing.Size(114, 65);
             this.lblWards.TabIndex = 0;
             this.lblWards.Text = "+78";
             // 
@@ -396,6 +407,17 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(209, 247);
             this.gunaShadowPanel2.TabIndex = 14;
             // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.gunaLabel7.Location = new System.Drawing.Point(33, 141);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(124, 41);
+            this.gunaLabel7.TabIndex = 0;
+            this.gunaLabel7.Text = "Rooms";
+            // 
             // lblRooms
             // 
             this.lblRooms.AutoSize = true;
@@ -403,7 +425,7 @@
             this.lblRooms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblRooms.Location = new System.Drawing.Point(28, 33);
             this.lblRooms.Name = "lblRooms";
-            this.lblRooms.Size = new System.Drawing.Size(142, 81);
+            this.lblRooms.Size = new System.Drawing.Size(114, 65);
             this.lblRooms.TabIndex = 0;
             this.lblRooms.Text = "+78";
             // 
@@ -422,6 +444,17 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(209, 247);
             this.gunaShadowPanel1.TabIndex = 15;
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(18, 136);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(142, 41);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Patients";
+            // 
             // lblPatient
             // 
             this.lblPatient.AutoSize = true;
@@ -429,7 +462,7 @@
             this.lblPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
             this.lblPatient.Location = new System.Drawing.Point(30, 33);
             this.lblPatient.Name = "lblPatient";
-            this.lblPatient.Size = new System.Drawing.Size(114, 81);
+            this.lblPatient.Size = new System.Drawing.Size(93, 65);
             this.lblPatient.TabIndex = 0;
             this.lblPatient.Text = "+11";
             // 
@@ -455,7 +488,7 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.gunaLabel2.Location = new System.Drawing.Point(35, 92);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(365, 46);
+            this.gunaLabel2.Size = new System.Drawing.Size(295, 38);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
@@ -466,48 +499,15 @@
             this.lblBillOfficer.ForeColor = System.Drawing.Color.White;
             this.lblBillOfficer.Location = new System.Drawing.Point(34, 42);
             this.lblBillOfficer.Name = "lblBillOfficer";
-            this.lblBillOfficer.Size = new System.Drawing.Size(139, 28);
+            this.lblBillOfficer.Size = new System.Drawing.Size(115, 23);
             this.lblBillOfficer.TabIndex = 0;
             this.lblBillOfficer.Text = "Hi, Doctor";
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(18, 136);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(176, 51);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Patients";
-            // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel7.Location = new System.Drawing.Point(33, 141);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(152, 51);
-            this.gunaLabel7.TabIndex = 0;
-            this.gunaLabel7.Text = "Rooms";
-            // 
-            // gunaLabel8
-            // 
-            this.gunaLabel8.AutoSize = true;
-            this.gunaLabel8.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel8.Location = new System.Drawing.Point(33, 136);
-            this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(142, 51);
-            this.gunaLabel8.TabIndex = 0;
-            this.gunaLabel8.Text = "Wards";
             // 
             // frmWdDash
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1296, 809);
+            this.ClientSize = new System.Drawing.Size(1296, 788);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmWdDash";

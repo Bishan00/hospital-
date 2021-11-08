@@ -55,14 +55,14 @@
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.lblOutpatient = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.lblInpatient = new Guna.UI.WinForms.GunaLabel();
             this.pnlBanner = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lblLabOfficer = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -92,7 +92,7 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1321, 816);
+            this.gunaPanel1.Size = new System.Drawing.Size(1321, 788);
             this.gunaPanel1.TabIndex = 10;
             // 
             // gunaGroupBox2
@@ -356,20 +356,20 @@
             // gunaLabel6
             // 
             this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Montserrat Alternates ExtraBold", 15F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.gunaLabel6.Location = new System.Drawing.Point(554, 265);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(245, 34);
+            this.gunaLabel6.Size = new System.Drawing.Size(170, 25);
             this.gunaLabel6.TabIndex = 16;
             this.gunaLabel6.Text = "Patient analytics";
             // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Montserrat Alternates ExtraBold", 15F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.gunaLabel5.Location = new System.Drawing.Point(12, 265);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(211, 34);
+            this.gunaLabel5.Size = new System.Drawing.Size(148, 25);
             this.gunaLabel5.TabIndex = 16;
             this.gunaLabel5.Text = "Staff analytics";
             // 
@@ -388,6 +388,17 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(209, 247);
             this.gunaShadowPanel2.TabIndex = 14;
             // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.gunaLabel7.Location = new System.Drawing.Point(21, 117);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(142, 82);
+            this.gunaLabel7.TabIndex = 0;
+            this.gunaLabel7.Text = "   Out \r\nPatients";
+            // 
             // lblOutpatient
             // 
             this.lblOutpatient.AutoSize = true;
@@ -395,7 +406,7 @@
             this.lblOutpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblOutpatient.Location = new System.Drawing.Point(28, 33);
             this.lblOutpatient.Name = "lblOutpatient";
-            this.lblOutpatient.Size = new System.Drawing.Size(142, 81);
+            this.lblOutpatient.Size = new System.Drawing.Size(114, 65);
             this.lblOutpatient.TabIndex = 0;
             this.lblOutpatient.Text = "+78";
             // 
@@ -414,6 +425,17 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(209, 247);
             this.gunaShadowPanel1.TabIndex = 15;
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(16, 114);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(142, 82);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "    In \r\nPatients";
+            // 
             // lblInpatient
             // 
             this.lblInpatient.AutoSize = true;
@@ -421,7 +443,7 @@
             this.lblInpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
             this.lblInpatient.Location = new System.Drawing.Point(30, 33);
             this.lblInpatient.Name = "lblInpatient";
-            this.lblInpatient.Size = new System.Drawing.Size(114, 81);
+            this.lblInpatient.Size = new System.Drawing.Size(93, 65);
             this.lblInpatient.TabIndex = 0;
             this.lblInpatient.Text = "+11";
             // 
@@ -447,7 +469,7 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.gunaLabel2.Location = new System.Drawing.Point(35, 92);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(365, 46);
+            this.gunaLabel2.Size = new System.Drawing.Size(295, 38);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
@@ -458,37 +480,15 @@
             this.lblLabOfficer.ForeColor = System.Drawing.Color.White;
             this.lblLabOfficer.Location = new System.Drawing.Point(34, 42);
             this.lblLabOfficer.Name = "lblLabOfficer";
-            this.lblLabOfficer.Size = new System.Drawing.Size(139, 28);
+            this.lblLabOfficer.Size = new System.Drawing.Size(115, 23);
             this.lblLabOfficer.TabIndex = 0;
             this.lblLabOfficer.Text = "Hi, Doctor";
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(16, 114);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(176, 102);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "    In \r\nPatients";
-            // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel7.Location = new System.Drawing.Point(21, 117);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(176, 102);
-            this.gunaLabel7.TabIndex = 0;
-            this.gunaLabel7.Text = "   Out \r\nPatients";
             // 
             // frmLabDash
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1321, 816);
+            this.ClientSize = new System.Drawing.Size(1321, 788);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLabDash";

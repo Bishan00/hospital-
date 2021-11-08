@@ -68,17 +68,19 @@
             this.pnlTheme.Controls.Add(this.dgvCustomer);
             this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTheme.Location = new System.Drawing.Point(0, 0);
+            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlTheme.Name = "pnlTheme";
-            this.pnlTheme.Size = new System.Drawing.Size(1436, 911);
+            this.pnlTheme.Size = new System.Drawing.Size(1040, 640);
             this.pnlTheme.TabIndex = 0;
             // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(481, 38);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(11, 2);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(200, 120);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(150, 98);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 13;
             this.gunaPictureBox1.TabStop = false;
@@ -90,9 +92,10 @@
             this.lblMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblMedicine.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Bold);
             this.lblMedicine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.lblMedicine.Location = new System.Drawing.Point(12, 0);
+            this.lblMedicine.Location = new System.Drawing.Point(9, -100);
+            this.lblMedicine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMedicine.Name = "lblMedicine";
-            this.lblMedicine.Size = new System.Drawing.Size(463, 112);
+            this.lblMedicine.Size = new System.Drawing.Size(370, 89);
             this.lblMedicine.TabIndex = 12;
             this.lblMedicine.Text = "Customers";
             // 
@@ -104,10 +107,9 @@
             this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
-            this.txtSearch.Location = new System.Drawing.Point(25, 166);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(166, 64);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(420, 44);
+            this.txtSearch.Size = new System.Drawing.Size(315, 36);
             this.txtSearch.TabIndex = 11;
             this.txtSearch.text = "";
             this.txtSearch.OnTextChange += new System.EventHandler(this.txtSearch_OnTextChange);
@@ -155,7 +157,8 @@
             this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomer.EnableHeadersVisualStyles = false;
             this.dgvCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvCustomer.Location = new System.Drawing.Point(25, 233);
+            this.dgvCustomer.Location = new System.Drawing.Point(11, 129);
+            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCustomer.Name = "dgvCustomer";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -170,7 +173,7 @@
             this.dgvCustomer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCustomer.RowTemplate.Height = 24;
             this.dgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomer.Size = new System.Drawing.Size(1278, 486);
+            this.dgvCustomer.Size = new System.Drawing.Size(958, 375);
             this.dgvCustomer.TabIndex = 10;
             this.dgvCustomer.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -253,11 +256,12 @@
             // 
             // frmPhrCstmr
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 911);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.pnlTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmPhrCstmr";
             this.Text = "frmPhrCstmr";
             this.Load += new System.EventHandler(this.frmPhrCstmr_Load);
