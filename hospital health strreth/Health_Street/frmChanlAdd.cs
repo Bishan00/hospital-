@@ -355,5 +355,15 @@ namespace Health_Street
         {
             this.Close();
         }
+
+        private void gunaGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

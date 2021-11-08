@@ -114,14 +114,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Health_Street.exe" size="18890224">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Health_Street.exe" size="18891248">
       <assemblyIdentity name="Health_Street" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AV8jjttImpNED690+sk+oPjdVzS4mO13wC+UjOFbrQw=</dsig:DigestValue>
+        <dsig:DigestValue>MkQpz3BcLD6gCA6RaYy9+LG/TtOU9iUP0bduX1QBQS4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
