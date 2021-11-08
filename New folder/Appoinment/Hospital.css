@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#header{
+    background-color: rgb(232, 235, 236);
+    height: 135px;
+    background-image: linear-gradient(rgba(136, 233, 176, 0.7),rgba(154, 230, 201, 0.7)),url(images.jpg);
+
+}
+@media screen and (max-width:250px) {
+    header {
+       height: 50px;
+    }
+}
+nav{
+    display: flex;
+    padding: 1% 1% ;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+nav img{
+    width: 250px;
+}
+#nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+/* link */
+#nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 1px 4px;
+    position: relative;
+    
+    margin: 4px;
+}
+#nav-links ul li a{
+    color: rgb(7, 65, 50);
+    text-decoration: none;
+}
+/* link click style */
+#nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: rgb(5, 20, 14);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+#nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+/* Image 1 */
+#imagsec1{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(5, 119, 37, 0.7),rgba(103, 151, 127, 0.7)),url(group-smiling-doctors-showing-thumbs-up-medicine-profession-teamwork-healthcare-concept-international-medics-46976435.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+@media  screen and (max-width:300px) {
+    imagsec1 {
+        width: 25%;
+    }
+}
+
+
+#text-box{
+    width: 90%;
+    color: rgba(255, 255, 255, 0.652);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+#text-box h1{
+    color: rgb(250, 250, 252);
+    font-size: 60px;
+    /* animation */
+    opacity: 0;
+    animation: scale .5s forwards;
+    animation-delay: .3s;
+}
+@media(max-width: 60px){
+    .text-box h1{
+        font-size: 10px;
+    }
+}
+#text-box p{
+    font-size: 20px;
+    opacity: 0;
+    animation: scale .5s forwards;
+    animation-delay: .5s;
+}
+/* visit link */
+#link{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid gray;
+    padding: 12px 30px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .7s;
+
+}
+#link:hover{
+    border: 1px solid black;
+    background: rgb(154, 238, 202);
+    transition: 1s;
+
+}
+
+
+
+/* ABOUT US */
+
+.col-lg-6{
+    /* background-color: rgba(230, 225, 225, 0.7); */
+    border-radius: 70px;
+
+   
+    
+}
+.img-fluid{
+    width: 500px;
+    padding: 3px;
+    margin: 5px;
+    border-radius: 40px;
+    transition: 0.5s;
+    justify-content: space-between;
+}
+.ABOUT{
+    color: rgba(26, 25, 26, 0.7);
+    text-align: center;
+    margin: 35px;
+}
+.para1{
+    text-align: center;
+    color: rgb(43, 43, 43);
+    line-height: 1.9;
+    margin-bottom: 2.4rem;
+}
+#link2{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(55, 106, 64);
+    border: 1px solid rgb(42, 44, 35);
+    padding: 12px 30px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+    
+
+}
+#link2:hover{
+    border: 1px solid black;
+    background: rgb(135, 230, 217);
+    transition: 1s;
+    text-align: center;
+}
+
+.video1{
+    margin-left: 0%;
+    
+    display: block;
+}
+.video2{
+    /* background-color: rgb(226, 226, 226); */
+    border-radius: 40px;
+
+}
+/* hedding animation */
+@keyframes fadeUp{
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+.imge{
+    max-width: 100%;
+    height: auto;
+    padding: 30px;
+    width: 1600px;
+    height: 600px;
+
+}
+.categories{
+    padding: 4% 0;
+    border-radius: 15px;
+}
+
+.box-3{
+    width: 28%;
+    float: left;
+    margin: 2%;
+    
+}
+/* eXPLORE fOODS */
+#row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+#entry-col{
+    flex-basis: 31%;
+    
+    background: rgb(209, 208, 208);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+}
+#entry-col p{
+    color: black;
+}
+#entry-col:hover{
+    box-shadow: 0 0 20px rgb(0,0,0,0.2);
+}
+
+#Food{
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    padding-top:10%;
+} 
+#Food h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: rgb(80, 155, 84);
+} 
+#Food p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    
+
+}
+#Food-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom:30px ;
+    position: relative;
+    overflow:hidden;
+
+}
+#Food-col img{
+    width: 100%;
+}
+#layer{
+    background: transparent;
+    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 00.5s;
+} 
+#layer:hover{
+    background: rgba(55, 56, 59, 0.7);
+
+}
+#layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: cornsilk;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+#layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+    
+}
+/* Fotter */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display:flexas;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}

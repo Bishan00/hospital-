@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#header{
+    background-color: rgb(232, 235, 236);
+    height: 135px;
+    background-image: linear-gradient(rgba(183, 187, 197, 0.7),rgba(185, 187, 196, 0.7)),url(images.jpg);
+
+}
+@media screen and (max-width:250px) {
+    header {
+       height: 50px;
+    }
+}
+nav{
+    display: flex;
+    padding: 1% 1% ;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+nav img{
+    width: 250px;
+}
+#nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+/* link */
+#nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 1px 4px;
+    position: relative;
+    
+    margin: 4px;
+}
+#nav-links ul li a{
+    color: rgb(41, 88, 76);
+    text-decoration: none;
+}
+/* link click style */
+#nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: rgb(5, 20, 14);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+#nav-links ul li:hover::after{
+    width: 100%;
+}
+
+body{
+    width:100% ;
+   min-height: 150vh;
+    background-image: linear-gradient(rgba(102, 123, 206, 0.7),rgba(4,9,30,0.7)),url(photo-1519494026892-80bbd2d6fd0d.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.inner-layer{
+   position: absolute;
+   width:100% ;
+   min-height: 100vh;
+   overflow: auto;
+  
+}
+.content{
+    color: seashell;
+    padding: 18%;
+    margin-top: auto;
+    text-align: center;
+   
+}
+.form-data{
+   margin-top: 20%;
+   background-color: rgba(4,9,30,0.7);
+   width: 100%;
+   
+}
+@media screen and (max-width:250px) {
+    form-data {
+       width: 50%;
+    }
+}
+.form-body{
+    padding: 5%;
+}
+.form-head{
+    padding: 5%;
+    border-bottom: 3px solid #ccc;
+}
+.form-data{
+    color: seashell;
+    text-align: center;
+}
+.no-margin{
+   margin: 0px;
+}
+.form-row{
+    margin-bottom: 10px;
+}
+.form-control{
+    background-color: rgb(238, 239, 242);
+    
+    top: 40px;
+    right: 10px;
+}
+.form-control:focus{
+    box-shadow: none;
+    border: 3px solid #168c51
+}
+
+
+
