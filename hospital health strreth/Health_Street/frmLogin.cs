@@ -112,10 +112,7 @@ namespace Health_Street
                     passingRoll = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text,3,1);
                     passingRollName = dbManager.getValue("SELECT * FROM ACCOUNT", txtUsername.Text, 3, 2);
                     new frmDctMain().Show();
-                    if (txtPassword.Text == "RUBERU1212" || txtPassword.Text == "LOSALA45DO" || txtPassword.Text == "HARENDRAQ1" || txtPassword.Text == "SANJAYA123" || txtPassword.Text == "WARUNA2312")
-                    {
-                        new Health_Street.frmTranceparentBG(new frmChangePassword());
-                    }
+                   
 
 
                     break;

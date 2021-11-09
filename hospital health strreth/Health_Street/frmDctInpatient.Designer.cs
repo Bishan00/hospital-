@@ -85,7 +85,7 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(36, 6);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(39, 21);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(111, 105);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -98,7 +98,7 @@
             this.lblGuardians.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblGuardians.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold);
             this.lblGuardians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.lblGuardians.Location = new System.Drawing.Point(153, 14);
+            this.lblGuardians.Location = new System.Drawing.Point(165, 64);
             this.lblGuardians.Name = "lblGuardians";
             this.lblGuardians.Size = new System.Drawing.Size(259, 62);
             this.lblGuardians.TabIndex = 4;
@@ -111,7 +111,7 @@
             this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
-            this.txtSearch.Location = new System.Drawing.Point(31, 120);
+            this.txtSearch.Location = new System.Drawing.Point(39, 133);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 36);
@@ -168,7 +168,7 @@
             this.dgvInpatient.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInpatient.EnableHeadersVisualStyles = false;
             this.dgvInpatient.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvInpatient.Location = new System.Drawing.Point(31, 180);
+            this.dgvInpatient.Location = new System.Drawing.Point(21, 279);
             this.dgvInpatient.Name = "dgvInpatient";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -182,7 +182,7 @@
             this.dgvInpatient.RowHeadersWidth = 51;
             this.dgvInpatient.RowTemplate.Height = 24;
             this.dgvInpatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInpatient.Size = new System.Drawing.Size(1123, 432);
+            this.dgvInpatient.Size = new System.Drawing.Size(1123, 241);
             this.dgvInpatient.TabIndex = 2;
             this.dgvInpatient.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvInpatient.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));

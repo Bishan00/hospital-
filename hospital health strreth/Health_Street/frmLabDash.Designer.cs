@@ -92,7 +92,7 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1321, 788);
+            this.gunaPanel1.Size = new System.Drawing.Size(1286, 788);
             this.gunaPanel1.TabIndex = 10;
             // 
             // gunaGroupBox2
@@ -488,7 +488,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1321, 788);
+            this.ClientSize = new System.Drawing.Size(1286, 788);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLabDash";

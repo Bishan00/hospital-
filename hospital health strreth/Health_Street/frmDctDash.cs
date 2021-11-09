@@ -62,5 +62,9 @@ namespace Health_Street
             rowCountInPatient();
         }
 
+        private void pnlThemeDash_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

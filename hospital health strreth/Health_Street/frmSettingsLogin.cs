@@ -91,7 +91,7 @@ namespace Health_Street
                 lblOldpassword.ResetText();
                 btnDiable();
             }
-            else if (txtOldPassword.Text == dbManager.getValue("SELECT * FROM ACCOUNT",frmLogin.passingRoll,1,4) )
+            else if (txtOldPassword.Text == dbManager.getValue("SELECT * FROM 'account'",frmLogin.passingRoll,1,4) )
             {
                 lblOldpassword.ResetText();
                 txtOldPassword.FocusedBorderColor = Color.FromArgb(33, 96, 104);
@@ -134,7 +134,7 @@ namespace Health_Street
                 btnDiable();
                 txtOldPassword.Focus();
             }
-            else if(txtOldPassword.Text != dbManager.getValue("SELECT * FROM ACCOUNT", frmLogin.passingRoll, 1, 4))
+            else if(txtOldPassword.Text != dbManager.getValue("SELECT * FROM 'account'", frmLogin.passingRoll, 1, 4))
             {
                 txtOldPassword.BorderColor = Color.FromArgb(232, 17, 35);
                 lblOldpassword.Text = "*Password is incorrect";

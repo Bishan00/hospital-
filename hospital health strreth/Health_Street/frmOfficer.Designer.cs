@@ -69,8 +69,9 @@
             this.pnlTheme.Controls.Add(this.lblPatient);
             this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTheme.Location = new System.Drawing.Point(0, 0);
+            this.pnlTheme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlTheme.Name = "pnlTheme";
-            this.pnlTheme.Size = new System.Drawing.Size(1420, 951);
+            this.pnlTheme.Size = new System.Drawing.Size(1040, 640);
             this.pnlTheme.TabIndex = 0;
             // 
             // txtSearch
@@ -81,10 +82,9 @@
             this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(96)))), ((int)(((byte)(104)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
-            this.txtSearch.Location = new System.Drawing.Point(22, 185);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(16, 17);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(420, 44);
+            this.txtSearch.Size = new System.Drawing.Size(315, 36);
             this.txtSearch.TabIndex = 11;
             this.txtSearch.text = "";
             this.txtSearch.OnTextChange += new System.EventHandler(this.txtSearch_OnTextChange);
@@ -132,7 +132,8 @@
             this.dgvOfficer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOfficer.EnableHeadersVisualStyles = false;
             this.dgvOfficer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvOfficer.Location = new System.Drawing.Point(22, 252);
+            this.dgvOfficer.Location = new System.Drawing.Point(16, 58);
+            this.dgvOfficer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvOfficer.Name = "dgvOfficer";
             this.dgvOfficer.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -147,7 +148,7 @@
             this.dgvOfficer.RowHeadersWidth = 51;
             this.dgvOfficer.RowTemplate.Height = 24;
             this.dgvOfficer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOfficer.Size = new System.Drawing.Size(1279, 504);
+            this.dgvOfficer.Size = new System.Drawing.Size(959, 410);
             this.dgvOfficer.TabIndex = 10;
             this.dgvOfficer.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvOfficer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -251,9 +252,10 @@
             this.gunaPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(22, 21);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(16, -116);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(192, 133);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(144, 108);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 9;
             this.gunaPictureBox1.TabStop = false;
@@ -265,20 +267,22 @@
             this.lblPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPatient.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold);
             this.lblPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.lblPatient.Location = new System.Drawing.Point(219, 45);
+            this.lblPatient.Location = new System.Drawing.Point(164, -96);
+            this.lblPatient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPatient.Name = "lblPatient";
-            this.lblPatient.Size = new System.Drawing.Size(224, 78);
+            this.lblPatient.Size = new System.Drawing.Size(179, 62);
             this.lblPatient.TabIndex = 8;
             this.lblPatient.Text = "Officer";
             this.lblPatient.Click += new System.EventHandler(this.lblPatient_Click);
             // 
             // frmOfficer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1420, 951);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.pnlTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmOfficer";
             this.Text = "frmADaddmitPatient";
             this.Load += new System.EventHandler(this.frmADaddmitPatient_Load);

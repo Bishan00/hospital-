@@ -171,10 +171,10 @@
             this.pnlRighUserd.Controls.Add(this.pbProPic);
             this.pnlRighUserd.Controls.Add(this.gunaPictureBox1);
             this.pnlRighUserd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRighUserd.Location = new System.Drawing.Point(609, 0);
+            this.pnlRighUserd.Location = new System.Drawing.Point(620, 0);
             this.pnlRighUserd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlRighUserd.Name = "pnlRighUserd";
-            this.pnlRighUserd.Size = new System.Drawing.Size(252, 591);
+            this.pnlRighUserd.Size = new System.Drawing.Size(241, 591);
             this.pnlRighUserd.TabIndex = 4;
             // 
             // gunaShadowPanel2
@@ -372,10 +372,10 @@
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(-11, 178);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(10, 185);
             this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(289, 260);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(243, 260);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 3;
             this.gunaPictureBox1.TabStop = false;
