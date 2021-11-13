@@ -73,5 +73,20 @@ namespace Health_Street
         {
 
         }
+
+        private void gunaShadowPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gunaLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSoledRoom_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Health_Street
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNewPassword());
+            Application.Run(new frmCustomer());
         }
     }
 }

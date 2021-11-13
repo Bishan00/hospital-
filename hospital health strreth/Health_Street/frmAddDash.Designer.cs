@@ -51,14 +51,14 @@
             this.Ward_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ward_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.lblAvailbaleRoom = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.lblSoledRoom = new Guna.UI.WinForms.GunaLabel();
             this.pnlBanner = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lblAddmitionOfficer = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
@@ -345,6 +345,17 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(249, 247);
             this.gunaShadowPanel2.TabIndex = 6;
             // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 23F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
+            this.gunaLabel3.Location = new System.Drawing.Point(16, 122);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(186, 74);
+            this.gunaLabel3.TabIndex = 0;
+            this.gunaLabel3.Text = "Unavailable \r\n    Room";
+            // 
             // lblAvailbaleRoom
             // 
             this.lblAvailbaleRoom.AutoSize = true;
@@ -352,7 +363,7 @@
             this.lblAvailbaleRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
             this.lblAvailbaleRoom.Location = new System.Drawing.Point(28, 33);
             this.lblAvailbaleRoom.Name = "lblAvailbaleRoom";
-            this.lblAvailbaleRoom.Size = new System.Drawing.Size(142, 81);
+            this.lblAvailbaleRoom.Size = new System.Drawing.Size(114, 65);
             this.lblAvailbaleRoom.TabIndex = 0;
             this.lblAvailbaleRoom.Text = "+78";
             // 
@@ -370,6 +381,19 @@
             this.gunaShadowPanel1.ShadowShift = 10;
             this.gunaShadowPanel1.Size = new System.Drawing.Size(249, 247);
             this.gunaShadowPanel1.TabIndex = 7;
+            this.gunaShadowPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaShadowPanel1_Paint);
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(35, 114);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(167, 82);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Available \r\n  Rooms";
+            this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
             // 
             // lblSoledRoom
             // 
@@ -378,9 +402,10 @@
             this.lblSoledRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
             this.lblSoledRoom.Location = new System.Drawing.Point(30, 33);
             this.lblSoledRoom.Name = "lblSoledRoom";
-            this.lblSoledRoom.Size = new System.Drawing.Size(114, 81);
+            this.lblSoledRoom.Size = new System.Drawing.Size(93, 65);
             this.lblSoledRoom.TabIndex = 0;
             this.lblSoledRoom.Text = "+11";
+            this.lblSoledRoom.Click += new System.EventHandler(this.lblSoledRoom_Click);
             // 
             // pnlBanner
             // 
@@ -404,7 +429,7 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.gunaLabel2.Location = new System.Drawing.Point(35, 92);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(365, 46);
+            this.gunaLabel2.Size = new System.Drawing.Size(295, 38);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "You have been doing your whole work plan for\r\nthe last two months, Way to go";
             // 
@@ -415,31 +440,9 @@
             this.lblAddmitionOfficer.ForeColor = System.Drawing.Color.White;
             this.lblAddmitionOfficer.Location = new System.Drawing.Point(34, 42);
             this.lblAddmitionOfficer.Name = "lblAddmitionOfficer";
-            this.lblAddmitionOfficer.Size = new System.Drawing.Size(163, 28);
+            this.lblAddmitionOfficer.Size = new System.Drawing.Size(136, 23);
             this.lblAddmitionOfficer.TabIndex = 0;
             this.lblAddmitionOfficer.Text = "Hi, Welcome";
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 25F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(35, 114);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(205, 102);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Available \r\n  Rooms";
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 23F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(144)))), ((int)(((byte)(156)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(16, 122);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(234, 94);
-            this.gunaLabel3.TabIndex = 0;
-            this.gunaLabel3.Text = "Unavailable \r\n    Room";
             // 
             // frmAddDash
             // 
