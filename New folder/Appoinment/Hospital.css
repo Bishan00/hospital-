@@ -339,8 +339,8 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
-    padding: 70px 0;
+	background-color: #1b6b6b;
+    padding: 70px ;
 }
 .footer-col{
    width: 25%;
@@ -373,7 +373,7 @@ ul{
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color:#bbbbbb;
 	display: block;
 	transition: all 0.3s ease;
 }
@@ -385,7 +385,7 @@ ul{
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background-color: rgba(255,255,255,0.2);
+	background-color:#e91e63(255,255,255,0.2);
 	margin:0 10px 10px 0;
 	text-align: center;
 	line-height: 40px;
@@ -395,7 +395,7 @@ ul{
 }
 .footer-col .social-links a:hover{
 	color: #24262b;
-	background-color: #ffffff;
+	background-color: #AFEEEE;
 }
 
 /*responsive*/
