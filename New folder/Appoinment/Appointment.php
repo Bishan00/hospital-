@@ -65,7 +65,7 @@ $conn->close();
               </nav>
             <section id="header">
                 <nav>
-                    <a href="https://www.nibmworldwide.com/"><img src="HEALTH_CARE_HOSPITAL__1_-removebg-preview (1).png"></a>
+                    <a href="https://www.nibmworldwide.com/"><img src="Logo.png"></a>
                     <div id="nav-links">
                         <ul>
                             

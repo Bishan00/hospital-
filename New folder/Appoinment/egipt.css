@@ -1,8 +1,7 @@
 #header{
   background-color: rgb(232, 235, 236);
   height: 150px;
-  background-image: linear-gradient(rgba(183, 187, 197, 0.7),rgba(109, 111, 121, 0.7)),url(images.jpg);
-
+  background-image: linear-gradient(rgba(136, 233, 176, 0.7),rgba(154, 230, 201, 0.7)),url(images.jpg);
 }
 @media screen and (max-width:250px) {
   header {
@@ -23,7 +22,7 @@ nav{
 
 
 nav img{
-  width: 250px;
+  width: 180px;
 }
 #nav-links{
   flex: 1;

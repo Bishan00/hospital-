@@ -3,9 +3,14 @@ session_start();
 require_once 'database.php';
 if(isset($_POST['register'])){
 	  
-	$Login_Username = $_POST['uname'];
-    $Login_Password = $_POST['password'];
-	$E_mail = $_POST['email'];
+	$fn = $_POST['fname'];
+    $ln = $_POST['lname'];
+	$email = $_POST['email'];
+	$pnum= $_POST['pno'];
+	$date = $_POST['dob'];
+    $password = $_POST['pass'];
+	$repassword = $_POST['re-pass'];
+	$gender = $_POST['g'];
 	
 		
 	
@@ -13,7 +18,7 @@ $conn = new mysqli('localhost','root','','hospital');
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }     
-	$sql= "INSERT INTO `account`( `Roll_Name`, `Login_Username`, `Login_Password`, `E_mail` ) VALUES ('Customer','$Login_Username','$Login_Password','$E_mail')";
+	$sql="INSERT INTO `account` (`fname`, `lname`, `email`, `password`, `repassword`, `PNO`, `dob`,`gender`) VALUES ('$fn', '$ln', '$email', '$password', '$repassword', '$pnum', '$date','$gender')";
 
 	
 	 

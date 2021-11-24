@@ -44,7 +44,7 @@
       </nav>
     <section id="header">
         <nav>
-            <a href="https://www.nibmworldwide.com/"><img src="HEALTH_CARE_HOSPITAL__1_-removebg-preview (1).png"></a>
+            <a href="https://www.nibmworldwide.com/"><img src="Logo.png"></a>
             <div id="nav-links">
                 <ul>
                     
@@ -78,7 +78,7 @@ table.center {
 </head>
 <body>
 <br>
-<h2> <pre>                                      view appoinment </pre></h2>
+<h2> <pre>                                         view appoinment </pre></h2>
 <br />
 
 <table class="center"> 
@@ -126,47 +126,48 @@ while($data = mysqli_fetch_array($records))
 
 <?php mysqli_close($conn); // Close connection ?>
 <br><br>
-<!-- Fotter -->
 <section>
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>company</h4>
+                    <h4>Hospital</h4>
                     <ul>
-                        <li><a href="Aboutus.html">about us</a></li>
-                        <li><a href="#">our services</a></li>
+                       
+                        <li><a href="Room.php">Room </a></li>
+                        <li><a href="doctor.php">Doctor</a></li>
                         <li><a href="#">privacy policy</a></li>
                         
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>contact us</h4>
+                    <h4>Contact Us</h4>
                     <ul>
-                        
-                        <li><a>0761285178</a></li>
-                        <li><a>Nibm matara</a></li>
-                        <li><a>Chalitha@gmail.com</a></li>
-                        
+                        <li><a href="#">0761285178</a></li>
+                        <li><a href="#">Bkaannthana@gmail.com</a></li>
+                      
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>View Details</h4>
+                    <h4>view details</h4>
                     <ul>
-                        <li> <a href="Room.php">Room </a></li>
-                        <li><a href="doctor.php">Doctor</a></li>
+                        
                         <li><a href="view.php">Appoinment</a></li>
-                    
+                        <li><a href="galery.php">Drug</a></li>
+                        <li><a href="in_out xray.php">X-Ray</a></li>
+                        <li><a href="in_out report.php">Report</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
+                    <ul>
+                        
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -189,5 +190,3 @@ while($data = mysqli_fetch_array($records))
 </body>
 
 </html>
-
-

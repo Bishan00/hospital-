@@ -46,7 +46,7 @@ require_once 'database.php';
       </nav>
     <section id="header">
         <nav>
-            <a href="https://www.nibmworldwide.com/"><img src="HEALTH_CARE_HOSPITAL__1_-removebg-preview (1).png"></a>
+            <a href="https://www.nibmworldwide.com/"><img src="Logo.png"></a>
             <div id="nav-links">
                 <ul>
                     
@@ -104,7 +104,7 @@ require_once 'database.php';
                     <div class="Room_Number"> <b><br>Room Number</br> </b>
                     <?php echo $Room_Number; ?> <br>
 
-                    <b>xray<br> <?php echo '<img src="data:image;base64,'.base64_encode($row['X_Ray']).'" alt="Image" style="width: 1000px; height: 1000px;">' ;?> 
+                    <b>xray<br> <?php echo '<img src="data:image;base64,'.base64_encode($row['X_Ray']).'" alt="Image" style="width: 500px; height: 500px;">' ;?> 
 
     
                        
@@ -138,47 +138,49 @@ require_once 'database.php';
 
 <!-- gallery section ends -->
 
-       <!-- Fotter -->
+  <!-- Fotter -->
 <section>
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>company</h4>
+                    <h4>Hospital</h4>
                     <ul>
-                        <li><a href="index.html">about us</a></li>
-                        <li><a href="#">our services</a></li>
+                       
+                        <li><a href="Room.php">Room </a></li>
+                        <li><a href="doctor.php">Doctor</a></li>
                         <li><a href="#">privacy policy</a></li>
                         
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>contact us</h4>
+                    <h4>Contact Us</h4>
                     <ul>
-                        
-                        <li><a>0761285178</a></li>
-                        <li><a>Nibm matara</a></li>
-                        <li><a>Chalitha@gmail.com</a></li>
-                        
+                        <li><a href="#">0761285178</a></li>
+                        <li><a href="#">Bkaannthana@gmail.com</a></li>
+                      
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>View Details</h4>
+                    <h4>view details</h4>
                     <ul>
-                    <li><a href="Room.php">Room </a></li>
-                        <li><a href="doctor.php">Doctor</a></li>
-                        <li><a href="view.php">Appoinment</a></li>
                         
+                        <li><a href="view.php">Appoinment</a></li>
+                        <li><a href="galery.php">Drug</a></li>
+                        <li><a href="in_out xray.php">X-Ray</a></li>
+                        <li><a href="in_out report.php">Report</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
+                    <ul>
+                        
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -189,11 +191,15 @@ require_once 'database.php';
     
 
    
-    <script src="script.js"></script>
+    <script src="main.js"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
    
+
+      
+
 </body>
+
 </html>
